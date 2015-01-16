@@ -1,2 +1,2 @@
 # iOS-Notes
-iOS simple bullet point notes
+Objective-c and iOS simple bullet point notes
