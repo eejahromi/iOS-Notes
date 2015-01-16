@@ -11,6 +11,8 @@ classes and objects
 class is the blueprint for the house
 object IS THE HOUSE
 
+method/class operations in Objective-c vs java/C++
+
 calling a method inside a class
 myObject.myMethod();
 
