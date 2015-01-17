@@ -37,6 +37,8 @@ myDate = [NSDate new];
 NSDate *myDate = [[NSDate alloc]init];
 Class *myObj = [[Class alloc]init];
 
+collections
+nsarray, nsdictionary, nsset
 
 arrays:
 NSArray to add objects to it
