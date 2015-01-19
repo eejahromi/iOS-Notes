@@ -37,6 +37,12 @@ myDate = [NSDate new];
 NSDate *myDate = [[NSDate alloc]init];
 Class *myObj = [[Class alloc]init];
 
+initializing classes:
+self = [super init];
+    if (self) {
+    // do stuff
+    }
+
 collections
 nsarray, nsdictionary, nsset
 
