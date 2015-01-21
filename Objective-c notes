@@ -1,3 +1,10 @@
+ios sdk layers
+
+cocoa touch
+media services
+core services
+core os
+
 objective-c
 NSLog() for printing to the screen
 @"Hello" // @ before all string literals
