@@ -30,6 +30,9 @@ object IS THE HOUSE
 
 method/class operations in Objective-c vs java/C++
 
+_height as an instance variable is actually 
+self.height behind the scenes
+
 calling a method inside a class
 myObject.myMethod();
 
