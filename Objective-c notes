@@ -5,7 +5,7 @@ media services
 core services
 core os
 
-UIPickerView
+UIPickerView protocols
 <UIPickerViewDataSource,UIPickerViewDelegate>
 UIPickerViewDataSource
 -How many components for the picker
