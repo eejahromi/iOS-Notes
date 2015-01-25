@@ -11,6 +11,12 @@ UIPickerViewDataSource
 -How many components for the picker
 -How many rows
 
+if more than one component then
+if (component == 0)
+do something
+else 
+do something
+
 UIPickerViewDelegate
 -Title for each row
 -Selection row response
