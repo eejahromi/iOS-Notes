@@ -81,6 +81,10 @@ NSLog(@"second element:%@",myArray[1]);
 //shorthand for NSArray
 NSArray *quicker = @[@"apple",@"orange",@"banana"]; //no nil
 
+IndexPath object has a property (row) that could points to a path in the array.
+IndexPath *index;
+NSString *title = index.path;
+
 NSMutableArray *myArray = [[NSMutableArray alloc]initWithObjects:...
 
 dictionary:
