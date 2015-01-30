@@ -21,6 +21,10 @@ UIPickerViewDelegate
 -Title for each row
 -Selection row response
 
+UITableView <UITableViewDataSource,UItableViewDelegate>
+How many rows
+Row selection
+
 objective-c
 NSLog() for printing to the screen
 @"Hello" // @ before all string literals
@@ -115,7 +119,6 @@ if you want to add a few methods to the NSString class to have more flexibility
 // add new methods
 
 @end
-
 
 
 
