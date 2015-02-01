@@ -25,6 +25,11 @@ UITableView <UITableViewDataSource,UItableViewDelegate>
 How many rows
 Row selection
 
+deqeue cell with custom tableview cell
+(with #import "CustomTableViewCell.h")
+CustomTableViewCell *cell = (UITableViewCell *)[tableView deqeueWithCellidentifier:@"Cell"];
+
+
 objective-c
 NSLog() for printing to the screen
 @"Hello" // @ before all string literals
