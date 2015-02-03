@@ -29,6 +29,8 @@ deqeue cell with custom tableview cell
 (with #import "CustomTableViewCell.h")
 CustomTableViewCell *cell = (UITableViewCell *)[tableView deqeueReusableCellWithIdentifier:@"Cell"];
 
+if you want to cusmize a cell you have to create a new file "CustomTableViewCell" for it and have the code in there.
+
 
 objective-c
 NSLog() for printing to the screen
