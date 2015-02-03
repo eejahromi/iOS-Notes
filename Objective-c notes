@@ -27,7 +27,7 @@ Row selection
 
 deqeue cell with custom tableview cell
 (with #import "CustomTableViewCell.h")
-CustomTableViewCell *cell = (UITableViewCell *)[tableView deqeueWithCellidentifier:@"Cell"];
+CustomTableViewCell *cell = (UITableViewCell *)[tableView deqeueReusableCellWithIdentifier:@"Cell"];
 
 
 objective-c
