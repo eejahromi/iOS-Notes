@@ -34,6 +34,13 @@ for enabling editing in a tableView use the method:
 
 if you want to cusmize a cell you have to create a new file "CustomTableViewCell" for it and have the code in there.
 
+MultipleView Projects
+we use segues and prepareForSegue to pass information to the next screen
+
+important things for MultipleViews
+-Class binding with the storyboard
+
+
 setting the top edge in code
 UIEdgeInsets contentInset = tableView.contentInset;
 content.top = 20; // 20 points from the top
