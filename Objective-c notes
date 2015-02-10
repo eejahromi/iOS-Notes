@@ -39,6 +39,7 @@ we use segues and prepareForSegue to pass information to the next screen
 
 important things for MultipleViews
 -Class binding with the storyboard
+-Segues and segue identifiers
 
 
 setting the top edge in code
