@@ -40,6 +40,8 @@ we use segues and prepareForSegue to pass information to the next screen
 important things for MultipleViews
 -Class binding with the storyboard
 -Segues and segue identifiers
+-passing data to the next viewController using segues
+i.e LeagueViewController *leagueView = [segue destinationViewController];
 
 
 setting the top edge in code
