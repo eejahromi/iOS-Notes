@@ -41,6 +41,7 @@ important things for MultipleViews
 -Class binding with the storyboard
 -Segues and segue identifiers
 -passing data to the next viewController using segues
+NSIndexPath *indexPath = [tableView indexPathForSelectedRow]; // getting the index for selected row
 i.e LeagueViewController *leagueView = [segue destinationViewController];
 
 
