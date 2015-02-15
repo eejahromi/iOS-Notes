@@ -116,6 +116,13 @@ NSString *title = index.path;
 
 NSMutableArray *myArray = [[NSMutableArray alloc]initWithObjects:...
 
+Persistent data options 
+NSUserdefaults
+SQLite
+Core Data
+Propert lists
+
+
 dictionary:
 NSDictionary *states = 
 [[NSDictionary alloc]initWithObjectsAndKeys:@"Arizona",@"AZ",
@@ -151,3 +158,4 @@ if you want to add a few methods to the NSString class to have more flexibility
 
 
 
+B
