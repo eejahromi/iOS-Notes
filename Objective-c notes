@@ -71,6 +71,7 @@ self.height behind the scenes
 calling a method inside a class
 myObject.myMethod();
 
+objective-c style:
 [myObject myMethod];
 
 calling methods with arguments:
@@ -118,9 +119,9 @@ NSMutableArray *myArray = [[NSMutableArray alloc]initWithObjects:...
 
 Persistent data options 
 NSUserdefaults
-SQLite
-Core Data
-Propert lists
+SQLite // mostly c library
+Core Data // can enable it in xcode
+Propert lists // XML underneath the hood
 
 
 dictionary:
