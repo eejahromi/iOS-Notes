@@ -158,7 +158,11 @@ ios networking
 NSStream 
 
 lower level networking
-CFNetwork
+CFNetworking
+
+search implementation in ios
+UISearchController
+// allows search not only in table views but other viewControllers as well
 
 
 
