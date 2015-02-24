@@ -167,3 +167,4 @@ UISearchController
 things to add when we want to implement a search bar:
 UISearchController *searchController = [[UISearchControlelr alloc]initWithSearchResultsController:nil];
 // nil indicates that search results will be displayed the same way as table views
+searchController.searchResultsUpdater = self;
