@@ -168,3 +168,15 @@ things to add when we want to implement a search bar:
 UISearchController *searchController = [[UISearchControlelr alloc]initWithSearchResultsController:nil];
 // nil indicates that search results will be displayed the same way as table views
 searchController.searchResultsUpdater = self;
+
+For UICollectionView Segues
+if ([segue.identifier isEqualToString:@"showRecipePhoto"]) {
+        NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];
+        UINavigationController *destViewController = segue.destinationViewController;
+        RecipeViewController *recipeViewController = (RecipeViewController *)
+[destViewController.childViewControllers firstObject];
+        NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
+        recipeViewController.recipeImageName = [recipeImages[indexPath.section]
+objectAtIndex:indexPath.row];
+        [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
+}
