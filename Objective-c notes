@@ -180,3 +180,18 @@ if ([segue.identifier isEqualToString:@"showRecipePhoto"]) {
 objectAtIndex:indexPath.row];
         [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
 }
+
+
+Facebook sharing
+if([SLComposeViewController isAvailableForServiceType:SLServiceTypeForFacebook]){
+    SLComposeViewController *controller = [SLViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [controller setInitialText...
+
+
+
+
+
+
+
+
+
