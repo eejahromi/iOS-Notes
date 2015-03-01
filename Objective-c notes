@@ -187,16 +187,34 @@ if([SLComposeViewController isAvailableForServiceType:SLServiceTypeForFacebook])
     SLComposeViewController *controller = [SLViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
     [controller setInitialText...
 
+accessing the camera
+if([UIPickerController isSourceTypeAvailable])
 
 
 accessing the photo library to choose an image
 needed protocols <UIImagePickerController,UINavigationController>
 
-if([UIImagePickerController isSourceTypeAvailable]){
-
+if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]){
+	UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+	picker.delegate = self;
+	picker.allowsEditing = YES;
+	picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+	
+	[self presentViewController:picker animated:YES completion:NULL];
 }
 
+// delegate methods
 
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+	// selecting the edited image saved in the library
+	UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+	self.imageView.image = chosenImage;
+	
+	[picker dismissPickerViewControllerAnimated:YES completion:NULL];
+}
 
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+	[picker dismissPickerViewControllerAnimated:YES completion:NULL];
+}
 
 
