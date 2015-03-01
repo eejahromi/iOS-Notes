@@ -189,7 +189,12 @@ if([SLComposeViewController isAvailableForServiceType:SLServiceTypeForFacebook])
 
 
 
+accessing the photo library to choose an image
+needed protocols <UIImagePickerController,UINavigationController>
 
+if([UIImagePickerController isSourceTypeAvailable]){
+
+}
 
 
 
