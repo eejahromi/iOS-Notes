@@ -185,7 +185,8 @@ objectAtIndex:indexPath.row];
 Facebook sharing
 if([SLComposeViewController isAvailableForServiceType:SLServiceTypeForFacebook]){
     SLComposeViewController *controller = [SLViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    [controller setInitialText...
+    [controller setInitialText:@"Check out this Photo!"];
+    [controller addImage: self.imageView.image];
 
 accessing the camera
 if([UIPickerController isSourceTypeAvailable])
