@@ -218,4 +218,9 @@ if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceT
 	[picker dismissPickerViewControllerAnimated:YES completion:NULL];
 }
 
+// playing video - almost same as pictures but we use KUTTypeMovie for mediaType
+
+	picker.mediaType = [[NSArray alloc]initWithObjects:(NSString *)KUTTypeMovie,nil];
+	
+	[self presentViewController:picker animated:YES completion:NULL];
 
