@@ -63,6 +63,9 @@ classes and objects
 class is the blueprint for the house
 object IS THE HOUSE
 
+another way to use classes for OOP
+@class className //inside viewController.h or other main files
+
 method/class operations in Objective-c vs java/C++
 
 _height as an instance variable is actually 
