@@ -156,6 +156,10 @@ if you want to add a few methods to the NSString class to have more flexibility
 
 @end
 
+forward deceleration
+
+@className; // in another .h file
+// forward deceleration avoid cycle imports
 
 ios networking
 NSStream 
