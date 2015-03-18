@@ -29,6 +29,8 @@ deqeue cell with custom tableview cell
 (with #import "CustomTableViewCell.h")
 CustomTableViewCell *cell = (UITableViewCell *)[tableView deqeueReusableCellWithIdentifier:@"Cell"];
 
+// we can also access the reusable cell using tags from the attributes menu
+
 for enabling editing in a tableView use the method:
 -(void)tableView:(UITableView *)tableView commitEditingStyle:
 
