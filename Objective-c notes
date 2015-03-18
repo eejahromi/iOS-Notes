@@ -233,3 +233,6 @@ if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceT
 	
 	[self presentViewController:picker animated:YES completion:NULL];
 
+// opening a link inside safari - by switching to safari
+UIApplication *application = [UIApplication sharedApplication];
+[application openURL:blogPost.url]; // accessing the url property of blogPost instance
