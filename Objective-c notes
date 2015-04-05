@@ -242,3 +242,10 @@ parse as a backened for ios
 -database (strored as JSON)
 -analytics
 -push notifications
+
+
+Parse Object
+PFObject *object = [PFObject addClassName:@"Test"]; //class name being the name of the table
+
+// simple entry
+[object setKey:@"name" forValue:@"John"];
