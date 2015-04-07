@@ -249,3 +249,7 @@ PFObject *object = [PFObject addClassName:@"Test"]; //class name being the name 
 
 // simple entry
 [object setKey:@"name" forValue:@"John"];
+
+// simple query
+PFQuery *query = [PFQuery queryWithClass:@"test"];
+
