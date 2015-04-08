@@ -252,4 +252,4 @@ PFObject *object = [PFObject addClassName:@"Test"]; //class name being the name 
 
 // simple query
 PFQuery *query = [PFQuery queryWithClass:@"test"];
-
+[query orderByAscendingOrder:@"createdAt"]; 
