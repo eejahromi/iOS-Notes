@@ -265,3 +265,6 @@ PFQuery *query = [PFQuery queryWithClass:@"test"];
 
 //user
 PFUser *user = [PFUser userWithClass:@"user"];
+
+Core Data
+Uses SQLite under the hood but uses objects to communicate with the db
