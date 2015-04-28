@@ -268,3 +268,9 @@ PFUser *user = [PFUser userWithClass:@"user"];
 
 Core Data
 Uses SQLite under the hood but uses objects to communicate with the db
+
+-core data stack
+Managed object context
+Persistent store coordinator
+Managed object model
+Persistent store
