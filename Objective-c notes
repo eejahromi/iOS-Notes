@@ -270,7 +270,7 @@ Core Data
 Uses SQLite under the hood but uses objects to communicate with the db
 
 -core data stack
-Managed object context
+Managed object context: temporary memory area containing objects that interact with data in persistant store.
 Persistent store coordinator
 Managed object model
 Persistent store
