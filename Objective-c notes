@@ -270,7 +270,7 @@ Core Data
 Uses SQLite under the hood but uses objects to communicate with the db
 
 -core data stack
-Managed object context: temporary memory area containing objects that interact with data in persistant store.
-Persistent store coordinator: the party responsible to manage different persistant object stores and save the objects to the stores.
-Managed object model
-Persistent store
+Core Data Stack
+-NSManagedObjectContext runs the show.
+-NSPersistentStoreCoordinator binds all the models by using the NSManagedObjectModel which is the compiled version of the data model that we create using the dataModel graph/tables in xcode
+-NSPersistentStore is where the data is stored and it can be configured to use different formats (SQLite, XML, memory,etc.)
