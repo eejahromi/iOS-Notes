@@ -13,3 +13,33 @@ Core Data Stack
 -NSPersistentStoreCoordinator binds all the models by using the NSManagedObjectModel which is the compiled version of the data model that we create using the dataModel graph/tables in xcode
 -NSPersistentStore is where the data is stored and it can be configured to use different formats (SQLite, XML, memory,etc.)
 
+Writing Data
+We use the managedObjectContext along with entityDescription,sortDescriptors and predicates to write data to pers. store
+-NSEntityDescription is the object that creates entities to be sent to the the persistent store.
+
+// creating an entityDescription
+NSManagedObjectContext *context = [dataStore context];
+NSEntityDescription *entity = [NSEntityDescription entityForname:@"ItemCategory" inManagedObjectContext:context];
+
+//simple write using KVO
+//using entityDescription class method to create a managedObject to be used for insertion
+NSManagedObject *category1 = [NSEntityDescription insertNewObjectForEntityName:@"ItemCategory" inmanagedObjectContext:context];
+[category1 setValue:@"Electronics" forKey:@"categoryName"];
+[category1 setValue@"cool gadgets to buy" forKey:@"categoryDesc"];
+
+//using another entityDescription method to retreive category name
+NSString *newCategoryName = [category1 valueForKey:@"categoryName"];
+
+
+Reading Data
+again we need to go through managedContext object along with NSFetchRequest to read in data
+
+// simple fetchRequest assuming we have a managedObjectContext
+NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"ItemCategory"];
+NSError *error;
+// fetchRequests will come back in an array which then we can use
+NSArray *allCategories = [context executefetchRequest:request error:&error];
+
+if(!allCategories){NSLOG(@"Error %@",[error localizedDescription]);}
+
+
