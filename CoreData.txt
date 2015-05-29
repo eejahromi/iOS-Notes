@@ -1,1 +1,15 @@
+iOS Persistent data options 
+NSUserdefaults
+SQLite // mostly c library
+Core Data // can enable it in xcode
+Propert lists // XML underneath the hood
+
+Core Data
+Uses SQLite (one option) under the hood but uses objects to communicate with the db
+
+-core data stack
+Core Data Stack
+-NSManagedObjectContext runs the show.
+-NSPersistentStoreCoordinator binds all the models by using the NSManagedObjectModel which is the compiled version of the data model that we create using the dataModel graph/tables in xcode
+-NSPersistentStore is where the data is stored and it can be configured to use different formats (SQLite, XML, memory,etc.)
 
