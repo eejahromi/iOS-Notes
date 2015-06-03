@@ -267,4 +267,11 @@ PFQuery *query = [PFQuery queryWithClass:@"test"];
 PFUser *user = [PFUser userWithClass:@"user"];
 
 iOS Graphics and Animations
+-animation and graphics stack
 UIKit
+Core Graphics,Quartz 2D, Core Animation
+OpenGL ES
+
+-UIKit is buiult on top of Core Animations and is the easiest to use
+-CoreGraphics (CG) is a c library
+-Quartz 2d is great for drawing
