@@ -275,3 +275,9 @@ OpenGL ES
 -UIKit is buiult on top of Core Animations and is the easiest to use
 -CoreGraphics (CG) is a c library
 -Quartz 2d is great for drawing
+
+
+-UIKit
+adding subviews to the superview in order to show things such as labels, images etc.
+for simple procedural animation we use animateWithDuration 
+[UIView animateWithDuration:3.0 animations:^{ label.alpha:1.0; }];
