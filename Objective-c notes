@@ -288,3 +288,10 @@ more advanced animation
                     options:UIViewAnimationOptionAutoreverse
                  animations:^{ label.alpha:1.0; }
                  completion:^{ label.alpha:0.0; }
+
+
+UIKit vs Core Graphics
+UIKit was built on CG to some points
+UIKit is a little faster in terms of drawing shapes 
+CG is faster in drawing text
+CG also has more functions to use
