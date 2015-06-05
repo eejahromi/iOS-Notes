@@ -281,3 +281,10 @@ OpenGL ES
 adding subviews to the superview in order to show things such as labels, images etc.
 for simple procedural animation we use animateWithDuration 
 [UIView animateWithDuration:3.0 animations:^{ label.alpha:1.0; }];
+
+more advanced animation
+[UIView animateWithDuration:2.0
+                      delay:0.5
+                    options:UIViewAnimationOptionAutoreverse
+                 animations:^{ label.alpha:1.0; }
+                 completion:^{ label.alpha:0.0; }
