@@ -244,8 +244,14 @@ AVCaptureDevice *device;
 device.setTorchMode = AVCaptureTorchModeOn;
 [device unlockForConfiguration];
 
+-Nav controller
+
 Handy code for displaying nothing but the back arrow for navigation controller
 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
+
+-programmatically adding bar buttons
+UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
+target:self action:@selector(cancelButtonPressed:)];
 
 -Parse with ios
 parse as a backened for ios
