@@ -304,3 +304,25 @@ UIKit was built on CG to some points
 UIKit is a little faster in terms of drawing shapes 
 CG is faster in drawing text
 CG also has more functions to use
+
+
+UIKitDynamics
+// UIKit Dynamics
+    // UIKit Dynamics
+    animator = [[UIDynamicAnimator alloc]initWithReferenceView:self.view];
+    gravity = [[UIGravityBehavior alloc]initWithItems:@[self.mainImage]];
+//    [gravity setMagnitude:0.1f];
+    [animator addBehavior:gravity];
+    
+    collision = [[UICollisionBehavior alloc]initWithItems:@[self.mainImage]];
+    collision.translatesReferenceBoundsIntoBoundary = YES;
+    
+//    CGPoint topEdge = CGPointMake(self.mainLabel.frame.origin.x + self.mainLabel.frame.size.width, self.mainLabel.frame.origin.y);
+//    [collision addBoundaryWithIdentifier:@"barrier" fromPoint:self.mainLabel.frame.origin toPoint:topEdge];
+    
+    [animator addBehavior:collision];
+    
+    UIDynamicItemBehavior *itemBehaviour = [[UIDynamicItemBehavior alloc]initWithItems:@[self.mainImage]];
+    itemBehaviour.elasticity = 0.6;
+    [animator addBehavior:itemBehaviour];
+
