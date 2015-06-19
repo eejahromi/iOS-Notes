@@ -46,6 +46,11 @@ important things for MultipleViews
 NSIndexPath *indexPath = [tableView indexPathForSelectedRow]; // getting the index for selected row
 i.e LeagueViewController *leagueView = [segue destinationViewController];
 
+// for modal segues, it's better to embed in a navigation VC instead of using a nav bar
+for segue we use the following code to refer to the viewController
+UINavigationController *nav = [segue destinationViewController];
+NewVewController *destinationVC = [nav.viewControllers objectAtIndexPath:0];
+
 
 setting the top edge in code
 UIEdgeInsets contentInset = tableView.contentInset;
