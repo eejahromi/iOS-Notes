@@ -1,4 +1,4 @@
--Corelocation
+->Corelocation
 To find out where you are!
 
 CLLocationManager // the boss!
@@ -6,6 +6,8 @@ CLLocationManager // the boss!
 self.locationManager = [[CLLocationManager allc]init];
 self.locationManager.delegate = self;
 
+self.locationManager.desiredAccuracy
+self.locationManager.distanceFilter
 
 *new permission procedure in iOS 8+ 
 need to add these keys to project-info.plist with some description for values.
@@ -21,7 +23,14 @@ then we start updating
 
 finally we use the delegate method- locationManager: didUpdateLocations
 
--MapKit
+-ReverseGeocoding
+using CLGeocoder 
+-reverseGeocodeLocation:completionHandler
+then we use CLPlacemark and its properties to determine the location, zip code etc.
+placemark.name
+placemaek.locality
+
+->MapKit
 
 different objects to work with for MapKit
 MKMapView	// the map itself!
