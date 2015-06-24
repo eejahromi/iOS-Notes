@@ -1,0 +1,33 @@
+-Corelocation
+To find out where you are!
+
+CLLocationManager // the boss!
+
+self.locationManager = [[CLLocationManager allc]init];
+self.locationManager.delegate = self;
+
+
+*new permission procedure in iOS 8+ 
+need to add these keys to project-info.plist with some description for values.
+NSLocationAlwaysUsageDescription
+NSLocationWhenInUseUsageDescription
+
+then we check for the authorization
+if([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)])
+  [self.locationManager requestAlwaysAutorization];
+  
+then we start updating
+[self.locationManager startUpdatingLocation];
+
+finally we use the delegate method- locationManager: didUpdateLocations
+
+-MapKit
+
+different objects to work with for MapKit
+MKMapView	// the map itself!
+MKPointAnnotation // for annotation bubble etc.
+MKCoordinateRegion // for setting the region for zooming etc. (a struct)
+MKAnnotationView	// the entire annotationview
+MKPinAnnotationView	// for configuring the pin
+CLGeocoder	// for converting addresses into coordinates or reverse
+CLPlacemark	// stores placemark data for a given latitude and longitude
