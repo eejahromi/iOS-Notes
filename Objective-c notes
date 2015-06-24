@@ -341,17 +341,3 @@ layer properties
 layer.corderRadius
 layer.zposition
 
-
--MAPKit
-different objects to work with for MapKit
-MKMapView	// the map itself!
-MKPointAnnotation // for annotation bubble etc.
-MKCoordinateRegion // for setting the region for zooming etc. (a struct)
-MKAnnotationView	// the entire annotationview
-MKPinAnnotationView	// for configuring the pin
-CLGeocoder	// for converting addresses into coordinates or reverse
-CLPlacemark	// stores placemark data for a given latitude and longitude
-
-
-
-
