@@ -23,6 +23,14 @@ then we start updating
 
 finally we use the delegate method- locationManager: didUpdateLocations
 
+->Geocoding
+forward geocoding
+we can use -- [self.geocoder geocodeAddressString:@"New York" completionHandler:
+the more specific we are, the better the results
+[self.mapView setRegion:MKCoordinateRegion animated:YES];
+we can also use span.latitudeDelta and span.longitudeDelta to set the zooming
+
+
 -ReverseGeocoding
 using CLGeocoder 
 -reverseGeocodeLocation:completionHandler
