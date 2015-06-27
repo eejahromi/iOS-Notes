@@ -4,10 +4,10 @@ C-Library for managing different threads using queues and blocks
 dispatch_queue_t queue;
 
 //two popular types of queues
-1.serial: makes sure that the operations are happening in order and coming back in order
+1.serial: makes sure that the tasks are happening in order and coming back in order
 dispatch_queue_create("reverseDNSstringByConvention",DISPATCH_QUEUE_SERIAL);
 
-2.concurrent: operations are happening simultaneously and coming back as soon as finishing
+2.concurrent: tasks are happening simultaneously and coming back as soon as finishing
 dispatch_get_global_queue(GLOBAL_QUEUE_PRIORITY,0);
 
 -four types of queues
