@@ -5,7 +5,7 @@ dispatch_queue_t queue;
 
 //two popular types of queues
 1.serial: makes sure that the operations are happening in order and coming back in order
-dispatch_queue_create("reverseDNSstringByConvention",NULL or 0);
+dispatch_queue_create("reverseDNSstringByConvention",DISPATCH_QUEUE_SERIAL);
 
 2.concurrent: operations are happening simultaneously and coming back as soon as finishing
 dispatch_get_global_queue(GLOBAL_QUEUE_PRIORITY,0);
@@ -18,3 +18,6 @@ GLOBAL_QUEUE_PRIORITY_BACKGROUND // lowest priority
 
 adding tasks to a background queue
 dispatch_async(queueName,^{ codeBlock });
+
+**All UI related stuff should be run on the main queue
+dispatch_async(dispatch_get_main_queue(),^{ codeBlock });
