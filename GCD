@@ -22,3 +22,11 @@ dispatch_async(queueName,^{ codeBlock });
 3. Main Queue
 **All UI related stuff should be run on the main queue
 dispatch_async(dispatch_get_main_queue(),^{ codeBlock });
+
+Other useful queues:
+dispatch groups: useful for aggregate synchronization. We can add multiple blocks and track for their completion.
+
+dispatch_group_t group = dispatch_group_create();
+dispatch_group_async(group,queue,^{ blockOfCode });
+dispatch_group_notify(group,queue,^{ blockOfCode }); // notify when group tasks are completed
+
