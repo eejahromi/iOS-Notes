@@ -40,5 +40,9 @@ provides an object oriented approach instead of a c-based api
 they store NSOperation objects
 tasks always execute concurrently and never serially
 
+NSOperation is an abstract class
+two concrete subclasses:
+-NSInvocationOperation
+-NSBlockOperation
 
 
