@@ -30,3 +30,15 @@ dispatch_group_t group = dispatch_group_create();
 dispatch_group_async(group,queue,^{ blockOfCode });
 dispatch_group_notify(group,queue,^{ blockOfCode }); // notify when group tasks are completed
 
+-->Dispatch queues vs Opreration queues
+dispatch queues execute tasks in a FIFO order but operations queues don't
+dispatch queues can have serial execution but operations don't although it is possible to achieve via dependencies
+
+-Operation queues
+each queue is an instance of NSOperationQueue class
+provides an object oriented approach instead of a c-based api
+they store NSOperation objects
+tasks always execute concurrently and never serially
+
+
+
