@@ -1,1 +1,43 @@
-UITouch represents the movement or the presence of a finger on the screen for an event.
+->UITouch represents the movement or the presence of a finger on the screen for an event.
+
+-properties
+timestamp
+tapCount
+phase
+
+-Phases
+UITouchPhaseBegan
+UITouchPhaseMoved
+UITouchPhaseStationary
+UITouchPhaseEnded
+UITouchPhaseCancelled
+
+
+->UIEvent
+EventType
+EventSubTypes
+
+-three main types
+UIEventTypeTouches
+UIEventTypeMotion
+UIEventTypeRemoteControl
+
+-methods
+allTouches
+touchesForView
+touchesForWindow
+
+->Hit Test
+when the user touches the screen, iOS looks for the view that was touched and that becomes the hit test view
+
+methods
+UIWindow sendEvent
+(UIView *)hitTest:withEvent:
+(BOOL) pointInside:withEvent:
+
+UIWindow sendEvent fires first thing after touch
+then point inside will fire for a view to see if the touch occured inside that view
+if NO, hit test skips that view
+if YES, then hitTest will fire
+this repeats until hitTest is detected
+
