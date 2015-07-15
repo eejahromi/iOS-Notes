@@ -41,3 +41,22 @@ if NO, hit test skips that view
 if YES, then hitTest will fire
 this repeats until hitTest is detected
 
+
+->UIResponder cycle for touches
+touchesBegan:withEvent:
+touchesMoved:withEvent:
+touchesEnded:withEvent:
+touchesCancelled:wihEvent:
+
+
+-disabling touch events using UIView
+remove from superview
+set user interaction to NO
+hidden to YES or alpha/opaque to zero 
+
+some UIKit views/UIConrols have user interaction set to NO by default i.e UIImageView
+
+
+
+
+
