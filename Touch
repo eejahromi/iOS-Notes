@@ -56,7 +56,17 @@ hidden to YES or alpha/opaque to zero
 
 some UIKit views/UIConrols have user interaction set to NO by default i.e UIImageView
 
+->GestureRecognizers
+pan
+pinch
+rotate
+tap
+longPress
+custom
 
+simple gestureRecognizer in code
+UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewTapped:)];
 
-
-
+-(void)viewTapped:(UITapGestureRecognizer *)tap{
+  NSLog("You tapped the view!");
+}
