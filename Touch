@@ -66,7 +66,35 @@ custom
 
 simple gestureRecognizer in code
 UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewTapped:)];
+[self.myView addGestureRecognizer:tapGesture];
 
 -(void)viewTapped:(UITapGestureRecognizer *)tap{
   NSLog("You tapped the view!");
 }
+
+-sample code for dragging an image with an already defined panGestureRecognizer
+
+-(void)moveView:(UIPanGestureRecognizer *)pan{
+    switch (pan.state) {
+        case UIGestureRecognizerStateChanged:{
+            CGPoint offset = [pan translationInView:pan.view]; // how far the view moves
+            CGPoint center = pan.view.center;
+            
+            center.x += offset.x;
+            center.y += offset.y;
+            
+            pan.view.center = center;
+            
+            [pan setTranslation:CGPointZero inView:pan.view]; // from zero to the actual view (difference)
+        
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
+
+**GestureRecognizers do not use UIResponderChain
