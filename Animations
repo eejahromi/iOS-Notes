@@ -1,0 +1,8 @@
+->two types of animation
+
+presentation layer -> use view animations
+model layer -> use CABasicAnimation
+
+-iOS4+ use animation blocks for view based animation
+-for animating layers we use CABasicAnimation object
+
