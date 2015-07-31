@@ -48,6 +48,13 @@ touchesMoved:withEvent:
 touchesEnded:withEvent:
 touchesCancelled:wihEvent:
 
+Detecting which uiview was touched by the user sample code
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [touches anyObject];
+    CGPoint touchPoint = [touch locationInView:self.view];
+    if( CGRectContainsPoint( self.mainPanel.frame, touchPoint ) && touch.tapCount == 2){
+      // do something
+}
 
 -disabling touch events using UIView
 remove from superview
