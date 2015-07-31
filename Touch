@@ -53,7 +53,8 @@ Detecting which uiview was touched by the user sample code
     UITouch *touch = [touches anyObject];
     CGPoint touchPoint = [touch locationInView:self.view];
     if( CGRectContainsPoint( self.mainPanel.frame, touchPoint ) && touch.tapCount == 2){
-      // do something
+      // self.mainPanel - do something
+      }
 }
 
 -disabling touch events using UIView
