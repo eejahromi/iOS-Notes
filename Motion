@@ -1,3 +1,7 @@
 Motion
 
 Accelerometer - Gyroscope
+CoreMotion
+
+CMMotionManager
+use this to get information from the accelerometer and gyroscope
