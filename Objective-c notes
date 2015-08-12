@@ -339,5 +339,13 @@ UIColor *tintColor = [UIColor colorWithWhite:0.11 alpha:0.36];
 
 layer properties
 layer.corderRadius
-layer.zposition
+layer.zposition or for using this with views [self beingViewToFront:specificView];
+
+// Playing simple audio using AVFoundation
+after setting a property
+@property (nonatomic,strong) AVAudioPlayer *musicPlayer;
+
+[self.musicPlayer play];
+
+
 
