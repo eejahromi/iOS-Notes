@@ -5,3 +5,12 @@ CoreMotion
 
 CMMotionManager
 use this to get information from the accelerometer and gyroscope
+
+-Detecting shake
+using UIEvent subType UIEventSubtypeMotionShake
+
+-(void)motionEnded:(UIEventSubtype *)motion withEvent:(UIEvent *)event{
+  if(motion == UIEventSubtypeMotionShake){
+      // do something
+  }
+}
