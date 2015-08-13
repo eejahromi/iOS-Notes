@@ -34,7 +34,7 @@ CustomTableViewCell *cell = (UITableViewCell *)[tableView deqeueReusableCellWith
 for enabling editing in a tableView use the method:
 -(void)tableView:(UITableView *)tableView commitEditingStyle:
 
-if you want to cusmize a cell you have to create a new file "CustomTableViewCell" for it and have the code in there.
+if you want to cusmtoize a cell you have to create a new file subclassing "CustomTableViewCell" and have the code in there.
 
 MultipleView Projects
 we use segues and prepareForSegue to pass information to the next screen
@@ -78,6 +78,9 @@ method/class operations in Objective-c vs java/C++
 _height as an instance variable is actually 
 self.height behind the scenes
 
+_height uses the instance variable directly
+self.height uses the accessor method (getter in this case)
+
 calling a method inside a class
 myObject.myMethod();
 
@@ -97,7 +100,7 @@ nested method calls:
 
 
 allocating and instantiating a new class:
-NSDate *myDate
+NSDate *myDate;
 myDate = [NSDate new];
 
 NSDate *myDate = [[NSDate alloc]init];
@@ -110,7 +113,7 @@ self = [super init];
     }
 
 collections
-nsarray, nsdictionary, nsset
+NSArray, NSDictionary, NSSet
 
 arrays:
 NSArray to add objects to it
@@ -152,6 +155,10 @@ for-in loop:
 for(NSString *name in listOfNames){
 	// use name
 }
+
+NSSet:
+sets are collections with unique elements
+fast lookup and that's pretty much all they are good for
 
 -inheritance in objective-c is not that big of a deal
 if you want to add a few methods to the NSString class to have more flexibility
