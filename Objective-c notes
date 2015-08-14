@@ -309,7 +309,7 @@ more advanced animation
                     options:UIViewAnimationOptionAutoreverse
                  animations:^{ label.alpha:1.0; }
                  completion:^{ label.alpha:0.0; }
-
+when refering to self in blocks we have to capture a weak reference to self in order to avoid retain cycles.
 
 UIKit vs Core Graphics
 UIKit was built on CG to some points
