@@ -112,6 +112,13 @@ self = [super init];
     // do stuff
     }
 
+Dynamic binding
+when it is decided which method is going to be invoked during runtime instead of compile time
+
+Dynamic typing
+when a variable's type is not checked during compile time but at runtime
+
+
 collections
 NSArray, NSDictionary, NSSet
 
