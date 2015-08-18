@@ -5,6 +5,13 @@ media services
 core services
 core os
 
+iOS filesystem
+an iOS app sandbox contains three main containers
+-bundle container: main bundle where app gets created
+-data container: the real filesystem where data gets stored
+-icloud container: icloud stuff for file sharing
+
+
 UIPickerView protocols
 <UIPickerViewDataSource,UIPickerViewDelegate>
 UIPickerViewDataSource
