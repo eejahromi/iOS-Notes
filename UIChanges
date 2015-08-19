@@ -1,0 +1,7 @@
+
+-changing navigation bar color
+UINavigationBar *navBarAppearance = [UINavigationBar appearance];
+navBarAppearance.tintColor = [UIColor white];
+navBarAppearance.barTintColor = [UIColor orangeColor];
+navBarAppearance.titleTextAttributes = @{NSForgroundColorAttributeName:[UIColor whiteColor]}; // nav bar title color
+[[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent]; // changing status bar color
