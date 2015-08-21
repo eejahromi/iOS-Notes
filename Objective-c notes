@@ -375,4 +375,13 @@ after setting a property
 [self.musicPlayer play];
 
 
-
+NSNotification
+way of communicating between objects
+-NSNotificationCenter
+tuning in
+[NSNotificationCenter defaultCenter]; // get the default notification center
+to listen to a station send it the following message
+-(void)addObserver:selector:name:object:
+tune out after listening
+[center removeObserver:self];
+[center removeObserver:name:object:];
