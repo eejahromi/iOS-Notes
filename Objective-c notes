@@ -352,15 +352,10 @@ UIKitDynamics
     itemBehaviour.elasticity = 0.6;
     [animator addBehavior:itemBehaviour];
 
-// Applying blur to images using apples UIImageEffects files
-// applying blur effect to an image
-UIColor *tintColor = [UIColor colorWithWhite:0.11 alpha:0.36];
-    UIImage *blurredBackground = [UIImageEffects imageByApplyingBlurToImage:[UIImage imageNamed:@"tree.jpg"] withRadius:12 tintColor:tintColor saturationDeltaFactor:1.2 maskImage:nil];
-    self.backgroundImage.image = blurredBackground;
 
 layer properties
 layer.corderRadius
-layer.zposition or for using this with views [self beingViewToFront:specificView];
+layer.zposition or for using this with views [self bringViewToFront:specificView];
 
 // Playing simple audio using AVFoundation
 after setting a property
