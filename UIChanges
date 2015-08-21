@@ -10,3 +10,9 @@ navBarAppearance.titleTextAttributes = @{NSForgroundColorAttributeName:[UIColor 
 UIEdgeInsets contentInset = tableView.contentInset;
 content.top = 20; // 20 points from the top
 [tableView setContentInset:contentInset];
+
+-Applying blur to images using apples UIImageEffects files
+// applying blur effect to an image
+UIColor *tintColor = [UIColor colorWithWhite:0.11 alpha:0.36];
+    UIImage *blurredBackground = [UIImageEffects imageByApplyingBlurToImage:[UIImage imageNamed:@"tree.jpg"] withRadius:12 tintColor:tintColor saturationDeltaFactor:1.2 maskImage:nil];
+    self.backgroundImage.image = blurredBackground;
