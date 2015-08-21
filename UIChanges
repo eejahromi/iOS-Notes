@@ -5,3 +5,8 @@ navBarAppearance.tintColor = [UIColor white];
 navBarAppearance.barTintColor = [UIColor orangeColor];
 navBarAppearance.titleTextAttributes = @{NSForgroundColorAttributeName:[UIColor whiteColor]}; // nav bar title color
 [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent]; // changing status bar color
+
+-setting the top edge in code
+UIEdgeInsets contentInset = tableView.contentInset;
+content.top = 20; // 20 points from the top
+[tableView setContentInset:contentInset];
