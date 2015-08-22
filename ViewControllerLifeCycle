@@ -1,1 +1,8 @@
 viewControllerLifeCycle
+
+-viewDidLoad: Great for init stuff, except for geometry stuff because the bounds has already been set. 
+Only called once so put things that you want to load only once.
+
+-viewWillAppear: good for geometry stuff but not for stuff you only want to load once because viewWillAppear could be called more than once.
+
+-viewWillDisappear: free up stuff and stop things like animations.
