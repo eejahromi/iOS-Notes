@@ -280,6 +280,9 @@ UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithBarButtonSystemI
 target:self action:@selector(cancelButtonPressed:)];
 
 -custom delegation usign protocols
+// the file that hands the task to the delegate
+@property (weak,nonatomic) id <sendResponseDelegate> delegate;
+
 @protocol sendResponseDelegate
 -(void)responseBackToPreviousController:(NSString *)response;
 @end
