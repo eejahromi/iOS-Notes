@@ -287,6 +287,12 @@ target:self action:@selector(cancelButtonPressed:)];
 -(void)responseBackToPreviousController:(NSString *)response;
 @end
 
+[self.delegate responseBackToPreviousController:response];
+
+// the delegate file
+
+ResponsibleController *responsibleFile = [[ResponsibleController alloc] init];
+responsibleFile.delegate = self;
 
 
 -Parse with ios
