@@ -45,4 +45,11 @@ two concrete subclasses:
 -NSInvocationOperation
 -NSBlockOperation
 
+*Refering to self in blocks
+when using self in a block we have to be careful of a memory cycle
+local variables are always strong, and self.something means we have a strong pointer and so if these two are pointing to each other then neither one of them can leave the heap so then we have a memory cycle.
+The solution is to declare a weak variable using the keyword __weak
+** weak means if no object is pointing to it then we don't keep it in the heap.
+__weak SomeClass *weakSelf = self;
+
 
