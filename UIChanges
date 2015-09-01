@@ -6,6 +6,15 @@ navBarAppearance.barTintColor = [UIColor orangeColor];
 navBarAppearance.titleTextAttributes = @{NSForgroundColorAttributeName:[UIColor whiteColor]}; // nav bar title color
 [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent]; // changing status bar color
 
+-Nav controller
+Handy code for displaying nothing but the back arrow for navigation controller
+self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
+
+-programmatically adding bar buttons
+UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
+target:self action:@selector(cancelButtonPressed:)];
+
+
 -setting the top edge in code
 UIEdgeInsets contentInset = tableView.contentInset;
 content.top = 20; // 20 points from the top
