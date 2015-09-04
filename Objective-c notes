@@ -370,6 +370,9 @@ after setting a property
 
 [self.musicPlayer play];
 
+-parsing JSON
+    NSDictionary *parsedData = [NSJSONSerialization JSONObjectWithData:response options:0 error:&error];
+
 
 NSNotification
 way of communicating between objects
