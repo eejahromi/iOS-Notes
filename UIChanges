@@ -17,7 +17,7 @@ target:self action:@selector(cancelButtonPressed:)];
 
 -setting the top edge in code
 UIEdgeInsets contentInset = tableView.contentInset;
-content.top = 20; // 20 points from the top
+contentInset.top = 20; // 20 points from the top
 [tableView setContentInset:contentInset];
 
 -Applying blur to images using apples UIImageEffects files
