@@ -10,6 +10,10 @@ navBarAppearance.titleTextAttributes = @{NSForgroundColorAttributeName:[UIColor 
 Handy code for displaying nothing but the back arrow for navigation controller
 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
 
+-back button modification
+[[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"back_btn.png"]];
+[[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"back_btn.png"]];
+
 -programmatically adding bar buttons
 UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
 target:self action:@selector(cancelButtonPressed:)];
