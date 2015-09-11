@@ -40,6 +40,15 @@ placemaek.locality
 
 ->MapKit
 
+two ways to set the distance for the portion that is displayed on map
+1. (use MKCoordinateRegionMakeWithDistance function)
+MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(annotation.coordinate,1000,1000);
+[self.mapView setRegion:region animated:NO];
+
+2. (use showAnnotations method - automatically calculates the best distance based on annotations)
+NSArray *annotations = @[annotation];
+[self.mapView showAnnotations animated:no];
+
 different objects to work with for MapKit
 MKMapView	// the map itself!
 MKPointAnnotation // for annotation bubble etc.
