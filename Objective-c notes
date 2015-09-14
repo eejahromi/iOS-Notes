@@ -128,7 +128,7 @@ NSArray to add objects to it
 // we initialize it by using initWithObjects:@"one",@"two",nil;
 NSLog(@"second element:%@",myArray[1]);
 
-// NSArray is immutable
+// NSArray is immutable - you can't change the contents after initialization
 //shorthand for NSArray
 NSArray *quicker = @[@"apple",@"orange",@"banana"]; //no nil
 
@@ -136,6 +136,7 @@ IndexPath object has a property (row) that could points to a path in the array.
 IndexPath *index;
 NSString *title = index.path;
 
+to change stuff after initialization, we use a mutable array
 NSMutableArray *myArray = [[NSMutableArray alloc]initWithObjects:...
 
 Persistent data options 
