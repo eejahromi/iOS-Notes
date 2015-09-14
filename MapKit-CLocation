@@ -67,6 +67,10 @@ annotationView.leftCalloutAccessoryView = leftIconView;
 return annotationView;
 }
 
+-scaling map for directions overlay
+MKMapRect rect = [route.polyline boundingMapRect];
+[self.mapView setRegion:MKCoordinateRegionForMapRect(rect) animated:YES];
+
 different objects to work with for MapKit
 MKMapView	// the map itself!
 MKPointAnnotation // for annotation bubble etc.
