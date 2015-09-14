@@ -33,3 +33,6 @@ UIColor *tintColor = [UIColor colorWithWhite:0.11 alpha:0.36];
 -tableview refreshControl
 self.refreshControl = [[UIRefreshControl alloc]init];
 [self.refreshControl addTarget:self action:@selector(someMethod) forControlEvents:UIControlEventValueChanged];
+
+-tableview separator color
+[self.tableView setSeparatorColor:[UIColor whiteColor]];
