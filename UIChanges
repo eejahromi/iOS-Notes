@@ -37,6 +37,12 @@ self.refreshControl = [[UIRefreshControl alloc]init];
 -tableview separator color
 [self.tableView setSeparatorColor:[UIColor whiteColor]];
 
+-bar positioning
+- (UIBarPosition)positionForBar:(id <UIBarPositioning>)bar
+{
+    return UIBarPositionTopAttached;
+}
+
 -initializing nbis
 UINib *cellNib = [UINib nibWithNibName:@"someCell" bundle:nil];
 [self.tableView registerNib:cellNib forCellReuseIdentifier:@"SearchResultCell"];
