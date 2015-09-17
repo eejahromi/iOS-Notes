@@ -1,9 +1,9 @@
-ios sdk layers
+ios sdk layers and their framework examples
 
-cocoa touch
-media services
-core services
-core os
+cocoa touch: UIKit, Mapkit, iAd
+media services: AVFoundation, Core Graphics, Core Image, SpriteKit
+core services: Address Book, CFNetworking, Core Data, Core Location
+core os: Core Bluetooth, System, Local Authentication
 
 iOS filesystem
 an iOS app sandbox contains three main containers
