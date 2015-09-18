@@ -6,3 +6,15 @@ model layer -> use CABasicAnimation
 -iOS4+ use animation blocks for view based animation
 -for animating layers we use CABasicAnimation object
 
+CAKeyframeAnimation *bounceAnimation = [CAKeyframeAnimation
+animationWithKeyPath:@"transform.scale"];
+bounceAnimation.duration = 0.4;
+bounceAnimation.delegate = self;
+bounceAnimation.values = @[ @0.7, @1.2, @0.9, @1.0 ];
+bounceAnimation.keyTimes = @[ @0.0, @0.334, @0.666, @1.0 ];
+bounceAnimation.timingFunctions = @[
+[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
+[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
+[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]
+  ];
+[self.view.layer addAnimation:bounceAnimation forKey:@"bounceAnimation"];
