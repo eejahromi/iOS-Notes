@@ -319,6 +319,10 @@ OpenGL ES
 -CoreGraphics (CG) is a c library
 -Quartz 2d is great for drawing
 
+Using the autoresizingMask property you can tell a view what it should do when its superview
+changes in size.
+
+self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
 -UIKit
 adding subviews to the superview in order to show things such as labels, images etc.
