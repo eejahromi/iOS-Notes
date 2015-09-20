@@ -1,3 +1,5 @@
 -Useful debugging techniques and strategies
 
-
+-enabling zombies
+for BAD_ACCESS errors it is useful to enable zombies in the project target to get more info on where the error is happening.
+Project target > Edit scheme > Diagnostics > check enable zombie objects
