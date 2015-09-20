@@ -1,1 +1,9 @@
+A collection of useful tips, tricks and shortcut in XCode
 
+-Open quickly: good for jumping in between files or even searching for method names
+command + shift + o
+
+-Jump to definition: right click on a method name in a .h file to jump to the implementation
+
+-Related items menu
+subclasses and superclasses: useful for file hierarchy and understanding the project
