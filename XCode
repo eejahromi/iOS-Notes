@@ -19,3 +19,6 @@ s - summary
 t - type
 v - value
 
+-watch
+setting up watch for a certain variables to see when it changes
+
