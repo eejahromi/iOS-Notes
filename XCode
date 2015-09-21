@@ -7,6 +7,7 @@ command + shift + o
 
 -Related items menu
 subclasses and superclasses: useful for file hierarchy and understanding the project
+caller and callee for methods
 
 -debugging
 summary format edit: changing summary format of the variables in debugging area
