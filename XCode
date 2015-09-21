@@ -22,3 +22,11 @@ v - value
 -watch
 setting up watch for a certain variables to see when it changes
 
+
+-code commenting keywords
+#pragma mark - 
+//FIXME:
+//TODO:
+//MARK:
+
+
