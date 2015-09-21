@@ -7,3 +7,15 @@ command + shift + o
 
 -Related items menu
 subclasses and superclasses: useful for file hierarchy and understanding the project
+
+-debugging
+summary format edit: changing summary format of the variables in debugging area
+right click on variable > edit summary format > type in a valid message
+i.e {$VAR.textLabel.text};s
+
+options for what to show:
+n - variable name
+s - summary
+t - type
+v - value
+
