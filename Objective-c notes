@@ -337,6 +337,10 @@ more advanced animation
                  completion:^{ label.alpha:0.0; }
 when refering to self in blocks we have to capture a weak reference to self in order to avoid retain cycles.
 
+weak means that when an object no longer has a strong pointer to it, it gets deallocated and all weak pointers become nil.
+with views since we have a hierarchy then they will always have a strong pointer to them, their superView.
+
+
 UIKit vs Core Graphics
 UIKit was built on CG to some points
 UIKit is a little faster in terms of drawing shapes 
