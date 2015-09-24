@@ -18,6 +18,8 @@ self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"
 UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
 target:self action:@selector(cancelButtonPressed:)];
 
+- (UIBarPosition)positionForBar:(id <UIBarPositioning>)bar
+{ return UIBarPositionTopAttached; }
 
 -setting the top edge in code
 UIEdgeInsets contentInset = tableView.contentInset;
