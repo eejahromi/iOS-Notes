@@ -33,3 +33,8 @@ setting up watch for a certain variables to see when it changes
 -version control in command line (can't do in XCode)
 git reset --hard HEAD // revert
 git tag v1.0 // tagging
+
+
+-Instruments
+different templates for different purposes
+option-click on timeline when recording, we can put little markers (bookmark time)
