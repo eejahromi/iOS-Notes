@@ -1,8 +1,28 @@
 -Useful debugging techniques and strategies
 
+Signals
+
+SIGABRT
+abnormal termination
+syntax is correct, but logically incorrect.
+usually means XCode terminated because the app tried to do something it shouldn't.
+
+SIGSEGV (BAD_ACCESS)
+Invalid memory access. Address exists but we don't have access to it.
+SIGBUS (BAD_ACCESS)
+Invalid memory access. Adress doesn't exist or accessor is invalid.
+
 -enabling zombies
 for BAD_ACCESS errors it is useful to enable zombies in the project target to get more info on where the error is happening.
 Project target > Edit scheme > Diagnostics > check enable zombie objects
 
 - “unrecognized selector” error, usually means we forgot to implement a method somewhere
+
+Example for debugging
+-check the signal if there is one given
+-check the exception if there is one (i.e NSInvalidArgException)
+-check the call stack for the methods that were called. (gray ones are system calls, black ones are our calls)
+-check call stack registers if given. using lldb: di -s <register address> to get more info about the call.
+(look for the ones that involve our code)
+
 
