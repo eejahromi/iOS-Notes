@@ -35,6 +35,26 @@ git reset --hard HEAD // revert
 git tag v1.0 // tagging
 
 
+-breakpoints tips
+General breakpoints
+-use the navigator
+CMD + backspace for adding/deleting breakpoints
+-can group or share breakpoints
+
+Logging breakpoints
+Edit breakpoint > conditions/actions/commands
+Executing scripts
+
+Exception breakpoint 
+(when we end up in main.m without useful info)
+exception navigator > add exception point > add action
+actions: 
+po $eax (32 bit simulator) $rax (64 bit) $r0 (device)
+bt (backtrace)
+
+Symbolic breakpoint
+for ignoring cases like skipping iterations of loops and adding more action
+
 -Instruments
 different templates for different purposes
 option-click on timeline when recording, we can put little markers (bookmark time)
