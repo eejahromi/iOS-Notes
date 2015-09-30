@@ -18,3 +18,13 @@ with these UI elements you don't have to set a specific width or height constrai
 
 Constraints are real objects (of class NSLayoutConstraint) and they also have attributes.
 
+-Too many constraints
+when you get the "Unable to simultaneously satisfy constraints." error then that means we have too many constraints.
+Usually the problem is that either the width or height has to be flexible OR fixed.
+or 
+the relationship constraint has to be flexible OR fixed but width/height and relationship constraints cannot both be the same.
+
+-when two views have the same priority for compressing or growing then auto layout can get confused so in that case we have to change the priorities "Content Compression Resistance Priority" and "Content Hugging Priority".
+
+
+
