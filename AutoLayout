@@ -9,5 +9,7 @@ size and position
 Design by intent
 Meaning that you don't necessarily have to describe the position but you can describe the relationship with respect to the other views and corners of the screen and let autolayout figure out the rest.
 
+-we can always modify existing constraints in the attribute inspector or use Resolve Auto Layout Issues
+
 Constraints are real objects (of class NSLayoutConstraint) and they also have attributes.
-we can always modify existing constraints in the attribute inspector.
+
