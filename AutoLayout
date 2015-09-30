@@ -10,6 +10,11 @@ Design by intent
 Meaning that you don't necessarily have to describe the position but you can describe the relationship with respect to the other views and corners of the screen and let autolayout figure out the rest.
 
 -we can always modify existing constraints in the attribute inspector or use Resolve Auto Layout Issues
+-XCode adds auto layout when you don't add it during compile time. But that only happens if you don't set a single constraints on your object. 
+
+-Intrinsic Content Size
+objects like UIButton and UILabel can calculate their own size i.e text or image plus some padding.
+with these UI elements you don't have to set a specific width or height constraint when you want to use their default size.
 
 Constraints are real objects (of class NSLayoutConstraint) and they also have attributes.
 
