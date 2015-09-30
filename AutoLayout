@@ -1,1 +1,10 @@
+Rules of AutoLayout
+size and position
+-height
+-width
+-horizontal constraint
+-vertical constraint
+-relationship constraint
 
+
+Constraints are real objects (of class NSLayoutConstraint) and they also have attributes.
