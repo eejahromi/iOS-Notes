@@ -41,6 +41,23 @@ CustomTableViewCell *cell = (UITableViewCell *)[tableView deqeueReusableCellWith
 for enabling editing in a tableView use the method:
 -(void)tableView:(UITableView *)tableView commitEditingStyle:
 
+-iOS8 editActions for new buttons after cell swipe
+
+-(NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewRowAction *share = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Share" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+            NSString *defaultText = @"Just checking in";
+            UIActivityViewController *activity = [[UIActivityViewController alloc]initWithActivityItems:@[defaultText] applicationActivities:nil];
+            [self presentViewController:activity animated:YES completion:nil];
+    }];
+    share.backgroundColor = [UIColor colorWithRed:28/255.0 green:165/255.0 blue:253/255.0 alpha:1.0];
+    UITableViewRowAction *delete = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Delete" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        [tableViewArray removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }];
+    
+    return @[delete,share];
+}
+
 if you want to cusmtoize a cell you have to create a new file subclassing "CustomTableViewCell" and have the code in there.
 
 MultipleView Projects
