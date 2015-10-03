@@ -6,6 +6,11 @@ size and position
 -vertical constraint
 -relationship constraint
 
+Layout Guides
+-top layout guide sits 20 points away from the top of the view
+  if there is a navigation controller then it sits right below the navigation bar.
+-bottom layout guide changes depending on if there is a tab bar or not.
+
 Design by intent
 Meaning that you don't necessarily have to describe the position but you can describe the relationship with respect to the other views and corners of the screen and let autolayout figure out the rest.
 
