@@ -38,7 +38,7 @@ git tag v1.0 // tagging
 -breakpoints tips
 General breakpoints
 -use the navigator
-CMD + backspace for adding/deleting breakpoints
+CMD + backslash for adding/deleting breakpoints
 -can group or share breakpoints
 
 Logging breakpoints
