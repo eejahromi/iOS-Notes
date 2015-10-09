@@ -35,7 +35,7 @@ git reset --hard HEAD // revert
 git tag v1.0 // tagging
 git stash // put all the changes since last commit in a stack
 git stash drop // forget the last stash (if you stash twice, you have to drop twice)
-
+git mergetool -t opendiff // for merge conflicts
 
 -breakpoints tips
 General breakpoints
