@@ -288,7 +288,16 @@ AVCaptureDevice *device;
 device.setTorchMode = AVCaptureTorchModeOn;
 [device unlockForConfiguration];
 
--custom delegation usign protocols
+-custom delegation using protocols
+
+steps:
+-define protocol in the class providing the delegate methods
+-create a delegate property in the same class
+-use [self.delegate <methodName in protocol>] to pass the necessary info to the class conforming to delegate
+-add <protocolName> to the top of the delegate class
+-set the delegate to self in that same class
+-call the delegate method and use the info passed to the delegate class
+
 // the file that hands the task to the delegate
 @property (weak,nonatomic) id <sendResponseDelegate> delegate;
 
