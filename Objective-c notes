@@ -83,6 +83,10 @@ no string data type, instead
 NSString *message = @"Hello World"; // using a pointer
 NSString is a class and message is an object name, object being "Hello World"
 
+Accessing file and path // json example
+NSString *path = [[NSBundle mainBundle]pathForResource:@"stations" ofType:@"json"];
+NSString *content = [[NSString alloc]initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+
 
 classes and objects
 class is the blueprint for the house
