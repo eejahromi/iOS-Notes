@@ -11,6 +11,11 @@ an iOS app sandbox contains three main containers
 -data container: the real filesystem where data gets stored
 -icloud container: icloud stuff for file sharing
 
+-property attributes
+strong creates an ownership to the object its assigned to.
+weak creates a non-ownership to the object and avoids retain cycles, also sets the pointer to nil when destroyed.
+copy alternative to strong, it creates a copy of the property and takes ownership of that. freezes the object if you're dealing with mutable objects.
+   only applicable to objects conforming to NSCopying protocol.
 
 UIPickerView protocols
 <UIPickerViewDataSource,UIPickerViewDelegate>
