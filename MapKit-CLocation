@@ -78,4 +78,4 @@ MKCoordinateRegion // for setting the region for zooming etc. (a struct)
 MKAnnotationView	// the entire annotationview
 MKPinAnnotationView	// for configuring the pin
 CLGeocoder	// for converting addresses into coordinates or reverse
-CLPlacemark	// stores placemark data for a given latitude and longitude
+CLPlacemark	// stores placemark data (address) for a given latitude and longitude
