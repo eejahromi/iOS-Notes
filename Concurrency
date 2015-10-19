@@ -26,6 +26,13 @@ dispatch_async(dispatch_get_main_queue(),^{ codeBlock });
 Other useful queues:
 dispatch groups: useful for aggregate synchronization. We can add multiple blocks and track for their completion.
 
+-dispatch_after
+double delayInSeconds = 1.0;
+dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW,(int64_t)(delayInSeconds * NSEC_PER_SEC));
+dispatch_after(popTime,dispatch_get_main_queue(),^(void){
+	// run this code on main queue after delay 
+});
+
 dispatch_group_t group = dispatch_group_create();
 dispatch_group_async(group,queue,^{ blockOfCode });
 dispatch_group_notify(group,queue,^{ blockOfCode }); // notify when group tasks are completed
