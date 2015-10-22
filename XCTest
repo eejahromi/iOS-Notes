@@ -9,7 +9,18 @@ unit test methods
 setup: set it up, create and provide tools
 -setup gets called for every test method
 
-teardown: clean up after, setting variables
-to original
+teardown: clean up after, setting variables to original
 -teardown gets called after every test method
+
+if we want these to only run once, we add plus to the beginning of the method and don't call super
+
 test: test itself, based on use case
+
+test methods
+should start with the word test
+should have void for return type
+
+all assertions:
+return void
+generate some kind of failure
+take in...format parameter
