@@ -20,7 +20,18 @@ test methods
 should start with the word test
 should have void for return type
 
-all assertions:
+all assertions(facts):
 return void
 generate some kind of failure
 take in...format parameter
+
+Assertion types:
+
+XCTAssertNil(a1,format);
+XCTAssertNotNil(a1,format);
+//checks for nil values passing in and out of the functions
+
+XCTAssertTrue(expression,format); // ex, XCTAssertTrue(1 + 1 == 2,@"");
+XCTAssertFalse(expression,format);
+// checks for true and false expressions
+
