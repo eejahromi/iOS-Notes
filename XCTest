@@ -1,1 +1,15 @@
+Stack
 
+assertion (rules)
+unit test method
+unit class
+unit test bundle
+
+unit test methods
+setup: set it up, create and provide tools
+-setup gets called for every test method
+
+teardown: clean up after, setting variables
+to original
+-teardown gets called after every test method
+test: test itself, based on use case
