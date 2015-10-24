@@ -35,3 +35,18 @@ XCTAssertTrue(expression,format); // ex, XCTAssertTrue(1 + 1 == 2,@"");
 XCTAssertFalse(expression,format);
 // checks for true and false expressions
 
+XCTAssertEqualObjects(a1,a2,format) // only works with objects (no int,double...)
+XCTAssertEqual(a1,a2,format) // works with scalars,structs and unions (it does also work with object without error!)
+
+XCTAssertEqualWithAccuracy(1.56,1.57,0.2,format) // good for floating point numbers
+
+XCTAssertThrows(a1,format)
+XCTAssertNOThrow(a1,format)
+XCTAssertThrowsSpecific(exception,specific,format) // mostly for custom exception
+
+
+
+
+
+
+
