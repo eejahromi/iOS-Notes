@@ -32,4 +32,5 @@ the relationship constraint has to be flexible OR fixed but width/height and rel
 -when two views have the same priority for compressing or growing then auto layout can get confused so in that case we have to change the priorities "Content Compression Resistance Priority" and "Content Hugging Priority".
 
 
-
+Stackviews
+container for a few subviews that makes it easier to lay them out in a nice pattern vertically or horizontally.
