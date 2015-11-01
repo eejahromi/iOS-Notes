@@ -50,3 +50,6 @@ UINib *cellNib = [UINib nibWithNibName:@"someCell" bundle:nil];
 [self.tableView registerNib:cellNib forCellReuseIdentifier:@"SearchResultCell"];
 
 In the nib, select the Table View. Go to the Attributes inspector and set Keyboard to Dismiss interactively.
+
+IBDesignable
+IBInspectible
