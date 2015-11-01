@@ -51,5 +51,8 @@ UINib *cellNib = [UINib nibWithNibName:@"someCell" bundle:nil];
 
 In the nib, select the Table View. Go to the Attributes inspector and set Keyboard to Dismiss interactively.
 
-IBDesignable
-IBInspectible
+-IBDesignable
+-IBInspectible
+Allow you to have attributes for your custom controls inside interface builder when you write the code inside the custom class.
+
+
