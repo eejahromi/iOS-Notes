@@ -1,3 +1,44 @@
+Concurrent programming
+
+going from bottom to top
+-pthreads
+-NSThreads
+-GCD
+-Operation Queues
+-RunLoops
+
+-pthreads
+-NSThreads
+problem: clunky code, creating your own threads and using higher level apis can result in dozens or hundreds of threads which will take memory and kernel resources.
+
+->Queue based concurrency:
+-GCD
+-Operation Queues
+advantage: they centrally manage a thread pool that everybody uses
+
+thread pool: a pattern where a number of threads are created depending on performing a number of tasks. The threads are organized in a queue so that they can be reused later if needed. the algorithm for making the amount of threads is really important as it deals with requests and memory optimizations.
+
+GCD
+an abstraction on threads which will let the developers work with queues instead.
+we can send blocks to queues and the GCD will decide on which thread will the code run.
+
+Operation Queues
+Are a abstraction of the queue model exposed by GCD.They offer a bunch of features on top of GCD. Two different queues...
+
+-main queue
+-custom queues
+
+We can control how many operations of a certain queue may be executed concurrently.
+We can also sort the operations within a queue by using operation dependencies.
+
+
+Run Loops
+not technically a concurrency mechanism cause they don't enable parallel execution of tasks but good for asynchronous tasks.
+whenever we call performSelector:withObject:afterDelay the run loop is used behind the scenes. It handles UI events, timers and other kernel events.
+run loop runs in different modes, when scrolling on iOS run loop is not running in normal mode so if we want a timer to run during scrolling, we need to add it to the run loop in the NSRunLoopCommonModes mode.
+
+
+GCD in depth...
 C-Library for managing different threads using queues and blocks
 
 ->declaring a new queue
@@ -14,7 +55,7 @@ dispatch_get_global_queue(GLOBAL_QUEUE_PRIORITY,0);
 GLOBAL_QUEUE_PRIORITY_HIGH
 GLOBAL_QUEUE_PRIORITY_DEFAULT
 GLOBAL_QUEUE_PRIORITY_LOW
-GLOBAL_QUEUE_PRIORITY_BACKGROUND // lowest priority
+GLOBAL_QUEUE_PRIORITY_BACKGROUND // lowest priority, priority inversion warning!
 
 adding tasks to a background queue
 dispatch_async(queueName,^{ codeBlock });
