@@ -25,4 +25,6 @@ Example for debugging
 -check call stack registers if given. using lldb: di -s <register address> to get more info about the call.
 (look for the ones that involve our code)
 
-
+LLDB
+(lldb)di -s <register address>
+(lldb) thread list // tells you which thread is this code run on, great for when dealing with threads
