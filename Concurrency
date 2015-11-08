@@ -48,6 +48,11 @@ dispatch_queue_t queue;
 1.serial: makes sure that the tasks are happening in order and coming back in order
 dispatch_queue_create("reverseDNSstringByConvention",DISPATCH_QUEUE_SERIAL); // or NULL instead of second parameter
 
+dispatch once
+-singletons don't go well with testing
+-always create it as static or has global scope and don't create it as a member variable in
+an object.
+
 2.concurrent: tasks are happening simultaneously and coming back as soon as finishing
 dispatch_get_global_queue(GLOBAL_QUEUE_PRIORITY,0);
 
@@ -68,6 +73,9 @@ Other useful queues:
 dispatch groups: useful for aggregate synchronization. We can add multiple blocks and track for their completion.
 
 -dispatch_after
+lets you do work a little bit later
+don't substitute this for a normal use when you can put code into viewDidAppear and such
+
 double delayInSeconds = 1.0;
 dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW,(int64_t)(delayInSeconds * NSEC_PER_SEC));
 dispatch_after(popTime,dispatch_get_main_queue(),^(void){
