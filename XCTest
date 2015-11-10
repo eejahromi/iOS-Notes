@@ -44,7 +44,12 @@ XCTAssertThrows(a1,format)
 XCTAssertNOThrow(a1,format)
 XCTAssertThrowsSpecific(exception,specific,format) // mostly for custom exception
 
-
+Stubs:
+In testing typically we can test one thing.
+stubs are a way for us to use pre-defined answers for a part of our program which we need to pass in order to test another part of the progrm.
+example, if we have a game and a method which moves an object one square up
+also in that method we have a call to another method that checks the network connection
+we want to provide a canned response for that connection method in order to test our moveUp method so we use a stub.
 
 
 
