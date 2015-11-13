@@ -20,6 +20,8 @@ test methods
 should start with the word test
 should have void for return type
 
+new in XCode 6+ is testing asynchronously and performance testing.
+
 all assertions(facts):
 return void
 generate some kind of failure
@@ -52,6 +54,9 @@ also in that method we have a call to another method that checks the network con
 we want to provide a canned response for that connection method in order to test our moveUp method so we use a stub.
 
 
+Mocks:
+Mocks care about behaviors in testing. 
 
+Senario, if we have the same moveUp method as the Stubs and that method has 5 children methods and we comment one of those out, the the test will fail where as in stubs the method would pass.
 
 
