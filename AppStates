@@ -1,0 +1,26 @@
+startup
+UIApplicationMain calls appDelegate which handles the state transitions
+app delegate is declared as a subclass of UIResponder
+
+UIApplicationMan creates a main thread and calls the main function and hands it over to UIKit framework
+
+app states
+before running: not running
+after lunch: briefly in inactive on its way to active or background
+
+suspended:
+app is in memory but not executing code
+
+background:
+app not in foreground but is still executing code.
+
+app on it's way to being suspended:
+briefly in background
+
+active state:
+in foreground and receiving events
+
+inactive state:
+when user locks screen or incoming message,phone call
+in foreground but not receiving events
+or briefly inactive as it transitions into different state
