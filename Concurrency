@@ -118,3 +118,10 @@ The solution is to declare a weak variable using the keyword __weak
 __weak SomeClass *weakSelf = self;
 
 
+Atomicity
+Race Condition: the fact that every thread can access the same memory may cause what is known as a race condition.
+lock for instance variable
+@synchronized (self) {
+    myClass.object = value;
+}
+
