@@ -20,3 +20,14 @@ NSURL *documentsURL = [[fileManager URLsForDirectory:NSDocumentDirectory inDomai
 // looking into a directory
 NSArray *directoryContents = [fileManager contentsOfDirectoryAtURL:[NSURL URLWithString:homeDirectory] includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsHiddenFiles error:nil];
 
+// useful methods and properties for files and URLs
+NSURL *someURL;
+NSString *urlToString = [someURL absoluteString];
+
+NSString *filePath;
+NSURL *fileURLFromString = [NSURL fileURLWithPath:filePath];
+
+NSURL *libraryURL = ...
+NSURL *cachesPath = [libraryURL URLByAppendingPathComponent:@"Caches"];
+
+
