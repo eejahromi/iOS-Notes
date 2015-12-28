@@ -1,11 +1,12 @@
 iOS File System
 
-Data Container:
--Documents
--Library
+Data Container: // NSHomeDirectory() 
+-Documents: CoreData stuff, user data that needs to be saved
+-Library: Caches and Preferences
 -Tmp
 
-// Accessing file URLs in app bundle:
+-Bundle
+// in the same file as the project source code
 NSURL *videoURL = [[NSBundle mainBundle] URLForResource:@"sample" withExtension:@"mov"];
 
 -Directories:
@@ -16,4 +17,6 @@ NSString *homeDirectory = NSHomeDirectory(); // also NSTempDirectory()
 NSFileManager *fileManager = [NSFileManager defaultManager];
 NSURL *documentsURL = [[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 
+// looking into a directory
+NSArray *directoryContents = [fileManager contentsOfDirectoryAtURL:[NSURL URLWithString:homeDirectory] includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsHiddenFiles error:nil];
 
