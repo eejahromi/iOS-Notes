@@ -1,8 +1,19 @@
 iOS File System
 
 Data Container:
--Document
+-Documents
 -Library
--Temp
+-Tmp
+
+// Accessing file URLs in app bundle:
+NSURL *videoURL = [[NSBundle mainBundle] URLForResource:@"sample" withExtension:@"mov"];
+
+-Directories:
+NSString *homeDirectory = NSHomeDirectory(); // also NSTempDirectory()
+
+-File Manager:
+// Documents directory URL using fileManager
+NSFileManager *fileManager = [NSFileManager defaultManager];
+NSURL *documentsURL = [[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 
 
