@@ -46,4 +46,11 @@ NSArray *allCategories = [context executefetchRequest:request error:&error];
 
 if(!allCategories){NSLOG(@"Error %@",[error localizedDescription]);}
 
+-Under the hood
+finding the sqlite file in the filesystem:
+$ find ~ -name 'AppName.sqlite'
 
+viewing the DB in SQLite
+$ sqlite3 AppName.sqlite
+$ sqlite .schema
+$ select * from <tableName>
