@@ -21,7 +21,7 @@ We use the managedObjectContext along with entityDescription,sortDescriptors and
 NSManagedObjectContext *context = [dataStore context];
 NSEntityDescription *entity = [NSEntityDescription entityForname:@"ItemCategory" inManagedObjectContext:context];
 
-//simple write using KVO
+//simple write using KVC
 //using entityDescription class method to create a managedObject to be used for insertion
 NSManagedObject *category1 = [NSEntityDescription insertNewObjectForEntityName:@"ItemCategory" inmanagedObjectContext:context];
 [category1 setValue:@"Electronics" forKey:@"categoryName"];
@@ -29,6 +29,10 @@ NSManagedObject *category1 = [NSEntityDescription insertNewObjectForEntityName:@
 
 //using another entityDescription method to retreive category name
 NSString *newCategoryName = [category1 valueForKey:@"categoryName"];
+
+//using subclasses
+Item *itemOne = [NSEntityDescription insertNewObjectForEntityName:@"ItemCategory" inManagedObjectContext:context];
+itemOne.itemCategory = @"Everyday Use";
 
 
 Reading Data
