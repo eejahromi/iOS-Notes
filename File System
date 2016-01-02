@@ -30,6 +30,10 @@ NSURL *fileURLFromString = [NSURL fileURLWithPath:filePath];
 NSURL *libraryURL = ...
 NSURL *cachesPath = [libraryURL URLByAppendingPathComponent:@"Caches"];
 
+NSArray *pathComponents = @[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+                          ,fileWithExtension];
+NSURL *fileURL = [NSURL fileURLWithPathComponents:pathComponents];
+
 [fileManager moveItemAtPath:filePath toPath:newFilePath error:&error];
 [fileManager copyItemAtPath:filePath toPath:newFilePath error:&error];
 [fileManager removeItemAtPath:filePath error:&error];
