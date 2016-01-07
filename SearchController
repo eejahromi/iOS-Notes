@@ -18,4 +18,19 @@ in viewDidLoad:
     NSArray *searchResults;
 }
 
+inside task block
 
+stationNames = [[self.stationBeanList objectAtIndex:i] objectForKey:@"stationName"]; // For search results
+
+
+-(void)filterContentForText:(NSString *)searchText{
+    NSPredicate *resultsPredicate = [NSPredicate predicateWithFormat:@"stationName contains[c]%@",searchText];
+
+    
+    searchResults = [self.information filteredArrayUsingPredicate:resultsPredicate];
+}
+
+-(void)updateSearchResultsForSearchController:(UISearchController *)searchControllerr{
+    [self filterContentForText:searchControllerr.searchBar.text];
+    [self.tableView reloadData];
+}
