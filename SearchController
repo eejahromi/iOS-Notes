@@ -1,0 +1,21 @@
+use <UISearchResultsUpdating>
+
+// UISearchController in code
+in viewDidLoad:
+
+    searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
+    
+    [searchController.searchBar sizeToFit];
+    self.tableView.tableHeaderView = searchController.searchBar;
+    searchController.searchResultsUpdater = self;
+    searchController.dimsBackgroundDuringPresentation = NO;
+    self.definesPresentationContext = YES;
+
+
+@implementation StationsListViewController{
+    UISearchController *searchController;
+    NSMutableArray *stationNames;
+    NSArray *searchResults;
+}
+
+
