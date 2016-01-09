@@ -54,3 +54,12 @@ viewing the DB in SQLite
 $ sqlite3 AppName.sqlite
 $ sqlite .schema
 $ select * from <tableName>
+
+-Delete and rebuild the entire persistent store
+NSPersistentStore * store = [[self.persistentStoreCoordinator persistentStores] lastObject];
+NSError * error;
+[self.persistentStoreCoordinator removePersistentStore:store error:&error];
+[[NSFileManager defaultManager] removeItemAtURL:[store URL] error:&error];
+_managedObjectContext = nil;
+_persistentStoreCoordinator = nil;
+[self managedObjectContext]; // Rebuild The CoreData Stack by calling managedObjectContext
