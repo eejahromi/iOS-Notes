@@ -49,6 +49,8 @@ if(!allCategories){NSLOG(@"Error %@",[error localizedDescription]);}
 -Under the hood
 finding the sqlite file in the filesystem:
 $ find ~ -name 'AppName.sqlite'
+OR -using persistentStoreCoordinator
+NSLog(@"%@",[[[self.persistentStoreCoordinator persistentStores]lastObject]URL]);
 
 viewing the DB in SQLite
 $ sqlite3 AppName.sqlite
