@@ -10,3 +10,34 @@ yyyyy.MMMM.dd GGG hh:mm aaa 	  , 02014.January.10 AD 09:05 PM
 dateFormatter.doesRelativeDateFormatting = YES;
 NSLog( @"date: %@" , [formatter stringFromDate: [NSDate date]] );
 
+-singletons
+
+//static instance
+- (void)formatter:(NSDate *)date
+{
+    static NSDateFormatter *dateFormatter = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+		dateFormatter = [[NSDateFormatter alloc] init];
+		dateFormatter.dateFormat = @"EEE, dd MMM yyyy HH:mm:ss Z";
+    });
+
+    NSString *string = [dateFormatter stringFromDate: date];
+
+    
+}
+
+// singleton method
++ (NSDateFormatter *)formatter
+{
+    static NSDateFormatter *dateFormatter = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateStyle = NSDateFormatterFullStyle;
+        dateFormatter.timeStyle = NSDateFormatterFullStyle;
+    });
+
+    return dateFormatter;
+}
+
