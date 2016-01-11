@@ -438,3 +438,10 @@ if you override methods of the class, application may behave unpredictably
 
 Method swizzling
 Method swizzling is the act of swapping the implementations of two selectors as a program runs.
+
+-NSDateFormatter
+NSDateFormatterShortStyle 	1/10/14 		, 9:05 PM
+NSDateFormatterMediumStyle	Jan 10, 2014		, 9:05:41 PM
+NSDateFormatterLongStyle	January 10, 2014	, 9:05:41 PM GMT+8
+NSDateFormatterFullStyle	Friday, January 10, 2014, 9:05:41 PM Philippine Standard Time
+
