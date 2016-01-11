@@ -1,3 +1,10 @@
+-NSDateFormatter Styles
+NSDateFormatterShortStyle 	1/10/14 		, 9:05 PM
+NSDateFormatterMediumStyle	Jan 10, 2014		, 9:05:41 PM
+NSDateFormatterLongStyle	January 10, 2014	, 9:05:41 PM GMT+8
+NSDateFormatterFullStyle	Friday, January 10, 2014, 9:05:41 PM Philippine Standard Time
+
+
 -patterns
 yyyy.MM.dd G 'at' HH:mm:ss zzz 	, 2014.01.10 AD at 09:05:41 GMT+8
 EEE, MMM d, ''yy 	              ,  Sat, Jan 10, ’14
