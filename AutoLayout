@@ -34,3 +34,10 @@ the relationship constraint has to be flexible OR fixed but width/height and rel
 
 Stackviews
 container for a few subviews that makes it easier to lay them out in a nice pattern vertically or horizontally.
+
+// Monospacing fonts to prevent labels bouncing as a result intrinsic size
+NSArray *monospacedSetting = @[@{UIFontFeatureTypeIdentifierKey: @(kNumberSpacingType),
+                                     UIFontFeatureSelectorIdentifierKey: @(kMonospacedNumbersSelector)}];
+    
+    UIFontDescriptor *newDescriptor = [[self.durationLabel.font fontDescriptor] fontDescriptorByAddingAttributes:@{UIFontDescriptorFeatureSettingsAttribute: monospacedSetting}];
+    self.countLabel.font = [UIFont fontWithDescriptor:newDescriptor size:0];
