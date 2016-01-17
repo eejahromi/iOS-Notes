@@ -48,3 +48,26 @@ NSLog( @"date: %@" , [formatter stringFromDate: [NSDate date]] );
     return dateFormatter;
 }
 
+// Time formatter
++ (NSString *)timeFormatter:(NSTimeInterval)time {
+    
+    NSString *formattedTime;
+    int tHours = (time / 3600);
+    int tMins = ((time / 60) - tHours*60);
+    int tSecs = (time) - (tMins*60) - (tHours*3600);
+    
+    if (time > 3600) {
+        // longer than an hour
+        formattedTime = [NSString stringWithFormat:@"%i:%02d:%02d", tHours, tMins, tSecs ];
+    } else if (time < 3600 && time > 60) {
+        // between a minute and an hour
+        formattedTime = [NSString stringWithFormat:@"%02d:%02d", tMins, tSecs ];
+    } else {
+        // under a minute
+        formattedTime = [NSString stringWithFormat:@"0:%02d", tSecs ];
+    }
+    
+    return formattedTime;
+    
+}
+
