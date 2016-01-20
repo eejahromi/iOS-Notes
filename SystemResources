@@ -1,0 +1,7 @@
+// speaker
+NSError *error;
+AVAudioSession *audioSession = [AVAudioSession sharedSession];
+[audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
+
+[audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:&error]; // speaker off
+[audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&error]; // speaker on
