@@ -34,6 +34,7 @@ NSArray *pathComponents = @[[NSSearchPathForDirectoriesInDomains(NSDocumentDirec
                           ,fileWithExtension];
 NSURL *fileURL = [NSURL fileURLWithPathComponents:pathComponents];
 
+[filemanager fileExistsAtPath:filePath];
 [fileManager moveItemAtPath:filePath toPath:newFilePath error:&error];
 [fileManager copyItemAtPath:filePath toPath:newFilePath error:&error];
 [fileManager removeItemAtPath:filePath error:&error];
