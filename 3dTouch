@@ -1,3 +1,10 @@
+
+//checking for 3dTouch availability
+
+UITraitEnvironment protocol
+if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
+}
+
 -static shortcut
 // in info.plist
 UIApplicationShortcutItems Array
@@ -14,7 +21,7 @@ UIApplicationShortcutItem *shortcut = [[UIapplicationShortcutItem alloc]initWith
 
 -dynamic shortcut
 // adding/removing shortcuts
-
+use [UIApplication sharedApplication].shortcutItems to manipulate the shortcutItems array
 
 
 Peek and Pop
