@@ -1,5 +1,11 @@
-static shortcut
-
+-static shortcut
+// in info.plist
+UIApplicationShortcutItems Array
+UIApplicationShortcutItemSubtitle
+UIApplicationShortcutItemType // unique identifier
+UIApplicationShortcutItemTitle
+UIApplicationShortcutItemIconType // pre-existing icons
+UIApplicationShortcutItemFile // custom icon
 
 dynamic shortcut
 
