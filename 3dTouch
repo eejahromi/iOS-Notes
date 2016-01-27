@@ -7,7 +7,13 @@ UIApplicationShortcutItemTitle
 UIApplicationShortcutItemIconType // pre-existing icons
 UIApplicationShortcutItemFile // custom icon
 
-dynamic shortcut
+// in code
+UIApplicationShortcutItem *shortcut = [[UIapplicationShortcutItem alloc]initWithType:localizedType:localizedSubtitle:icon:userInfo:];
+[UIApplicationShortcutIcon iconWithTemplateImageName:]; // for adding icon
+[UIApplication sharedApplication].shortcutItems = @[shortcut];
+
+-dynamic shortcut
+// adding/removing shortcuts
 
 
 
