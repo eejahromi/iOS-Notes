@@ -37,6 +37,7 @@ git stash // put all the changes since last commit in a stack
 git stash drop // forget the last stash (if you stash twice, you have to drop twice)
 git mergetool -t opendiff // for merge conflicts
 git commit --amend // edit the most recent commit message
+git diff --stat `git hash-object -t tree /dev/null` | tail -1 // for counting lines of code for project
 
 -breakpoints tips
 General breakpoints
