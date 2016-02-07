@@ -5,3 +5,11 @@ AVAudioSession *audioSession = [AVAudioSession sharedSession];
 
 [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:&error]; // speaker off
 [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&error]; // speaker on
+
+
+// torch
+AVCaptureDevice *device;
+
+[device lockForConfiguration:nil];
+device.setTorchMode = AVCaptureTorchModeOn;
+[device unlockForConfiguration];
