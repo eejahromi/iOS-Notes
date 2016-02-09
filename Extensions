@@ -1,2 +1,10 @@
 -Today Extension
 //only for doing simple tasks and presenting simple things
+
+TE will add a new target to the project
+
+// controlling when to show (and not show) the Today extension
+NCWidgetController *widget = [NCWidgetController widgetController];
+[widget setHasContent:YES forWidgetWithBundleIdentifier:@"com.ehsanJahromi.appName.extensionName"];
+
+
