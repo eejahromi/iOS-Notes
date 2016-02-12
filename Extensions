@@ -7,6 +7,15 @@ Finder Sync
 Document Provider
 Custom keyboard
 
+Extension communication:
+Containing app - the app with the extension (provider)
+Host app       - the app in which you may use the extension in
+App Extension
+
+There is no direct connection between the containing app and the app extension.
+The host app sends a request to the app extension
+The app extension will send a response to the request by host app
+
 -Today Extension
 //only for doing simple tasks and presenting simple things
 
