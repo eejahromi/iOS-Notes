@@ -15,6 +15,7 @@ teardown: clean up after, setting variables to original
 if we want these to only run once, we add plus to the beginning of the method and don't call super
 
 test: test itself, based on use case
+IMPORTANT: test methods should not depend on each other, so order of them running should not matter
 
 test methods
 should start with the word test
