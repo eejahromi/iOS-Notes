@@ -30,4 +30,7 @@ TE will add a new target to the project
 NCWidgetController *widget = [NCWidgetController widgetController];
 [widget setHasContent:YES forWidgetWithBundleIdentifier:@"com.ehsanJahromi.appName.extensionName"];
 
+// using userDefaults to communicate between app and extension
+defaults = [[NSUserDefaults alloc]initWithSuiteName:@"group.com.ehsanJahromi.today"];
+
 
