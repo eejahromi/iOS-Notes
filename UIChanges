@@ -55,6 +55,11 @@ In the nib, select the Table View. Go to the Attributes inspector and set Keyboa
 -IBInspectible
 Allow you to have attributes for your custom controls inside interface builder when you write the code inside the custom class.
 
+-storyboard textField
+did End on Exit drag to a dismiss function
+auto-enable return key box check for no text key disabling
+
+
 -Attributed Strings
 UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:30.0f];
 
