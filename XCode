@@ -33,6 +33,8 @@ setting up watch for a certain variables to see when it changes
 -version control in command line (can't do in XCode)
 git reset --hard HEAD // revert
 git pull --rebase // pulling while having local commits that haven't been pushed yet
+git rebase master // updating a feature branch to the master branch or any other branch
+
 --NOTE: (ideally this shouldn't happen because local changes should happen in a separete branch)
 git tag v1.0 // tagging
 git stash // put all the changes since last commit in a stack
