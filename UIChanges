@@ -6,6 +6,9 @@ navBarAppearance.barTintColor = [UIColor orangeColor];
 navBarAppearance.titleTextAttributes = @{NSForgroundColorAttributeName:[UIColor whiteColor]}; // nav bar title color
 [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent]; // changing status bar color
 
+// if a viewController is embedded inside a navigationController then status bar style light content should be changed this way:
+self.navigationController.navigationBar.barStyle = UIStatusBarLightContent;
+
 -Nav controller
 Handy code for displaying nothing but the back arrow for navigation controller
 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
