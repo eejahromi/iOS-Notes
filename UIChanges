@@ -31,6 +31,8 @@ contentInset.top = 20; // 20 points from the top
 UIColor *tintColor = [UIColor colorWithWhite:0.11 alpha:0.36];
     UIImage *blurredBackground = [UIImageEffects imageByApplyingBlurToImage:[UIImage imageNamed:@"tree.jpg"] withRadius:12 tintColor:tintColor saturationDeltaFactor:1.2 maskImage:nil];
     self.backgroundImage.image = blurredBackground;
+-The higher the radius, the more blury the image.
+-The lower the saturation, the darker and more dull the image.
 
 -tableview refreshControl
 self.refreshControl = [[UIRefreshControl alloc]init];
