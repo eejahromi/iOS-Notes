@@ -62,6 +62,9 @@ bt (backtrace)
 
 Symbolic breakpoint
 for ignoring cases like skipping iterations of loops and adding more action
+also for stopping in a specific place in multiple files.
+Example,
+we can set a symbolic break point in every viewDidLoad: in every ViewController to find associated files with ViewControllers inside our running app
 
 -Instruments
 different templates for different purposes
