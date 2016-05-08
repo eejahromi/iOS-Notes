@@ -69,3 +69,7 @@ we can set a symbolic break point in every viewDidLoad: in every ViewController 
 -Instruments
 different templates for different purposes
 option-click on timeline when recording, we can put little markers (bookmark time)
+
+-Swift
+XCode can generate header files in swift so we can have a quick look at our method signatures to understand it better
+Navigate -> Jump to Generate Interface
