@@ -6,3 +6,12 @@ Only called once so put things that you want to load only once.
 -viewWillAppear: good for geometry stuff but not for stuff you only want to load once because viewWillAppear could be called more than once.
 
 -viewWillDisappear: free up stuff and stop things like animations.
+
+Layouts
+-viewWillLayoutSubviews: for telling to redraw the subviews
+-layoutSubviews: for a UIView
+
+Orientation Change (Landscape)
+if(UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
+    // do stuff that applies to being in landscape
+}
