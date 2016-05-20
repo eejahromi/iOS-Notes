@@ -14,3 +14,12 @@ CFBundleDisplayName
 			</array>
 		</dict>
 	</array>
+
+// App Transport Secuty
+
+// allowing arbitrary loads
+<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
