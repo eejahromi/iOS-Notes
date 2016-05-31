@@ -14,7 +14,7 @@ in viewDidLoad:
 
 @implementation StationsListViewController{
     UISearchController *searchController;
-    NSMutableArray *stationNames;
+    NSMutableArray *stations;
     NSArray *searchResults;
 }
 
@@ -22,12 +22,18 @@ inside task block
 
 stationNames = [[self.stationBeanList objectAtIndex:i] objectForKey:@"stationName"]; // For search results
 
+- (NSInteger)numberOfRowsInSection {
+    if(searchController.active) {
+        return searchResults.count;
+    } else {
+        return stationNames.count;
+    }
+}
 
 -(void)filterContentForText:(NSString *)searchText{
+    // stationName is a property of the object we have in our array
     NSPredicate *resultsPredicate = [NSPredicate predicateWithFormat:@"stationName contains[c]%@",searchText];
-
-    
-    searchResults = [self.information filteredArrayUsingPredicate:resultsPredicate];
+    searchResults = [stations filteredArrayUsingPredicate:resultsPredicate];
 }
 
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchControllerr{
