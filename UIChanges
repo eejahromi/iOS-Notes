@@ -64,6 +64,14 @@ Allow you to have attributes for your custom controls inside interface builder w
 did End on Exit drag to a dismiss function
 auto-enable return key box check for no text key disabling
 
+-iPad popover for UIAlertController (Actionsheet or defaultAlert)
+//checking for iPad UI
+if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+    // In this case the device is an iPad.
+    controller.popoverPresentationController.barButtonItem = self.mapTypeButton; // for the button (i.e barButton reference)
+    controller.popoverPresentationController.sourceView = self.view; 
+ }
+
 
 -Attributed Strings
 UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:30.0f];
