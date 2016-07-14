@@ -13,6 +13,8 @@ hh 'o''clock' a, zzzz 	        , 09 o’clock PM, Philippine Standard Time
 K:mm a, z 	                    , 9:05 PM, GMT+8
 yyyyy.MMMM.dd GGG hh:mm aaa 	  , 02014.January.10 AD 09:05 PM
 
+NOTE: spaces are denoted with ' '
+
 -relative formatting
 dateFormatter.doesRelativeDateFormatting = YES;
 NSLog( @"date: %@" , [formatter stringFromDate: [NSDate date]] );
