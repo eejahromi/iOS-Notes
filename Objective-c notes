@@ -454,3 +454,15 @@ if #available(iOS 10.0, *) {
     // Fallback on earlier versions
 }
 
+nil vs NULL vs NSNull 
+nil is a void */id
+NULL is a c pointer null
+NSNull is a class pointer
+
+// NSNull example
+NSArray *array = @[@1,@2,@3,[NSNull null]]; // NSNull should be used instead of nil
+
+
+
+
+
