@@ -1,1 +1,36 @@
 
+-Basics and memory management
+
+retain/strong
+takes ownership of the object and increments retain count by 1
+
+the object will not be destroyed as long as you or any other object points to it with a strong reference.
+
+weak
+takes non-ownership relationship between property and the assigned value. used to prevent retain cycle.
+
+weak signifies that we don't want to have control over object's lifetime. the object only lives because at least one other object holds a strong reference to it. once that is no longer the case, object gets destroyed and the weak property will get set to nil.
+
+copy
+alternative to strong but it creates a copy of the object and takes ownership of that
+it also freezes the object. Good for things like strings
+can only be used by objects that conform to NSCopying protocol
+
+assign
+for scalars, specifies that setter uses simple assignment.
+doesn't perform any memory management call when assigning a new value to property.
+doesn't increment retain count
+
+atomicity
+when we have more than one thread, it's possible for the setter and getter to be called 
+at the same time so that means getter/setter can be interrupted by another operation.
+
+atomic
+atomic properties lock the underlying object to prevent setter/getter to be called at the same time. but using atomic doesn't necessarily mean that code is thread safe.
+atomic has a little overhead
+
+nonatomic
+little more efficient. but doesn't guaranty the integrity of accessors in a multi-threaded environment.
+
+synthesize
+@synthesize running = _running;
