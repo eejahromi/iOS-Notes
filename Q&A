@@ -124,8 +124,18 @@ A controller object acts as a coordinator or as an intermediary between one or m
 
 singleton
 The Singleton design pattern ensures a class only has one instance, and provides a global point of access to it. The class keeps track of its sole instance and ensures that no other instance can be created. Singleton classes are appropriate for situations where it makes sense for a single object to provide access to a global resource.
-
 NSFileManager, NSWorkspace, NSApplication, and, in UIKit, UIApplication. A process is limited to one instance of these classes. When a client asks the class for an instance, it gets a shared instance, which is lazily created upon the first request.
+
+// singleton example
++ (instanceType)sharedInstance {
+	static MyManager *sharedManager = nil;
+	dispatch_once_t onceToken;
+	
+	dispatch_once(&onceToken,^{
+		sharedManager = [[self alloc]init];
+	});
+	return sharedManager;
+}
 
 category vs subclass
 you can't add instance variables to the class
