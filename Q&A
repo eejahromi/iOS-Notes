@@ -97,3 +97,96 @@ inactive state:
 when user locks screen or incoming message,phone call
 in foreground but not receiving events
 or briefly inactive as it transitions into different state
+
+- Abstract concepts and higher level Qs
+
+App bundle:
+xcode packages the project as a bundle, a directory in the filesystem that groups related resources together in one place. bundle contains app executable file and supporting resource file such as app icon, image files and localized content.
+
+code sign:
+signing an application allows the system to identify the pp and verify that the app hasn't been modified since the last time it was signed.
+
+NSCoder:
+abstract class, which represents a stream of data. used in archiving and unarchiving objects. 
+
+sandbox:
+for security reasons each app is installed in a sandbox. it limits app access to files, preferences, network resources, hardware... 
+sandbox contains
+bundle container
+data container
+iCloud container
+
+NSOperationQueue concurrent vs non-concurrent
+In the context of an NSOperation object, which runs in an NSOperationQueue, the terms concurrent and non-concurrent do not necessarily refer to the side-by-side execution of threads. Instead, a non-concurrent operation is one that executes using the environment that is provided for it while a concurrent operation is responsible for setting up its own execution environment.
+
+controller object
+A controller object acts as a coordinator or as an intermediary between one or more view objects and one or more model objects.
+
+singleton
+The Singleton design pattern ensures a class only has one instance, and provides a global point of access to it. The class keeps track of its sole instance and ensures that no other instance can be created. Singleton classes are appropriate for situations where it makes sense for a single object to provide access to a global resource.
+
+NSFileManager, NSWorkspace, NSApplication, and, in UIKit, UIApplication. A process is limited to one instance of these classes. When a client asks the class for an instance, it gets a shared instance, which is lazily created upon the first request.
+
+category vs subclass
+you can't add instance variables to the class
+if you override methods of the class, application may behave unpredictably
+
+notification
+one-to-many broadcast of message based on the observer pattern
+different from delegation which is one to one and observing objects cannot directly affect an impending operation
+
+posing
+allows a class to entirely replace another class within an application. the replacing class "poses as" te target class.
+a class may only pose as one of its direct or indirect subclasses
+kind of similar to categories but posing also can:
+posing class can call overriden methods through super, thus incorporating the implementation of the target class
+posing class can override methods defined in categories
+
+run loop in iOS
+event processing loop that you use to schedule work and coordinate the receipt of incoming events. the purpose of a run loop is to keep your thread busy when there is work to do and put your thread to sleep when there is none.
+each thread including app's main thread has an associated run loop object. only secondary threads need to run their run loop explicitly.
+
+dynamic typing
+when type is not checked at compile time. objc uses id data type.
+
+Method swizzling
+Method swizzling is the act of swapping the implementations of two selectors as a program runs.
+
+NSOperation (cont.)
+Quality of Service is a new concept in iOS 8 & OS X Yosemite that creates consistent, high-level semantics for scheduling system resources.
+
+UITouch
+object that represents location, force , movement and size of a finger on the screen for an event.
+hit test 
+when a view is touched ios will go down the view hierarchy to find a view that was touched using hit test
+responder chain
+after a touch is recognized ios goes up the responder chain all the way til window and UIApplication to find who's responsible for responding to the touch
+
+find location of touch
+touchesBegan
+UITouch *touch = [touches anyObject];
+CGPoint touchPoint = [touch locationInView:self.view];
+if(CGRectContainsPoint(self.mainPanel.frame,touchPoint) && touch.tapCount == 2)
+	self.mainPanel do something
+ 
+
+instruments
+performance, analysis and testing tool suite for profiling OSX and iOS apps.
+collects info about your app over a designated period of time
+info collected is based on predetermined templates
+Examples of instruments: Allocation, Core Data, Zombies, UI test, performance
+
+Core Data 
+CD has been optimized to use as little memory as possible. 
+if we ask CD for a 100 customers, CD allocates 100 spaces in an array but won't actually fetch until user asks for it.
+
+zombie object
+when the retain count hits 0 but object remains in memory you have a zombie.
+
+OS/Threads
+Race Condition: the fact that every thread can access the same memory may cause what is known as a race condition.
+lock for instance variable
+@synchronized (self) {
+    myClass.object = value;
+}
+
