@@ -34,3 +34,66 @@ little more efficient. but doesn't guaranty the integrity of accessors in a mult
 
 synthesize
 @synthesize running = _running;
+
+- Application level and little details
+
+protocol
+declaring methods that can be used by other classes. providing a way for classes to share methods without inheriting from other classes. usually used for custom delegation.
+
+UIApplication
+facilitates the interaction between the system and other objects in app
+controller object UIApplication manages the application event loop
+
+UIApplication: UIResponder
+
+dynamic
+@dynamic tells the compiler not to generate a warning if it can't find implementations of accessor methods associated with the property.
+tells the compiler that you will fulfill the API contract implied by a property either by providing method implementations directly or at runtime using other mechanisms such as dynamic loading of code or dynamic method resolution.
+
+delegate
+an object that will respond to pre-chosen selectors at some point in the future
+
+category
+allows you to add methods to existing classes without subclassing them. even when you don't have the implementations.
+
+-Distribute the implementation of your own classes into separate source files—for example, you could group the methods of a large class into several categories and put each category in a different file.
+-Declare private methods.
+
+blocks
+language feature, pieces of code you can pass around to methods as if they are values. blocks are objc objects. they can capture values from enclosing scope.
+
+NSOperation/NSOperationqueue
+an operation object is a single-shot object. you execute operations by adding them to an operation queue.
+
+Layer objects
+layer objects are used by views to render their contents. can use them for complex animations. they don't respond to touch. 
+
+UIWindow
+coordinates presentation of one or more views
+
+startup
+UIApplicationMain calls appDelegate which handles the state transitions
+app delegate is declared as a subclass of UIResponder
+
+UIApplicationMan creates a main thread and calls the main function and hands it over to UIKit framework
+
+app states
+before running: not running
+after lunch: briefly in inactive on its way to active or background
+
+suspended:
+app is in memory but not executing code
+
+background:
+app not in foreground but is still executing code.
+
+app on it's way to being suspended:
+briefly in background
+
+active state:
+in foreground and receiving events
+
+inactive state:
+when user locks screen or incoming message,phone call
+in foreground but not receiving events
+or briefly inactive as it transitions into different state
