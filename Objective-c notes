@@ -440,6 +440,15 @@ NSNull is a class pointer
 // NSNull example
 NSArray *array = @[@1,@2,@3,[NSNull null]]; // NSNull should be used instead of nil
 
+// Custom subscripting
+// To add array style subscripting:
+- (void)setObject:(id)obj atIndexedSubscript:(NSUInteger)idx; // setter
+- (id)objectAtIndexedSubscript:(NSUInteger)idx;               // getter
+
+// To add dictionary style subscripting
+- (void)setObject:(id)obj forKeyedSubscript:(id <NSCopying>)key; // setter
+- (id)objectForKeyedSubscript:(id)key;                           // getter
+
 
 
 
