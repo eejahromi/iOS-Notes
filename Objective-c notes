@@ -449,7 +449,20 @@ NSArray *array = @[@1,@2,@3,[NSNull null]]; // NSNull should be used instead of 
 - (void)setObject:(id)obj forKeyedSubscript:(id <NSCopying>)key; // setter
 - (id)objectForKeyedSubscript:(id)key;                           // getter
 
+// custom subscripting example
+NSMutableDictionary *dictionary = [[NSMutableDictionary alloc]init]; // in our custom class
 
+- (void)setObject:(id)obj forKeyedSubscript:(id <NSCopying>)key {
+	dictionary[key] = obj;
+}
+
+- (id)objectForKeyedSubscript:(id)key {
+	return dictionary[key];
+}
+
+CutomClass *obj = [[CustomClass alloc]init];
+obj[@"one"] = @"data";
+obj[@"one"]; // returns "data"
 
 
 
