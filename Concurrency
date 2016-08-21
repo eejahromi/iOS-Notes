@@ -125,3 +125,13 @@ lock for instance variable
     myClass.object = value;
 }
 
+NSLock
+NSLock is used to corrdinate operations between multiple threads using an object.
+
+// example
+[NSLock lock];
+[dictionary addObject:@"data" forKey:@"one"];
+[NSLock unlock];
+
+
+
