@@ -465,4 +465,40 @@ obj[@"one"] = @"data";
 obj[@"one"]; // returns "data"
 
 
+// Obj-C class properties
+in order to play with Swift better, Obj-C now has class properties
+-Class properties aren't synthesized in XCode and it will generate a warning when you don't implement them yourself
+
+// example
+@interface Contestant : NSObject
+@property (class,nonatomic,assign,readonly) NSUInteger userId;
+@property (class, nonatomic, copy) NSUUID *identifier;
++ (void)resetIdentifier;
+@end
+
+@implementation Contestant
+static NSUUID *_identifier = nil;
+
++ (NSInteger)userCount {
+  return _userCount;
+}
+
++ (NSUUID *)identifier {
+  if (_identifier == nil) {
+    _identifier = [[NSUUID alloc] init];
+  }
+  return _identifier;
+}
+
++ (void)setIdentifier:(NSUUID *)newIdentifier {
+  if (newIdentifier != _identifier) {
+    _identifier = [newIdentifier copy];
+  }
+}
+
+
+@end
+
+
+
 
