@@ -495,10 +495,13 @@ static NSUUID *_identifier = nil;
     _identifier = [newIdentifier copy];
   }
 }
-
-
 @end
 
-
+// Generated Swift Interface
+public class Contestant : NSObject {
+    public class var userId: Int { get }
+    public class var identifier: NSUUID!
+    public class func resetIdentifier()
+}
 
 
