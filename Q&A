@@ -104,7 +104,7 @@ App bundle:
 xcode packages the project as a bundle, a directory in the filesystem that groups related resources together in one place. bundle contains app executable file and supporting resource file such as app icon, image files and localized content.
 
 code sign:
-signing an application allows the system to identify the pp and verify that the app hasn't been modified since the last time it was signed.
+signing an application allows the system to identify the app and verify that the app hasn't been modified since the last time it was signed.
 
 NSCoder:
 abstract class, which represents a stream of data. used in archiving and unarchiving objects. 
