@@ -2,3 +2,15 @@ Build Process
 
 -Pre-compilation
 Before compilation begins, target dependencies are put together by XCode build tools.
+
+-Compilation
+From a higher level, the compiler does a couple of things with our Objc code. First it converts Objc to lower level code and 
+second it analyzes code to make sure we didn't make any obvious mistakes.
+
+--Compiler
+Clang is the compiler for Objc. Which is the front-end to Apple's LLVM.
+Clang takes the Objc code, analyzes it and then it transforms it to low-level representation that resembles assembly code.
+LLVM takes those instructions and turns it into native byte code for the target platform.
+
+Useful Command: clang -ccc-print-phases hello.m // shows the different phases clang goes through for compiling source file
+Typical phases include: Preprocessor, compiler, assembler, linker
