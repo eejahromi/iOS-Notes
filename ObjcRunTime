@@ -1,1 +1,22 @@
+Objective-C Runtime is the machine that makes Objective-C work. Without Objc runtime the language is just a bunch of words.
 
+Objc Runtime is like a little operating system that takes care of the data structures, function calls and dynamic 
+features of Objc.
+
+Every class declaration, method invocation and expression evaluation is compiled into equivilant C function to interact with
+the runtime so the runtime functions can be invoked directly which can be powerful but sometimes tricky.
+
+-Message Sending
+The underlying behavior of "method calls" in objective c
+[sampleObject message];
+
+will be translated by the compiler into:
+objc_msgSend(sampleObject,@selector(message));
+
+A class (Class) maintains a dispatch table to resolve messages sent at runtime; each entry in the table is a
+method (Method), which keys a particular name, the selector (SEL), to an implementation (IMP), which is a pointer to 
+an underlying C function.
+
+When a message is sent to an object, it checks the class' dispatch table to find an implementation for the message's selector.
+If it finds a match, the function is invoked. If not it checks the super class' dispatch table and so on until it finds a match
+or determines that the selector is unrecognized.
