@@ -75,7 +75,7 @@ XCode can generate header files in swift so we can have a quick look at our meth
 Navigate -> Jump to Generate Interface
 
 
-Build Process
+-Build Process
 The process that code goes through in order to run the app is separeted into a few parts which can be seen in the XCode
 project file in different tabs: Build phases, Build Rules and Build Settings
 
@@ -88,9 +88,14 @@ Copy Bundle Resources: Copy items like PNGs and other resource files
 
 there are more phases that a user can add such as run scripts to run before the link process
 
+Build Rules
+Build Rules specify how different file types should be compiled. Normally there is no need to add new rules but under certain 
+situations we may want to have files other than .m files to be compiled with certain inputs and outputs
 
-
-
+Build Settings
+Lots of details and configurations for how each task in the build process is perform like compiler warnings and code signing 
+details etc.
+All these settings can be seen in a text format by opening the XCode project file in a text editor.
 
 
 
