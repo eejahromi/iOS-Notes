@@ -13,5 +13,37 @@ Clang is a 3-phase compiler. Front-end, Optimizer, Backend
 Clang takes the Objc code, analyzes it and then it transforms it to low-level representation that resembles assembly code.
 LLVM takes those instructions and turns it into native byte code for the target platform.
 
-Useful Command: clang -ccc-print-phases hello.m // shows the different phases clang goes through for compiling source file
+>Useful Command: clang -ccc-print-phases hello.m // shows the different phases clang goes through for compiling source file
 Typical phases include: Preprocessor, compiler, assembler, linker
+
+Compilation Process:
+=>Preprocessing: First thing that happens when compiling is the import statements and custom macros getting replaced by real 
+source code.
+>Useful Command: clang -E hello.c | wc // shows line counts after running the proprocessor
+
+=>Tokenization (Lexing): During compilation text is tuned into a stream of tokens.
+>Useful Command: clang -Xclang -dump-tokens hello.m // dumps the tokens
+
+=>Parsing: Stream of tokens turns into an Abstract Syntax Tree (AST)
+>Useful Command: clang -Xclang -ast-dump -fsyntax-only hello.m // AST dump
+
+=>Static Analysis: Uses AST to do static analysis like type checking.
+
+=>Type Checking: Checks types to see if say a method is associated with the class is being called on.
+
+=>Other Analysis: More analysis like compiler warnings and such.
+
+=>Code Generation: After all that,clang can generate the LLVM code.
+>Useful Comamnd: clang -O3 -S -emit-llvm hello.c -o hello.ll // generates hello.ll
+
+=>Optimization: Optimizing code for better performance. For example, optimizing code in a tail-recursive way for 
+ a recursive function.
+>Useful Commands:
+clang -O0 -S -emit-llvm factorial.c -o factorial.ll // To compile this without optimizations
+clang -O3 -S -emit-llvm factorial.c -o factorial.ll // To compile this with optimizations
+
+
+
+
+
+
