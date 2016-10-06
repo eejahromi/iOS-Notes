@@ -1,1 +1,4 @@
+Build Process
 
+-Pre-compilation
+Before compilation begins, target dependencies are put together by XCode build tools.
