@@ -96,7 +96,7 @@ Build Settings
 Lots of details and configurations for how each task in the build process is perform like compiler warnings and code signing 
 details etc.
 All these settings can be seen in a text format by opening the XCode project file in a text editor.
-
+Build settings environment variables can be looked up at https://pewpewthespells.com/blog/buildsettings.html
 
 
 
