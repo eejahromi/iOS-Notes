@@ -73,3 +73,28 @@ option-click on timeline when recording, we can put little markers (bookmark tim
 -Swift
 XCode can generate header files in swift so we can have a quick look at our method signatures to understand it better
 Navigate -> Jump to Generate Interface
+
+
+Build Process
+The process that code goes through in order to run the app is separeted into a few parts which can be seen in the XCode
+project file in different tabs: Build phases, Build Rules and Build Settings
+
+Build Phases
+A high level plan of how code is going to turn into executables
+Target Dependencies: Adding dependencies in the project like CocoaPods
+Compile Sources: Compiling .m source code files
+Link Binary with Libraries: Linking the compiled source code with static and dynamic libraries
+Copy Bundle Resources: Copy items like PNGs and other resource files
+
+there are more phases that a user can add such as run scripts to run before the link process
+
+
+
+
+
+
+
+
+
+
+
