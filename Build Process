@@ -43,7 +43,9 @@ clang -O0 -S -emit-llvm factorial.c -o factorial.ll // To compile this without o
 clang -O3 -S -emit-llvm factorial.c -o factorial.ll // To compile this with optimizations
 
 
-
+-Objective-C vs Swift Compilation
+Objc: Objc -> Objc AST -> LLVM IR -> Assembly Language
+Swift: Swift -> Swift AST -> Swift IL -> LLVM IR -> Assembly Language
 
 
 
