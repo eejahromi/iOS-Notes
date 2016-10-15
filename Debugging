@@ -29,3 +29,6 @@ LLDB
 (lldb)di -s <register address>
 (lldb) thread list // tells you which thread is this code run on, great for when dealing with threads
 (lldb) rb . -s AppName // sets a breakpoint in every function of the app
+
+
+(lldb)target modules list // a set of commands to inspect modules in the specified target
