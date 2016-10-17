@@ -1,1 +1,6 @@
 
+Useful instruments:
+
+-for lagging issues: TimeProfiler
+
+-for memory issues: Allocation, Leaks, Zombies
