@@ -26,7 +26,7 @@ Example for debugging
 (look for the ones that involve our code)
 
 LLDB
-(lldb)di -s <register address>
+(lldb)di -s <register address> // usually disassemble the first address that is a totally different number than the rest
 (lldb) thread list // tells you which thread is this code run on, great for when dealing with threads
 (lldb) rb . -s AppName // sets a breakpoint in every function of the app
 
