@@ -11,7 +11,15 @@ END_Loop
 
 
 Useful instruments:
--for lagging issues: TimeProfiler
+-TimeProfiler:
+For issues like lagging tableview or low frame rates in a graphics heavy app
 
+--Useful configurations:
+frame rate: for profiling intervals. The lower, the more data samples available to see i.e 10ms (every 10 ms)
+record waiting threads: additionally record samples for threads waiting in the background (helps with waiting threads i.e locks)
+
+-Pay attention to:
+Call tree view: sample datas in a tree structure
+CPU usage: how much CPU is being used at any given moment
 
 -for memory issues: Allocation, Leaks, Zombies
