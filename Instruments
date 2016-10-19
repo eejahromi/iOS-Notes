@@ -1,6 +1,17 @@
+Instruments
+
+Profile process for an app
+-Reproduce problem
+Loop
+  -Profile with Instruments
+  -Form a hypothesis
+END_Loop
+-Make a change
+-Measure the improvement
+
 
 Useful instruments:
-
 -for lagging issues: TimeProfiler
+
 
 -for memory issues: Allocation, Leaks, Zombies
