@@ -9,17 +9,26 @@ END_Loop
 -Make a change
 -Measure the improvement
 
+General Instruments tips:
+use shift + drag and Option + drag to see different intervals of the recording
 
 Useful instruments:
 -TimeProfiler:
 For issues like lagging tableview or low frame rates in a graphics heavy app
 
---Useful configurations:
+>>Useful configurations:
 frame rate: for profiling intervals. The lower, the more data samples available to see i.e 10ms (every 10 ms)
 record waiting threads: additionally record samples for threads waiting in the background (helps with waiting threads i.e locks)
 
--Pay attention to:
+->Pay attention to:
 Call tree view: sample datas in a tree structure
+-Most amount of time spent in a function (follow the big number down the tree)
+-DetailView (On the right): Heaviest stack trace functions
+(Double click to go to source code)
+-Check out thread view to see what each thread is doing
+-if we took samples of idle threads click on those to see what the idle thread is doing
+
 CPU usage: how much CPU is being used at any given moment
+-also CPU view will show you the activity of each core at a given moment
 
 -for memory issues: Allocation, Leaks, Zombies
