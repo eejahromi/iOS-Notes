@@ -66,6 +66,10 @@ also for stopping in a specific place in multiple files.
 Example,
 we can set a symbolic break point in every viewDidLoad: in every ViewController to find associated files with ViewControllers inside our running app
 
+Sound on breakpoint
+setup to make a sound when a line of code is executed
+Edit Breakpoint > addAction > pick sound /check Automatically continue after evaluating
+
 -Instruments
 different templates for different purposes
 option-click on timeline when recording, we can put little markers (bookmark time)
