@@ -32,3 +32,6 @@ LLDB
 
 
 (lldb)target modules list // a set of commands to inspect modules in the specified target
+
+// prints the view hierarchy (text format of viewHierarchy button in toolbar)
+(lldb)po [[[[UIApplication sharedApplication] delegate] window] recursiveDescription];
