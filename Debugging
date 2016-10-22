@@ -18,6 +18,9 @@ Project target > Edit scheme > Diagnostics > check enable zombie objects
 
 - “unrecognized selector” error, usually means we forgot to implement a method somewhere
 
+-enabling thread sanitizer
+Project target > Edit scheme > Run > Options > Enable thread sanitizer
+
 Example for debugging
 -check the signal if there is one given
 -check the exception if there is one (i.e NSInvalidArgException)
