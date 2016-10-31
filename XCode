@@ -102,7 +102,10 @@ details etc.
 All these settings can be seen in a text format by opening the XCode project file in a text editor.
 Build settings environment variables can be looked up at https://pewpewthespells.com/blog/buildsettings.html
 
-
+Environment variables
+// Runtime environment variable for launch time statistics
+Target -> Edit Scheme -> Run -> Arguments
+DYLD_PRINT_STATISTICS 1
 
 
 
