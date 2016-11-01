@@ -1,2 +1,19 @@
 Useful Macros
 
+// simulator
+#if TARGET_IPHONE_SIMULATOR
+		return ...;
+#endif
+
+// OS
+#if TARGET_OS_IOS
+		return iOSAsset;
+#endif
+
+#if TARGET_OS_IPHONE
+
+#elif TARGET_OS_WATCH
+
+#elif TARGET_OS_TV
+
+#endif
