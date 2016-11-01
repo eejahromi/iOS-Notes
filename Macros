@@ -17,3 +17,12 @@ Useful Macros
 #elif TARGET_OS_TV
 
 #endif
+
+
+// availability
+NS_AVAILABLE_IOS(_ios);
+NS_DEPRECATED_IOS(_iosIntro,_iosDep...);
+NS_AVAILABLE_IOS(3_0);
+NS_CLASS_DEPRECATED_IOS(2_0, 9_0,"message");
+
+
