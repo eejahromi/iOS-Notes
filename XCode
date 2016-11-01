@@ -107,6 +107,7 @@ Environment variables
 Target -> Edit Scheme -> Run -> Arguments
 DYLD_PRINT_STATISTICS 1
 
-
-
+-Older iOS simulator versions
+// download specific versions of the simulator
+Xcode/Preferences/Components 
 
