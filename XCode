@@ -43,33 +43,6 @@ git mergetool -t opendiff // for merge conflicts
 git commit --amend // edit the most recent commit message
 git diff --stat `git hash-object -t tree /dev/null` | tail -1 // for counting lines of code for project
 
--breakpoints tips
-General breakpoints
--use the navigator
-CMD + backslash for adding/deleting breakpoints
--can group or share breakpoints
-
-Logging breakpoints
-Edit breakpoint > conditions/actions/commands
-Executing scripts
-
-Exception breakpoint 
-(when we end up in main.m without useful info)
-exception navigator > add exception point > add action
-actions: 
-po $eax (32 bit simulator) $rax (64 bit) $r0 (device)
-bt (backtrace)
-
-Symbolic breakpoint
-for ignoring cases like skipping iterations of loops and adding more action
-also for stopping in a specific place in multiple files.
-Example,
-we can set a symbolic break point in every viewDidLoad: in every ViewController to find associated files with ViewControllers inside our running app
-
-Sound on breakpoint
-setup to make a sound when a line of code is executed
-Edit Breakpoint > addAction > pick sound /check Automatically continue after evaluating
-
 -Instruments
 different templates for different purposes
 option-click on timeline when recording, we can put little markers (bookmark time)
