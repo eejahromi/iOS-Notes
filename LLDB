@@ -1,1 +1,22 @@
 Useful LLDB commands
+
+LLDB
+(lldb)di -s <register address> // usually disassemble the first address that is a totally different number than the rest
+(lldb) thread list // tells you which thread is this code run on, great for when dealing with threads
+(lldb) rb . -s AppName // sets a breakpoint in every function of the app
+
+(lldb)target modules list // a set of commands to inspect modules in the specified target
+
+// prints the view hierarchy (text format of viewHierarchy button in toolbar)
+(lldb)po [[[[UIApplication sharedApplication] delegate] window] recursiveDescription];
+
+
+ADVANCED LLDB
+-lldb from command line
+(lldb)process attach -n "appName" -w // attach lldb to an app on iOS sim. Run this command and then start app in simulator.
+// set a breakpoint when something happens without looking at the code
+// in this case we break when a UILabel's text gets set to "Hi"
+(lldb)rb UILabel.setText: -c '(BOOL)[$rdx containsString:@"Hi"]'
+
+-lldb attach to a process on Device
+$ ios-deploy -d -W -b path/to/foo.app
