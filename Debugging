@@ -54,6 +54,7 @@ General breakpoints
 -use the navigator
 CMD + backslash for adding/deleting breakpoints
 -can group or share breakpoints
+log statements: %B will print the method we're in at breakpoint, %H hit count of the method
 
 Logging breakpoints
 Edit breakpoint > conditions/actions/commands
