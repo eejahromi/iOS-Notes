@@ -16,11 +16,15 @@ app not in foreground but is still executing code.
 
 app on it's way to being suspended:
 briefly in background
+[[UIApplication sharedApplication] applicationState] == UIApplicationStateBackground
 
 active state:
 in foreground and receiving events
+[[UIApplication sharedApplication] applicationState] == UIApplicationStateActive
 
 inactive state:
 when user locks screen or incoming message,phone call
 in foreground but not receiving events
 or briefly inactive as it transitions into different state
+
+[[UIApplication sharedApplication] applicationState] == UIApplicationStateInactive
