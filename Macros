@@ -18,6 +18,9 @@ Useful Macros
 
 #endif
 
+// keywords
+__unused // used to supress unsed warning if necessary
+
 
 // availability
 NS_AVAILABLE_IOS(_ios);
