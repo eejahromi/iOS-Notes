@@ -42,6 +42,8 @@ git stash drop // forget the last stash (if you stash twice, you have to drop tw
 git mergetool -t opendiff // for merge conflicts
 git commit --amend // edit the most recent commit message
 git diff --stat `git hash-object -t tree /dev/null` | tail -1 // for counting lines of code for project
+git log --oneline // short version of log with only hash and commit message
+git log --since="2016-07-01" // show only commits after july 1st, 2016
 
 -Instruments
 different templates for different purposes
