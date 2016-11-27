@@ -36,4 +36,16 @@ for(int i=0;i<count;i++) {
 }
 free(methods);
 
+--ivar names example
+Class class = [NSArray class];
+unsigned int count;
+Ivars *ivars = class_copyIvarList(class,&count);
+
+for(int i=0;i<count;i++) {
+  Ivar *ivar = ivar_getName[0];
+  const char *name = ivar_getName(ivar);
+  NSLog(@"%s",name);
+}
+free(ivars);
+
 
