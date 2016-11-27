@@ -20,3 +20,20 @@ an underlying C function.
 When a message is sent to an object, it checks the class' dispatch table to find an implementation for the message's selector.
 If it finds a match, the function is invoked. If not it checks the super class' dispatch table and so on until it finds a match
 or determines that the selector is unrecognized.
+
+-Class Interospection
+we can use Objc runtime to get a copy of the method names and ivars of a certain class
+
+--method names example
+Class class = [UITableView class];
+unsigned int count;
+Method *methods = class_copy_methodList(class,&count);
+
+for(int i=0;i<count;i++) {
+  Method *method = methods[i];
+  SEL selector = method_getName(method);
+  NSLog(@"%@",selector);
+}
+free(methods);
+
+
