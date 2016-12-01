@@ -3,3 +3,10 @@ It works on the layer property of views and the work is done on the GPU
 
 -CALayer
 every view is backed by a CALayer to get the bitmap informaiton of that view
+--useful properties
+* borderRadius and other border related properties
+* shadowRadius and other shadow related properties
+* anchorPoint and anchorPointZ
+* mask
+
+NOTE: CALayer does not recognize touch
