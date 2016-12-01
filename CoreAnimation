@@ -9,6 +9,15 @@ every view is backed by a CALayer to get the bitmap informaiton of that view
 * anchorPoint and anchorPointZ
 * mask
 
+->subclasses
+CAGradientLayer: built in gradient layer that makes gradients easy to achieve compared to CoreGraphics
+steps to ceate gradientLayer
+-create CAGradientLayer
+-set frame
+-set colors array
+-add layer to view
+
+
 NOTE: CALayer does not recognize touch
 
 Rendering behaviors (for performance)
