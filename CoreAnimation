@@ -1,0 +1,5 @@
+CoreAnimation is a graphics rendering and animation infrastructure on iOS and macOS
+It works on the layer property of views and the work is done on the GPU
+
+-CALayer
+every view is backed by a CALayer to get the bitmap informaiton of that view
