@@ -7,3 +7,9 @@ also in AppDelegate we can use the method application:didReceiveLocalNotificatio
 
 -pre iOS 10
 UILocalNotification class
+UILocalNotification *notification = [[UILocalNotification alloc]init];
+notification.alertTitle = @"Reminder";
+notification.alertBody = @"Buy milk";
+notification.fireDate = aFutureDate;
+notification.repeatInterval = NSCalendarUnitDay; // repeat daily
+[[UIApplication sharedApplication] scheduleLocalNotification:notification];
