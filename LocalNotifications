@@ -1,0 +1,4 @@
+Local Notifications
+
+-pre iOS 10
+UILocalNotification class
