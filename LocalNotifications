@@ -1,4 +1,9 @@
 Local Notifications
 
+NOTE: Local notifications only fire when application is in the background, if we want to get a message while app is in 
+foreground the we have to show an alert
+
+also in AppDelegate we can use the method application:didReceiveLocalNotification: to know when a notification fires globally
+
 -pre iOS 10
 UILocalNotification class
