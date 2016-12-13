@@ -43,6 +43,8 @@ content.title = @"Don't forget";
 content.body = @"Buy milk";
 content.sound = [UNNotificationSound defaultSound];
 NSTimeInterval intervalAmount = 60;
+
+// if repeating is on then timeInterval has to be larger than 60
 UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:intervalAmount
                                                                                                     repeats:YES];
     
@@ -51,4 +53,12 @@ UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"
                                                                           trigger:trigger];
     
 [center addNotificationRequest:request withCompletionHandler:nil];
+
+-check for permissions post iOS 10
+[center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+        if (settings.authorizationStatus != UNAuthorizationStatusAuthorized) {
+           // do necessary warnings
+        }
+    }];
+
 
