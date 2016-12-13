@@ -4,6 +4,27 @@ NOTE: Local notifications only fire when application is in the background, if we
 foreground the we have to show an alert
 
 also in AppDelegate we can use the method application:didReceiveLocalNotification: to know when a notification fires globally
+when we are in foreground
+
+-Local Notifications permissions
+--pre iOS 10
+[application registerUserNotificationSettings:[UIUserNotificationSettings
+                                                       settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound
+                                                       categories:nil]];
+                                                       
+--post iOS 10
+
+if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0) {
+        UNUserNotificationCenter *notification = [UNUserNotificationCenter currentNotificationCenter];
+        UNAuthorizationOptions options = UNAuthorizationOptionAlert + UNAuthorizationOptionSound;
+        [notification requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (!granted) {
+                NSLog(@"Permission not granted!");
+            }
+        }];
+}
+
+
 
 -pre iOS 10
 UILocalNotification class
