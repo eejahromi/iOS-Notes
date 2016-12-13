@@ -34,3 +34,21 @@ notification.alertBody = @"Buy milk";
 notification.fireDate = aFutureDate;
 notification.repeatInterval = NSCalendarUnitDay; // repeat daily
 [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+
+
+-post iOS 10
+UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+UNMutableNotificationContent *content = [UNMutableNotificationContent new];
+content.title = @"Don't forget";
+content.body = @"Buy milk";
+content.sound = [UNNotificationSound defaultSound];
+NSTimeInterval intervalAmount = 60;
+UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:intervalAmount
+                                                                                                    repeats:YES];
+    
+UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"SimpleNotification"
+                                                                          content:content
+                                                                          trigger:trigger];
+    
+[center addNotificationRequest:request withCompletionHandler:nil];
+
