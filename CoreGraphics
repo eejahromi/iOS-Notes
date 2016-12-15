@@ -15,3 +15,10 @@ CGContextRef context = UIGraphicsGetCurrentContext();
 
 NOTE: Core Graphics uses lower level C functions and core foundation APIs so manual memory management is needed wherever the 
 phrases create,copy and ref are used.
+
+Push and pop context
+We can also use UIKit to push and pop contexts:
+
+UIGraphicsPushContext(context)
+UIGraphicsPopContext(context)
+
