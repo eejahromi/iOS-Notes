@@ -22,3 +22,10 @@ We can also use UIKit to push and pop contexts:
 UIGraphicsPushContext(context)
 UIGraphicsPopContext(context)
 
+Lines
+lineJoin: when a line turns a corner
+-joinMiter //default sharp edge
+-joinRound
+-joinBevel // cut edge (not round, not sharp)
+NOTE: You can't mix and match within one drawing
+CGContextSetLineJoin(context,kCGLineJoinMiter);
