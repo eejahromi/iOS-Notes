@@ -29,3 +29,10 @@ lineJoin: when a line turns a corner
 -joinBevel // cut edge (not round, not sharp)
 NOTE: You can't mix and match within one drawing
 CGContextSetLineJoin(context,kCGLineJoinMiter);
+
+lineCap: normal line end
+-lineCapButt // just ends with a square
+-lineCapRound // adds a half circle to end
+-lineCapSquare // adds a half square to end
+NOTE: can't mix and match in one drawing
+CGContextSetLineCap(context, kCGLineCapButt);
