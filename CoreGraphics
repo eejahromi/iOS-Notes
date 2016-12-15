@@ -1,1 +1,17 @@
 Core Graphics
+
+Core Graphics or Quartz is a drawing engine that draws on a context (could be thought of as a canvas).
+
+Context
+There are different ways you can get a context. You can get a hold of the current context using UIKit
+
+CGContextRef currentContext; // a pointer to typedef to hide the star
+context = UIGraphicsGetCurrentContext();
+
+or create an Image context with UIKit and then use the same code to get a reference to it
+
+UIGraphicsBeginImageContextWithOptions(CGSizeMake(45,45),YES,2);
+CGContextRef context = UIGraphicsGetCurrentContext();
+
+NOTE: Core Graphics uses lower level C functions and core foundation APIs so manual memory management is needed wherever the 
+phrases create,copy and ref are used.
