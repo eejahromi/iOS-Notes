@@ -36,3 +36,8 @@ lineCap: normal line end
 -lineCapSquare // adds a half square to end
 NOTE: can't mix and match in one drawing
 CGContextSetLineCap(context, kCGLineCapButt);
+
+lineDash: dashed, takes an array of CGFloat to represent the present and absent length parts of the line
+CGFloat dashes[] = {12.0,8.0,6.0,14.0};
+CGContextSetLineDash(context, 0, dashes, 2); // params: context, phase (how far into the pattern to start), dashes, count(of dashes array)
+
