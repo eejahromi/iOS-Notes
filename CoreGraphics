@@ -26,6 +26,12 @@ Converting between coordinate Systems
 CGPoint convertedPoint = [outerView convertPoint:samplePoint fromView:grayView]; // useful for views embedded in scrollviews
 CGPoint convertedPoint = [outerView convertPoint:samplePoint toView:grayView];
 
+Key structure
+Points:CGPoint,Size:CGSize,Rectangles:CGRect,Transforms:CGAffineTransform
+
+Transforms: Useful methods
+CGAffineTransformMakeScale(), CGAffineTransformMakeRotation(), CGAffineTransformMakeTranslation()
+
 Lines
 lineJoin: when a line turns a corner
 -joinMiter //default sharp edge
