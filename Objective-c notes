@@ -504,4 +504,11 @@ public class Contestant : NSObject {
     public class func resetIdentifier()
 }
 
-
+send user to settings app
+if (&UIApplicationOpenSettingsURLString != NULL) {
+   NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    [[UIApplication sharedApplication] openURL:url];
+}
+else {
+  // do it the old way of showing an alert
+}
