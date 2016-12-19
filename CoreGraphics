@@ -22,6 +22,10 @@ We can also use UIKit to push and pop contexts:
 UIGraphicsPushContext(context)
 UIGraphicsPopContext(context)
 
+Converting between coordinate Systems
+CGPoint convertedPoint = [outerView convertPoint:samplePoint fromView:grayView]; // useful for views embedded in scrollviews
+CGPoint convertedPoint = [outerView convertPoint:samplePoint toView:grayView];
+
 Lines
 lineJoin: when a line turns a corner
 -joinMiter //default sharp edge
