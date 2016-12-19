@@ -32,6 +32,11 @@ Points:CGPoint,Size:CGSize,Rectangles:CGRect,Transforms:CGAffineTransform
 Transforms: Useful methods
 CGAffineTransformMakeScale(), CGAffineTransformMakeRotation(), CGAffineTransformMakeTranslation()
 
+convert to String
+NSStringFromCGPoint() NSStringFromCGSize() NSStringFromCGRect() NSStringFromCGAffineTransform()
+Convert from String
+CGPointFromString() CGSizeFromString() CGRectFromString() CGAffineTransformFromString()
+
 Lines
 lineJoin: when a line turns a corner
 -joinMiter //default sharp edge
