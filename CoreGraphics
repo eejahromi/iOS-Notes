@@ -56,3 +56,7 @@ lineDash: dashed, takes an array of CGFloat to represent the present and absent 
 CGFloat dashes[] = {12.0,8.0,6.0,14.0};
 CGContextSetLineDash(context, 0, dashes, 2); // params: context, phase (how far into the pattern to start), dashes, count(of dashes array)
 
+Performance
+Core graphics is usually pretty fast but it could be computationally expensive when lines and paths are overlapping 
+because it has to calculate where the intersections are to not do any drawing.
+
