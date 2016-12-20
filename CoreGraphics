@@ -2,6 +2,14 @@ Core Graphics
 
 Core Graphics or Quartz is a drawing engine that draws on a context (could be thought of as a canvas).
 
+Bitmaps and PDFs really work the same. You draw to them using identical commands and functions. You set colors and draw 
+shapes and text just as if you were drawing in a view or to an image. but, PDF contexts contain vector data in their 
+“backing store,” describing the drawing in a resolution-independent manner. Bitmap contexts are rasterized. They use pixel 
+arrays to store the data drawn into them. PDF contexts also may contain more than one page. You establish a bounding 
+rectangle that specifies the default size and location of each PDF page.
+
+since PDFs are vector based they are resolution independent so resizing them won't affect the resolution.
+
 Context
 There are different ways you can get a context. You can get a hold of the current context using UIKit
 
