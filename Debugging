@@ -51,17 +51,16 @@ bt (backtrace)
 for ignoring cases like skipping iterations of loops and adding more action
 also for stopping in a specific place in multiple files.
 Example,
-we can set a symbolic break point in every viewDidLoad: in every ViewController to find associated files with ViewControllers inside our running app
-
-(say we want to break when a tableViewCell has the text "new Content" in it)
-Symbol: -[UILabel setText:]
-Condition: (BOOL)[$rdx containsString:@"cool"]
 
 (we want to print the name of the class associated with a viewController as we navigate through app)
 Symbol: -[UIViewController viewDidAppear:]
 Condition: sizeof(void *) == 8 // only print for 64 bit
 action: po [$rdi class] // print class name in register 1
 * check automatically continue after
+
+(say we want to break when a tableViewCell has the text "new Content" in it)
+Symbol: -[UILabel setText:]
+Condition: (BOOL)[$rdx containsString:@"new Content"]
 
 Sound on breakpoint
 setup to make a sound when a line of code is executed
