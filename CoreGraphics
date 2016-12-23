@@ -45,6 +45,12 @@ NSStringFromCGPoint() NSStringFromCGSize() NSStringFromCGRect() NSStringFromCGAf
 Convert from String
 CGPointFromString() CGSizeFromString() CGRectFromString() CGAffineTransformFromString()
 
+Convert to dictionary
+CGPointCreateDictionaryRepresentation() CGSizeCreateDictionaryRepresentation() CGRectCreateDictionaryRepresentation()
+Convert from dictionary
+CGPointMakeWithDictionaryRepresentation() CGSizeMakeWithDictionaryRepresentation() CGRectMakeWithDictionaryRepresentation()
+*Dictionaries are useful for storing structs in userDefaults
+
 Lines
 lineJoin: when a line turns a corner
 -joinMiter //default sharp edge
