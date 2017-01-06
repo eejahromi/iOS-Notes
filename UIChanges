@@ -79,6 +79,11 @@ if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
  }
 
 
+// Forcing orientation change for a viewController
+NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationLandscapeLeft];
+[[UIDevice currentDevice] setValue:value forKey:@"orientation"];
+
+
 -Attributed Strings
 UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:30.0f];
 
