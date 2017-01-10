@@ -1,37 +1,45 @@
 // GlobalAlertView
 
-static UIWindow *_sharedAlertView = nil;
-+ (UIWindow *)sharedAlertView
-{
+static UIWindow *_sharedNavigationBarAlertView = nil;
+static UILabel *label = nil;
+
++ (UIWindow *)sharedNavigationBarAlertView {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedNavigationBarAlertView = [[UIWindow alloc] initWithFrame:CGRectZero];
         _sharedNavigationBarAlertView.windowLevel = UIWindowLevelStatusBar + 1.0;
         _sharedNavigationBarAlertView.hidden = YES;
         _sharedNavigationBarAlertView.backgroundColor = [UIColor purpleColor];
+        
     });
-    return _sharedAlertView;
+    return _sharedNavigationBarAlertView;
 }
 
-+ (void)showWithCompletion:(void(^)(BOOL))completion
-{
++ (void)showWindowAlertWithText:(NSString *)alertText {
     CGRect frame = [UIScreen mainScreen].bounds;
     frame.size.height = 64.0;
-    [self sharedAlertView].frame = frame;
-    [self sharedAlertView].hidden = NO;
-    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    [self sharedNavigationBarAlertView].frame = frame;
+    [self sharedNavigationBarAlertView].hidden = NO;
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        label = [[UILabel alloc] initWithFrame:frame];
+    });
+    
     label.textColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
-    label.text = @"This is an Alert!";
-    [_sharedAlertView addSubview:label];
+    label.text = alertText;
+    [_sharedNavigationBarAlertView addSubview:label];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self hide];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self hideWindowAlert];
     });
-    //completion(YES);
-    
 }
-+ (void)hide
-{
-    [self sharedAlertView].hidden = YES;
++ (void)hideWindowAlert {
+    [UIView animateWithDuration:0.3 animations:^{
+        [self sharedNavigationBarAlertView].frame = CGRectMake(0.0, -64.0, [UIScreen mainScreen].bounds.size.width, 64.0);
+    } completion:^(BOOL finished) {
+        [self sharedNavigationBarAlertView].hidden = YES;
+    }];
+    
 }
