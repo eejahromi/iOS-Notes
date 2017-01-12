@@ -13,3 +13,10 @@ AVCaptureDevice *device;
 [device lockForConfiguration:nil];
 device.setTorchMode = AVCaptureTorchModeOn;
 [device unlockForConfiguration];
+
+// Playing quick sounds
+#import <AudioToolBox.h>
+AudioServicesPlaySystemSound(systemSoundID);
+
+-list of all available system sound codes
+http://iphonedevwiki.net/index.php/AudioServices
