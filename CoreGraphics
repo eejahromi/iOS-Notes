@@ -34,6 +34,12 @@ Converting between coordinate Systems
 CGPoint convertedPoint = [outerView convertPoint:samplePoint fromView:grayView]; // useful for views embedded in scrollviews
 CGPoint convertedPoint = [outerView convertPoint:samplePoint toView:grayView];
 
+Taking a snapshot of a view using CoreGraphics and UIKit
+UIGraphicsBeginImageContextWithOptions(self.view.bounds,NO,[UIScreen mainScreen].scale);
+[self.view drawViewHierarchyInRect:self.view.bounds afterScreenUpdates:YES];
+UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
+UIgraphicsEndImageContext();
+
 Key structure
 Points:CGPoint,Size:CGSize,Rectangles:CGRect,Transforms:CGAffineTransform
 
