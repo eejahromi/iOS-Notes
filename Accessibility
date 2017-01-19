@@ -5,3 +5,12 @@ Accessibility Attributes
 -Hint: describes what element completes i.e "Shows product details"
 -Frame: The frame of the element within the screen
 -Value: value of the element i.e "54 out of 100" for UISlider
+
+// marking something as accessibility element
+descriptionLabel.isAccessibilityElement = YES;
+NOTE: In UIKit most of the elements are already set to YES except for labels
+Also if this is set to YES then it will be read as a seperate accebility in voice over so we can use this trick to make it one:
+// example: A tableViewCell containing a label
+set the flag to NO
+descriptionLabel.isAccessibilityElement = NO;
+descriptionLabel.accessibilityLabel = [NSString stringWithFormat:@"Unchecked %@",descriptionLabel.text];
