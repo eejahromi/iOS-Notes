@@ -1,1 +1,7 @@
-// Accessibility 
+Accessibility Attributes
+
+-Label: Way to identify the accessible element i.e "Back Button"
+-Traits: Elements state, behavior or usage i.e "is selected" for UIButton
+-Hint: describes what element completes i.e "Shows product details"
+-Frame: The frame of the element within the screen
+-Value: value of the element i.e "54 out of 100" for UISlider
