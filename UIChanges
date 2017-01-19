@@ -19,6 +19,14 @@ self.navigationController.navigationBar.barStyle = UIStatusBarLightContent;
 Handy code for displaying nothing but the back arrow for navigation controller
 self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
 
+Also making navigation bar go away in a detailViewController for more real estate...
+//in MasterViewController viewWillDisappear:
+[self.navigationController setNavivationBarHidden:YES animated:YES];
+
+//in MasterViewController viewWillAppear:
+[self.navigationController setNavigationBarHidden:NO animated:YES];
+
+
 -back button modification
 [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"back_btn.png"]];
 [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"back_btn.png"]];
