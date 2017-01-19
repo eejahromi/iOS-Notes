@@ -89,13 +89,23 @@ if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
     controller.popoverPresentationController.sourceView = self.view; 
  }
 
-
 // Forcing orientation change for a viewController
 NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationLandscapeLeft];
 [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
 
+// Using a block to do operations based on device orientation and avoid checking for orientation everytime
+[self executeOnDevicePortrait:^{
+    self.view.backgroundColor = [UIColor grayColor];
+}];
 
--Attributed Strings
+- (void)executeOnDevicePortrait:(void(^)(void))operation {
+    if(UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
+        operation();
+    }
+}
+
+
+// Attributed Strings
 UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:30.0f];
 
     NSMutableAttributedString * attrNameString = [[NSMutableAttributedString alloc] initWithString:self.name];
