@@ -31,6 +31,9 @@ Also making navigation bar go away in a detailViewController for more real estat
 [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"back_btn.png"]];
 [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"back_btn.png"]];
 
+Storyboard also and code can also accept ASCII character symbols so we can use (←) as back button
+More symbols: http://htmlarrows.com/
+
 -programmatically adding bar buttons
 UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
 target:self action:@selector(cancelButtonPressed:)];
