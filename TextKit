@@ -1,1 +1,4 @@
+Dynamic Type
 
+self.textField.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+self.textField.adjustsFontForContentSizeCategory = YES;
