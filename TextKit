@@ -1,4 +1,11 @@
-Dynamic Type
-
+// Dynamic Type
 self.textField.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 self.textField.adjustsFontForContentSizeCategory = YES;
+
+// Changing font color for a selected portion of text
+NSRange selectedRange = [self.textView selectedRange];
+NSDictionary *newColorAttribute = @{NSForegroundColorAttributeName: [UIColor redColor]};
+
+[self.textView.textStorage beginEditing];
+[self.textView.textStorage setAttributes:newColorAttribute range:selectedRange];
+[self.textView.textStorage endEditing];
