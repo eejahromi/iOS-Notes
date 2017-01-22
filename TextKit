@@ -9,3 +9,7 @@ NSDictionary *newColorAttribute = @{NSForegroundColorAttributeName: [UIColor red
 [self.textView.textStorage beginEditing];
 [self.textView.textStorage setAttributes:newColorAttribute range:selectedRange];
 [self.textView.textStorage endEditing];
+
+// Exclusion paths
+CGRect convertedFrame = [self.textView convertRect:self.imageView fromView:self.view];
+self.textView.textContainer.exclusionPaths = @[UIBezierPath bezierPathWithRect:convertedRect]; // set to nil to reset
