@@ -1,6 +1,6 @@
 // 3 components of TextKit
 -NSTextStorage
--NSLayoutManager
+-NSLayoutManager: Takes from text storage and lays it out into the shape provided by text container
 -NSTextContainer
 --UITextView
 
