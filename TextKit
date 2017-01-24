@@ -1,3 +1,9 @@
+// 3 components of TextKit
+-NSTextStorage
+-NSLayoutManager
+-NSTextContainer
+--UITextView
+
 // Dynamic Type
 self.textField.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 self.textField.adjustsFontForContentSizeCategory = YES;
