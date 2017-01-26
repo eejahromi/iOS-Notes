@@ -408,12 +408,6 @@ layer properties
 layer.corderRadius
 layer.zposition or for using this with views [self bringViewToFront:specificView];
 
-// Playing simple audio using AVFoundation
-after setting a property
-@property (nonatomic,strong) AVAudioPlayer *musicPlayer;
-
-[self.musicPlayer play];
-
 -parsing JSON
     NSDictionary *parsedData = [NSJSONSerialization JSONObjectWithData:response options:0 error:&error];
 
