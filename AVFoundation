@@ -1,0 +1,6 @@
+// speech Synthesizer
+
+AVSpeechSynthesizer *synthesizer = [[AVSpeechSynthesizer alloc] init];
+AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:@"Hello"];
+[synthesizer speakUtterance:utterance];
+
