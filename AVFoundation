@@ -1,5 +1,10 @@
-// speech Synthesizer
+// Playing simple audio using AVFoundation
+after setting a property
+@property (nonatomic,strong) AVAudioPlayer *musicPlayer;
 
+[self.musicPlayer play];
+
+// speech Synthesizer
 AVSpeechSynthesizer *synthesizer = [[AVSpeechSynthesizer alloc] init];
 AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:@"Hello"];
 [synthesizer speakUtterance:utterance];
