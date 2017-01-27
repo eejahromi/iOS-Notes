@@ -22,6 +22,7 @@ record waiting threads: additionally record samples for threads waiting in the b
 
 ->Pay attention to:
 Call tree view: sample datas in a tree structure
+Tip:Option + -> toexpand the entire tree
 -Most amount of time spent in a function (follow the big number down the tree)
 -DetailView (On the right): Heaviest stack trace functions
 (Double click to go to source code)
