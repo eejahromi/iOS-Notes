@@ -45,6 +45,10 @@ git diff --stat `git hash-object -t tree /dev/null` | tail -1 // for counting li
 git log --oneline // short version of log with only hash and commit message
 git log --since="2016-07-01" // show only commits after july 1st, 2016
 
+Useful CocoaPods commands:
+for checking if using outdated pods: pod outdated
+for checking current versions of pods: cat Podfile.lock
+
 -Instruments
 different templates for different purposes
 option-click on timeline when recording, we can put little markers (bookmark time)
