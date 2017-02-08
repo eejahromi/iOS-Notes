@@ -36,8 +36,11 @@ We can also sort the operations within a queue by using operation dependencies.
 
 Run Loops
 not technically a concurrency mechanism cause they don't enable parallel execution of tasks but good for asynchronous tasks.
-whenever we call performSelector:withObject:afterDelay the run loop is used behind the scenes. It handles UI events, timers and other kernel events.
-run loop runs in different modes, when scrolling on iOS run loop is not running in normal mode so if we want a timer to run during scrolling, we need to add it to the run loop in the NSRunLoopCommonModes mode.
+whenever we call performSelector:withObject:afterDelay the run loop is used behind the scenes. It handles UI events, timers 
+and other kernel events. NSObject also has a class method cancelPreviousPerformRequestsWithTarget: that cancels requests for 
+a specific target from the current run loop.
+run loop runs in different modes, when scrolling on iOS run loop is not running in normal mode so if we want a timer to 
+run during scrolling, we need to add it to the run loop in the NSRunLoopCommonModes mode.
 
 
 GCD in depth...
