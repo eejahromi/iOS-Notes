@@ -20,3 +20,7 @@ AudioServicesPlaySystemSound(systemSoundID);
 
 -list of all available system sound codes
 http://iphonedevwiki.net/index.php/AudioServices
+
+// Accessing system states like thermal and low battery
+[NSProcessInfo processInfo].termalState
+[NSProcessInfo processInfo].lowPowerModeEnabled
