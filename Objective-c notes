@@ -506,3 +506,14 @@ if (&UIApplicationOpenSettingsURLString != NULL) {
 else {
   // do it the old way of showing an alert
 }
+
+// Enum Count
+// add an element to the last enum to be the count because we are starting at zero
+typdef NS_Enum(NSUInteger,TableViewSections) {
+	TableViewSectionPrograms = 0,
+	TableViewSectionDevelopers,
+	TableViewSectionLicenses,
+	TableViewSectionCount
+};
+
+
