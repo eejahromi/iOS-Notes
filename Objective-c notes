@@ -516,4 +516,5 @@ typdef NS_Enum(NSUInteger,TableViewSections) {
 	TableViewSectionCount
 };
 
-
+// let reuseIdentifier for a cell be the xib name if using one so we can get a 2 for one and use a constant
+static NSString * const developerCell = @"DeveloperCell";
