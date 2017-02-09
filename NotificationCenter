@@ -1,1 +1,5 @@
-// NotificationCenter keys
+NotificationCenter keys
+
+// For orientation change use statusBar instead of deviceOrientation
+UIApplicationWillChangeStatusBarOrientationNotification
+UIApplicationDidChangeStatusBarOrientationNotification
