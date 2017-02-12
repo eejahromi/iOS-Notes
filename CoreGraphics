@@ -40,6 +40,12 @@ UIGraphicsBeginImageContextWithOptions(self.view.bounds,NO,[UIScreen mainScreen]
 UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
 UIgraphicsEndImageContext();
 
+// getting a UIKit version of a layer using ImageContext
+UIGraphicsBeginImageContext(self.gradientLayer.frame.size);
+[self.gradientLayer renderInContext: UIGraphicsGetCurrentContext()];
+UIImage gradientImage = UIGraphicsGetImageFromCurrentImageContext();
+UIGraphicsEndImageContext();
+
 Key structure
 Points:CGPoint,Size:CGSize,Rectangles:CGRect,Transforms:CGAffineTransform
 
