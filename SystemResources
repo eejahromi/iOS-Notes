@@ -24,3 +24,8 @@ http://iphonedevwiki.net/index.php/AudioServices
 // Accessing system states like thermal and low battery
 [NSProcessInfo processInfo].termalState
 [NSProcessInfo processInfo].lowPowerModeEnabled
+
+// keyboard click for custom keyboard
+view needs to conform UIInputAudioFeedback protocol
+implement enableInputClicksWhenVisible method 
+class can then call [[UIDevice currentDevice] playInputClick];
