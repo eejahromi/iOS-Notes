@@ -300,8 +300,8 @@ layer.zposition or for using this with views [self bringViewToFront:specificView
     NSDictionary *parsedData = [NSJSONSerialization JSONObjectWithData:response options:0 error:&error];
 
 iOS version checking
-if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_9_0) {
-    // do stuff for iOS 9 and newer
+if ([[UIDevice currentDevice] systemVersion] >= 9.0) {
+    // do stuff for iOS 9 and higher
 }
 else {
     // do stuff for older versions than iOS 9
