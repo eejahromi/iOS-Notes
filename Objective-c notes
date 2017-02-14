@@ -206,12 +206,7 @@ if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceT
 UIApplication *application = [UIApplication sharedApplication];
 [application openURL:blogPost.url]; // accessing the url property of blogPost instance
 
-Using the torch
-AVCaptureDevice *device;
 
-[device lockForConfiguration:nil];
-device.setTorchMode = AVCaptureTorchModeOn;
-[device unlockForConfiguration];
 
 -custom delegation using protocols
 
@@ -236,29 +231,6 @@ steps:
 
 ResponsibleController *responsibleFile = [[ResponsibleController alloc] init];
 responsibleFile.delegate = self;
-
-
--Parse with ios
-parse as a backened for ios
--database (strored as JSON)
--analytics
--push notifications
-
-
-Parse Object
-PFObject *object = [PFObject addClassName:@"Test"]; //class name being the name of the table
-
-// simple entry
-[object setKey:@"name" forValue:@"John"];
--alternative way
-object[@"name"] = @"John";
-
-// simple query
-PFQuery *query = [PFQuery queryWithClass:@"test"];
-[query orderByAscendingOrder:@"createdAt"]; 
-
-//user
-PFUser *user = [PFUser userWithClass:@"user"];
 
 iOS Graphics and Animations
 -animation and graphics stack
