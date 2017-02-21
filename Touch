@@ -106,3 +106,18 @@ UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarg
 
 
 **GestureRecognizers do not use UIResponderChain
+
+// Drawing using UITouch methods and UIKit
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = touches.allObjects.lastObject;
+    self.currentPath = [UIBezierPath bezierPath];
+    self.currentPath.lineWidth = 3.0;
+    [self.currentPath moveToPoint:[touch locationInView:self]];
+    [paths addObject:self.currentPath];
+}
+
+
+
+
+
+
