@@ -116,7 +116,18 @@ UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarg
     [paths addObject:self.currentPath];
 }
 
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = touches.allObjects.lastObject;
+    [self.currentPath addLineToPoint:[touch locationInView:self]];
+    [self setNeedsDisplay];
+}
 
+- (void)drawRect:(CGRect)rect {
+    [[UIColor redColor] set];
+    for (UIBezierPath *path in paths) {
+        [path stroke];
+    }
+}
 
 
 
