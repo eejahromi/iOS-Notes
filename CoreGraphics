@@ -40,6 +40,16 @@ UIGraphicsBeginImageContextWithOptions(self.view.bounds,NO,[UIScreen mainScreen]
 UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
 UIgraphicsEndImageContext();
 
+// screenshot of part of a view
+CGRect cropRect = view.bounds;
+cropRect.origin.x = -CGRectGetMinX(rect);
+cropRect.origin.y = -CGRectGetMinY(rect);
+UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
+[view drawViewHierarchyInRect:cropRect afterScreenUpdates:YES];
+UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+UIGraphicsEndImageContext();
+
+
 // getting a UIKit version of a layer using ImageContext
 UIGraphicsBeginImageContext(self.gradientLayer.frame.size);
 [self.gradientLayer renderInContext: UIGraphicsGetCurrentContext()];
