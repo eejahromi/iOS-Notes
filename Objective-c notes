@@ -406,3 +406,16 @@ typdef NS_Enum(NSUInteger,TableViewSections) {
 
 // let reuseIdentifier for a cell be the xib name if using one so we can get a 2 for one and use a constant
 static NSString * const developerCell = @"DeveloperCell";
+
+// finding the topmost viewController
++ (UIViewController*)topMostViewController
+{
+    UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
+
+    while (topController.presentedViewController) {
+        topController = topController.presentedViewController;
+    }
+
+    return topController;
+}
+
