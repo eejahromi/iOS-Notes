@@ -18,8 +18,16 @@ Useful Macros
 
 #endif
 
-// keywords
+-keywords
 __unused // used to supress unsed warning if necessary
+
+
+// logging macros
+__func__
+__line__
+__FILE__
+__PRETTY_FUNCTION__
+
 
 
 // availability
