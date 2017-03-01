@@ -31,6 +31,27 @@ the relationship constraint has to be flexible OR fixed but width/height and rel
 
 -when two views have the same priority for compressing or growing then auto layout can get confused so in that case we have to change the priorities "Content Compression Resistance Priority" and "Content Hugging Priority".
 
+// Auto Layout in code
+-This pins view1 20 points above view2
+NSLayoutConstraint *myConstraint =[NSLayoutConstraint    
+     constraintWithItem:view1                                                                 
+     attribute:NSLayoutAttributeBottom                                                                     
+     relatedBy:NSLayoutRelationEqual                                                                        
+     toItem:view2                                                            
+     attribute:NSLayoutAttributeBottom                                                                    
+     multiplier:1.0                                                                      
+     constant:-20];
+     
+-This makes button's width 5 times the width of the label
+NSLayoutConstraint *myConstraint =[NSLayoutConstraint 
+     constraintWithItem:mybutton
+     attribute:NSLayoutAttributeWidth
+     relatedBy:NSLayoutRelationEqual
+     toItem:mylabel
+     attribute:NSLayoutAttributeWidth
+     multiplier:5
+     constant:0];
+     
 
 Stackviews
 container for a few subviews that makes it easier to lay them out in a nice pattern vertically or horizontally.
