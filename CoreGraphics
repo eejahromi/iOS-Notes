@@ -10,6 +10,9 @@ rectangle that specifies the default size and location of each PDF page.
 
 since PDFs are vector based they are resolution independent so resizing them won't affect the resolution.
 
+For creating static views that don't move around CG is fine but if we want to create views that move around and need to be 
+redrawn quite often we are better off using Core Animation.
+
 Context
 There are different ways you can get a context. You can get a hold of the current context using UIKit
 
