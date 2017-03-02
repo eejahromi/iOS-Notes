@@ -51,7 +51,8 @@ NSLayoutConstraint *myConstraint =[NSLayoutConstraint
      attribute:NSLayoutAttributeWidth
      multiplier:5
      constant:0];
-     
+ 
+NOTE: Autolayout in IB cannot be applied cross hierarchy views but it is possible to do it in code using the above method.
 
 Stackviews
 container for a few subviews that makes it easier to lay them out in a nice pattern vertically or horizontally.
