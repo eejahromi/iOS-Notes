@@ -55,6 +55,13 @@ NSLayoutConstraint *myConstraint =[NSLayoutConstraint
 NOTE: Autolayout in IB cannot be applied cross hierarchy views but it is possible to do it in code using the above method.
 
 // Visual format language
+views are enclosed with brackets [myButton]
+views width is enclosed in paranthesis [myButton(100)]
+view pins to superview |-30-[myButton]-30-|
+the format language defaults to horizontal and for vertical we specify code with "V"
+H:|-8-[myButton]-8-|
+V:|-40-[myButton]-20-|
+
 // Get the views dictionary
 NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(mylabel, mybutton);
 
