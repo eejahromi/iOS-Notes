@@ -4,3 +4,6 @@ Start uploading file before user presses upload to get a head start
 -Object initialization performance
 If an object creation for a task takes a while do it earlier when you anticipate user will try to do that task
 Example: Creating new conversation in a chat app while the user is idle in the chat listView
+
+-Database initialization
+if database initialization is affecting performance, we can ship the app with an initialized DB in the bundle
