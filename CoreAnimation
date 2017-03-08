@@ -30,3 +30,7 @@ NOTE: Normaly only one of these should be configured by the developer, if needed
 [CATransaction setDisableActions:YES];
 // configurations with layer
 [CATransaction commit];
+
+-Disabling some actions from shapeLayers
+CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+shapeLayer.actions = @{@"contents": [NSNull null]};
