@@ -24,3 +24,9 @@ Rendering behaviors (for performance)
 -drawsAsynchronously: when true, this layer will be drawn asynchronously (for layers that get redrawn a lot)
 -shouldRasterize: when true, this layer only gets drawn once
 NOTE: Normaly only one of these should be configured by the developer, if needed
+
+-Removing implicit animation from layer
+[CATransaction begin];
+[CATransaction setDisableActions:YES];
+// configurations with layer
+[CATransaction commit];
