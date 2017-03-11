@@ -9,6 +9,17 @@ every view is backed by a CALayer to get the bitmap informaiton of that view
 * anchorPoint and anchorPointZ
 * mask
 
+-Implicitly animated properties
+backgroundColor
+borderColor
+borderWidth
+bounds
+cornerRadius
+mask
+opacity
+position
+transform
+
 ->subclasses
 CAGradientLayer: built in gradient layer that makes gradients easy to achieve compared to CoreGraphics
 steps to ceate gradientLayer
