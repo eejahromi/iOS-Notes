@@ -3,6 +3,7 @@ It works on the layer property of views and the work is done on the GPU
 
 -CALayer
 every view is backed by a CALayer to get the bitmap informaiton of that view
+Views live in 2D world where as Layers live in the 3D world
 --useful properties
 * borderRadius and other border related properties
 * shadowRadius and other shadow related properties
