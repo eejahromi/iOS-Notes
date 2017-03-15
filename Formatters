@@ -85,3 +85,7 @@ NSTimeInterval interval = destinationGMTOffset - sourceGMTOffset;
     
 NSDate* destinationDate = [[NSDate alloc] initWithTimeInterval:interval sinceDate:sourceDate];
 
+-NumberFormatter
+NSNumber *freeSpace = 123542635;
+long long space = [freeSpace longLongValue] / (1024 * 1024);
+[NSNumberFormatter localizedStringFromNumber:@(space) numberStyle:NSNumberFormatterDecimalStyle];
