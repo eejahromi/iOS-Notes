@@ -89,3 +89,11 @@ NSDate* destinationDate = [[NSDate alloc] initWithTimeInterval:interval sinceDat
 NSNumber *freeSpace = 123542635;
 long long space = [freeSpace longLongValue] / (1024 * 1024);
 [NSNumberFormatter localizedStringFromNumber:@(space) numberStyle:NSNumberFormatterDecimalStyle];
+
+// currencyStyle
+NSNumber *amount = @(29.42);
+NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+[formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+NSLocale *locale = [NSLocale currentLocale];
+[formatter setLocale:locale];
+NSLog(@"I have %@ in my wallet", [formatter stringFromNumber:amount]);
