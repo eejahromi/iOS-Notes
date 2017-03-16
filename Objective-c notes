@@ -419,3 +419,12 @@ static NSString * const developerCell = @"DeveloperCell";
     return topController;
 }
 
+// data detector
+NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingAllTypes error:nil];
+[detector enumerateMatchesInString:input options:0 range:NSMakeRange(0,input.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+	for(int i=0;i<[result numberOfRanges];i++) {
+		NSRange range = [result numberOfRanges:i];
+		NSString *substring = [input substringWithRange:range];
+		NSLog(@"Found (%d): %@",(int)result.resultType,substring);
+	}
+}]; 
