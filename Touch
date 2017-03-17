@@ -62,6 +62,10 @@ remove from superview
 set user interaction to NO
 hidden to YES or alpha/opaque to zero 
 
+-setting exclusive touch for a view
+Say we have to buttons and touching both at the same time fires off to different events, by setting exclusiveTouch property
+of the view (or button which is a UIControl,UIView Subclass) we can avoid that.
+
 some UIKit views/UIConrols have user interaction set to NO by default i.e UIImageView
 
 ->GestureRecognizers
