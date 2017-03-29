@@ -10,6 +10,10 @@ LLDB
 // prints the view hierarchy (text format of viewHierarchy button in toolbar)
 (lldb)po [[[[UIApplication sharedApplication] delegate] window] recursiveDescription];
 
+// Evalue an expression
+(lldb) e CLLocation *$loc = locations.firstObject
+(lldb) po $loc.altitude // 123.95005035400391
+(lldb) po $loc.horizontalAccuracy // 93.450991690045839
 
 ADVANCED LLDB
 -lldb from command line
