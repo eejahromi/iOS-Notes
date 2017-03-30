@@ -103,10 +103,11 @@ because it has to calculate where the intersections are to not do any drawing.
 UIBezierPath *path = [[UIBezierPath alloc] init];
 [path moveToPoint:CGPointMake(self.view.frame.size.width,0.0)];
 [path addLineToPoint:CGPointMake(self.view.frame.size.width,selfview.frame.size.height)];
+[path addLineToPoint:CGPointMake(self.frame.size.width, 0.0)];
 [path closePath];
 
-
-
+[[UIColor grayColor] setFill]; // color that fills the shape
+[path fill]; // fill the shape
 
 
 
