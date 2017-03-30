@@ -109,6 +109,7 @@ UIBezierPath *path = [[UIBezierPath alloc] init];
 [[UIColor grayColor] setFill]; // color that fills the shape
 [path fill]; // fill the shape
 
-
+[[UIColor redColor] setStroke]; // color that goes around the border
+[path stroke]; // stroke the edges
 
 
