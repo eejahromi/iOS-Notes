@@ -99,3 +99,15 @@ Performance
 Core graphics is usually pretty fast but it could be computationally expensive when lines and paths are overlapping 
 because it has to calculate where the intersections are to not do any drawing.
 
+- Drawing CoreGraphics shapes with UIKit functions
+UIBezierPath *path = [[UIBezierPath alloc] init];
+[path moveToPoint:CGPointMake(self.view.frame.size.width,0.0)];
+[path addLineToPoint:CGPointMake(self.view.frame.size.width,selfview.frame.size.height)];
+[path closePath];
+
+
+
+
+
+
+
