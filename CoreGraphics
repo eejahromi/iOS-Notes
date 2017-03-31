@@ -113,4 +113,9 @@ UIBezierPath *path = [[UIBezierPath alloc] init];
 [path stroke]; // stroke the edges
 
 UIBezierPath *ovalPath = [UIBezierPath bezierPathWithOvalInRect:self.view.bounds];
+UIBezierPath *roundedPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:15.0];
+UIBezierPath *roundedDiffCorners = [UIBezierPath bezierPathWithRoundedRect:self.bounds
+                                      byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight
+                                            cornerRadii:CGSizeMake(15.0, 0.0)];
+
 
