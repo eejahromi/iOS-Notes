@@ -125,4 +125,6 @@ UIBezierPath *arcs = [UIBezierPath [UIBezierPath bezierPathWithArcCenter:CGPoint
                                              endAngle:[self toRadians:90.0]
                                             clockwise:NO];
                                             
-
+UIBezierPath *curve = [self.path addCurveToPoint:CGPointMake(self.frame.size.width, 50.0)
+                 controlPoint1:CGPointMake(self.frame.size.width + 50.0, 25.0)
+                 controlPoint2:CGPointMake(self.frame.size.width - 150.0, 50.0)];
