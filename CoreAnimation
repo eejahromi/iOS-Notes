@@ -29,6 +29,11 @@ steps to ceate gradientLayer
 -set colors array
 -add layer to view
 
+// no need to use a label
+CATextLayer *textLayer = [CATextLayer layer];
+textLayer.string = @"This is cool";
+textLayer.alignmentMode = kCAAlignmentCenter
+[self.view.layer addSublayer:textLayer];
 
 NOTE: CALayer does not recognize touch
 
