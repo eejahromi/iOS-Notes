@@ -133,6 +133,26 @@ UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarg
     }
 }
 
+// moving a UIView using a UIPanGestureRecognizer
+CGPoint translation = [sender translationInView:self.customView];
+    
+sender.view.center = CGPointMake(sender.view.center.x + translation.x,
+                                         sender.view.center.y + translation.y);
+    
+if (sender.state == UIGestureRecognizerStateEnded) {
+        
+        
+        
+[UIView animateWithDuration: 0.5
+                      delay: 0
+                    options: UIViewAnimationOptionCurveEaseOut
+                 animations:^{
+                      CGPoint finalPoint = CGPointMake(self.customView.center.x, self.customView.center.y);
+                      sender.view.center = finalPoint;
+                }
+                completion:nil];
+}
 
+[sender setTranslation:CGPointMake(0, 0) inView:self.cameraButton];
 
 
