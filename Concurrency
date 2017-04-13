@@ -12,6 +12,12 @@ going from bottom to top
 problem: clunky code, creating your own threads and using higher level apis can result in dozens or hundreds of threads which will take memory and kernel resources.
 
 ->Queue based concurrency:
+
+Synchronous vs Asynchronous
+Synchronous means the program will wait for the function to return and then resume the work (buying movie ticket at theater)
+Asynchronous means the program will call the function but continue working and not waiting for the function to return
+(ordering food at a restaurant and moving off the line)
+
 -GCD
 -Operation Queues
 advantage: they centrally manage a thread pool that everybody uses
