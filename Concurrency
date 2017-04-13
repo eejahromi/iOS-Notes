@@ -87,9 +87,22 @@ dispatch_after(popTime,dispatch_get_main_queue(),^(void){
 	// run this code on main queue after delay 
 });
 
+// groups are good for multiple concurrent queues doing work at the same time
 dispatch_group_t group = dispatch_group_create();
 dispatch_group_async(group,queue,^{ blockOfCode });
 dispatch_group_notify(group,queue,^{ blockOfCode }); // notify when group tasks are completed
+
+// dispatch_suspend() and dispatch_resume() are good for serializing asynchronous tasks like animations
+dispatch_queue_t serial_queue = dispatch_queue_create("someIdentifier",DISPATCH_QUEUE_SERIAL);
+dispatch_async(serial_queue,^{
+	// suspend the current queue to let the following code finish
+	dispatch_suspend(serial_queue);
+	[UIView animationWithTime:0.5 animation:^{ view.center += 5; } completion:^{ 
+		// resume current queue to let other stuff work again
+		dispatch_resume(serial_queue);
+	}];
+});
+
 
 -->Dispatch queues vs Opreration queues
 dispatch queues execute tasks in a FIFO order but operations queues don't
