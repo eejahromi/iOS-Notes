@@ -57,7 +57,23 @@ dispatch_queue_t queue;
 
 //three main popular types of queues
 1.serial: makes sure that the tasks are happening in order and coming back in order
-dispatch_queue_create("reverseDNSstringByConvention",DISPATCH_QUEUE_SERIAL); // or NULL instead of second parameter
+dispatch_queue_t serial = dispatch_queue_create("reverseDNSstringByConvention",DISPATCH_QUEUE_SERIAL); // or NULL instead of second parameter
+[NSArray enumerate...:^(BOOL *stop, id object){
+	dispatch_async(serial,^{
+		UIImage *image = [object processedImage];
+		dispatch_async(dispatch_get_main_queue(),^{
+			[processedImages addObject:image];
+		});
+	});
+}];
+
+// using the same serial queue and another queue dispatched to main to be used as a completion block for the above operation
+dispatch_async(serial,^{
+	dispatch_async(dispatch_get_main_queue(),^{
+		self.imageView.image = processedImages.firstObject;
+	});
+});
+
 
 dispatch once
 -singletons don't go well with testing
