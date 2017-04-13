@@ -74,7 +74,6 @@ dispatch_async(serial,^{
 	});
 });
 
-
 dispatch once
 -singletons don't go well with testing
 -always create it as static or has global scope and don't create it as a member variable in
@@ -115,7 +114,12 @@ dispatch_group_async(group,queue,^{ blockOfCode });
 dispatch_group_notify(group,queue,^{ blockOfCode }); // notify when group tasks are completed
 
 // dispatch_suspend() and dispatch_resume() are good for serializing asynchronous tasks like animations
+// also, setting dispatch queues to different targets
+// Good example is performing the same animation multiple times but since animations need to happen on the main queue
+	we should change our dispatch queue target to make sure things happen the right way
+	
 dispatch_queue_t serial_queue = dispatch_queue_create("someIdentifier",DISPATCH_QUEUE_SERIAL);
+dispatch_set_target_queue(serial_queue);
 dispatch_async(serial_queue,^{
 	// suspend the current queue to let the following code finish
 	dispatch_suspend(serial_queue);
