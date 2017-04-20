@@ -128,3 +128,7 @@ UIBezierPath *arcs = [UIBezierPath [UIBezierPath bezierPathWithArcCenter:CGPoint
 UIBezierPath *curve = [self.path addCurveToPoint:CGPointMake(self.frame.size.width, 50.0)
                  controlPoint1:CGPointMake(self.frame.size.width + 50.0, 25.0)
                  controlPoint2:CGPointMake(self.frame.size.width - 150.0, 50.0)];
+
+// insetBy (creating a smaller/larger rect than the source with the same center point)
+CGRect bounds = self.view.bounds;
+CGRect smallerBound = bounds.insetBy(5,5);
