@@ -131,4 +131,4 @@ UIBezierPath *curve = [self.path addCurveToPoint:CGPointMake(self.frame.size.wid
 
 // insetBy (creating a smaller/larger rect than the source with the same center point)
 CGRect bounds = self.view.bounds;
-CGRect smallerBound = bounds.insetBy(5,5);
+CGRect smallerBound = CGRectInset(bounds, 10.0, 10.0);
