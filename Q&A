@@ -204,3 +204,9 @@ Apple Developer Account/iTunes Connect
 -Code signning certificates
 consists of developer identity and his/her private key
 
+-Provisioning profile
+The connection between code signing identity and yout App Identifier
+
+
+
+
