@@ -200,3 +200,7 @@ lock for instance variable
     myClass.object = value;
 }
 
+Apple Developer Account/iTunes Connect
+-Code signning certificates
+consists of developer identity and his/her private key
+
