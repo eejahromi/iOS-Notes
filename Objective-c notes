@@ -441,5 +441,5 @@ for (id secItemClass in secItemClasses) {
 }
 
 -Getting text content of a UIWebView using the DOM
-[webView stringByEvaluatingJavascript:@"document.content.innerText;"];
+[webView stringByEvaluatingJavascriptFrom:@"document.documentElement.innerText;"];
 
