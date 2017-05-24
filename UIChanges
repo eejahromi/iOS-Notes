@@ -114,6 +114,13 @@ NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationLandscapeLeft];
     }
 }
 
+// Adding custom font steps
+- Add font files (otf) to bundle
+- Create font array inside info.plist
+--Key: Fonts provided by application
+--value:array of font names (i.e Quicksand_Dash.otf)
+- Use font name (not filename) in the code
+
 
 // Attributed Strings
 UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:30.0f];
