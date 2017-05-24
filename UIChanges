@@ -118,47 +118,28 @@ NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationLandscapeLeft];
 // Attributed Strings
 UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:30.0f];
 
-    NSMutableAttributedString * attrNameString = [[NSMutableAttributedString alloc] initWithString:self.name];
+NSMutableAttributedString * attrNameString = [[NSMutableAttributedString alloc] initWithString:self.name];
+NSMutableAttributedString * attrAdjectiveString = [[NSMutableAttributedString alloc] initWithString:self.adjective];
+NSMutableAttributedString * attrAdverbString = [[NSMutableAttributedString alloc] initWithString:self.adverb];
+NSMutableAttributedString * attrNounString = [[NSMutableAttributedString alloc] initWithString:self.noun];
+    
+[attrNameString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, self.name.length)];
+[attrAdjectiveString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, self.adjective.length)];
+[attrNounString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, self.noun.length)];
+[attrAdverbString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, self.adverb.length)];
 
-    NSMutableAttributedString * attrAdjectiveString = [[NSMutableAttributedString alloc] initWithString:self.adjective];
+NSMutableAttributedString * firstString = [[NSMutableAttributedString alloc] initWithString:@" is happy the "];
+NSMutableAttributedString * secondString = [[NSMutableAttributedString alloc] initWithString:@"homework is done because the"];
+NSMutableAttributedString * thirdString = [[NSMutableAttributedString alloc] initWithString:@"almost stopped him from "];
+NSMutableAttributedString * fourthString = [[NSMutableAttributedString alloc] initWithString:@"watching the game!"];
 
-    NSMutableAttributedString * attrAdverbString = [[NSMutableAttributedString alloc] initWithString:self.adverb];
-
-    NSMutableAttributedString * attrNounString = [[NSMutableAttributedString alloc] initWithString:self.noun];
-
-    [attrNameString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, self.name.length)];
-
-    [attrAdjectiveString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, self.adjective.length)];
-
-    [attrNounString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, self.noun.length)];
-
-    [attrAdverbString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, self.adverb.length)];
-
-    NSMutableAttributedString * firstString = [[NSMutableAttributedString alloc] initWithString:@" is happy the "];
-
-    NSMutableAttributedString * secondString = [[NSMutableAttributedString alloc] initWithString:@"homework is done because the"];
-
-    NSMutableAttributedString * thirdString = [[NSMutableAttributedString alloc] initWithString:@"almost stopped him from "];
-
-    NSMutableAttributedString * fourthString = [[NSMutableAttributedString alloc] initWithString:@"watching the game!"];
-
-
-
-    [attrNameString appendAttributedString:firstString];
-
-    [attrNameString appendAttributedString:attrAdjectiveString];
-
-    [attrNameString appendAttributedString:secondString];
-
-
-    [attrNameString appendAttributedString:attrNounString];
-
-    [attrNameString appendAttributedString:thirdString];
-
-    [attrNameString appendAttributedString:attrAdverbString];
-
-    [attrNameString appendAttributedString:fourthString];
-
-
-    self.resultsTextView.attributedText = attrNameString;
+[attrNameString appendAttributedString:firstString];
+[attrNameString appendAttributedString:attrAdjectiveString];
+[attrNameString appendAttributedString:secondString];
+[attrNameString appendAttributedString:attrNounString];
+[attrNameString appendAttributedString:thirdString];
+[attrNameString appendAttributedString:attrAdverbString];
+[attrNameString appendAttributedString:fourthString];
+    
+self.resultsTextView.attributedText = attrNameString;
 
