@@ -15,3 +15,13 @@ Orientation Change (Landscape)
 if(UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
     // do stuff that applies to being in landscape
 }
+
+// Container View Controller
+- (void) displayContentController: (UIViewController*) content {
+   [self addChildViewController:content];
+   content.view.frame = [self frameForContentController];
+   [self.view addSubview:self.currentClientView];
+   [content didMoveToParentViewController:self];
+}
+
+
