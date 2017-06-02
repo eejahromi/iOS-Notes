@@ -25,3 +25,9 @@ if(UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
 }
 
 
+- (void) hideContentController: (UIViewController*) content {
+   [content willMoveToParentViewController:nil];
+   [content.view removeFromSuperview];
+   [content removeFromParentViewController];
+}
+
