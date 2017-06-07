@@ -17,6 +17,12 @@ if(UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
 }
 
 // Container View Controller
+
+1. call addChildViewController: method
+2. add child's root view to containers view hierarchy (also set size and position)
+3. add any constraints
+4. call didMoveToParentViewController of child view controller
+
 - (void) displayContentController: (UIViewController*) content {
    [self addChildViewController:content];
    content.view.frame = [self frameForContentController];
