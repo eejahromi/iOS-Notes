@@ -115,11 +115,11 @@ NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationLandscapeLeft];
 }
 
 // Adding custom font steps
-- Add font files (otf) to bundle
+- Add font files (otf) to bundle (make sure the target is selected)
 - Create font array inside info.plist
 --Key: Fonts provided by application
 --value:array of font names (i.e Quicksand_Dash.otf)
-- Use font name (not filename) in the code
+- Use font name (not filename) in the code (best way is to copy font name from get info window in finder)
 
 
 // Attributed Strings
