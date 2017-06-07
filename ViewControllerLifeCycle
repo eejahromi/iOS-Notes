@@ -18,6 +18,8 @@ if(UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
 
 // Container View Controller
 
+- adding child view controller
+
 1. call addChildViewController: method
 2. add child's root view to containers view hierarchy (also set size and position)
 3. add any constraints
@@ -30,6 +32,12 @@ if(UIDeviceOrientationIsLandscape([UIDevice currentDevice].orientation)) {
    [content didMoveToParentViewController:self];
 }
 
+-Removing child view controller
+
+1. call child's willMoveToParentViewController with the value nil
+2. remove any constraints with the child's root view
+3. remove child's root view from container's view hierarchy
+4. call child's removeFromParentViewController method to finalize end of parent-child relationship
 
 - (void) hideContentController: (UIViewController*) content {
    [content willMoveToParentViewController:nil];
