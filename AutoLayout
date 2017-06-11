@@ -89,7 +89,9 @@ To create vertical constraints, use:
 -topAnchor or bottomAnchor
 -firstBaselineAnchor or lastBaselineAnchor
 
-
+example:
+[first.topAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:20.0].active = YES;
+[firs.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
 
 Stackviews
 container for a few subviews that makes it easier to lay them out in a nice pattern vertically or horizontally.
