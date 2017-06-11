@@ -82,7 +82,7 @@ To create horizontal constraints, use:
 example:
 // setting left edge of view to 15.0 points of superview
 [first.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:15.0].active = YES; 
-
+[first.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
 
 Stackviews
 container for a few subviews that makes it easier to lay them out in a nice pattern vertically or horizontally.
