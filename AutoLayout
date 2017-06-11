@@ -71,6 +71,19 @@ NSArray *constraintsArray = [NSLayoutConstraint
          options:NSLayoutFormatAlignAllBaseline metrics:nil 
          views:viewsDictionary];
 
+// Constraints using Layout Anchors
+- Set view's translatesAutoResizingMaskIntoConstraint to NO to avoid constraint problems
+
+To create horizontal constraints, use:
+-centerXAnchor
+-leadingAnchor or trailingAnchor
+-leftAnchor and rightAnchor
+
+example:
+// setting left edge of view to 15.0 points of superview
+[first.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:15.0].active = YES; 
+
+
 Stackviews
 container for a few subviews that makes it easier to lay them out in a nice pattern vertically or horizontally.
 
