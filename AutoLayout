@@ -93,6 +93,13 @@ example:
 [first.topAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:20.0].active = YES;
 [firs.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
 
+To create size constraints, use:
+-heightAnchor and widthAnchor
+
+example:
+// second view has twice the width as the first view
+[second.widthAnchor constraintEqualToAnchor:first.widthAnchor multiplier:2.0].active = YES;
+
 Stackviews
 container for a few subviews that makes it easier to lay them out in a nice pattern vertically or horizontally.
 
