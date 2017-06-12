@@ -44,6 +44,7 @@ git commit --amend // edit the most recent commit message
 git diff --stat `git hash-object -t tree /dev/null` | tail -1 // for counting lines of code for project
 git log --oneline // short version of log with only hash and commit message
 git log --since="2016-07-01" // show only commits after july 1st, 2016
+git branch --vv // shows all local branches and latest commit
 
 Useful CocoaPods commands:
 for checking if using outdated pods: pod outdated
