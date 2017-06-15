@@ -38,6 +38,7 @@ git rebase master // updating a feature branch to the master branch or any other
 --NOTE: (ideally this shouldn't happen because local changes should happen in a separete branch)
 git tag v1.0 // tagging
 git stash // put all the changes since last commit in a stack
+git stash apply stash@{2} // applying a specific stash from list
 git stash drop // forget the last stash (if you stash twice, you have to drop twice)
 git mergetool -t opendiff // for merge conflicts
 git commit --amend // edit the most recent commit message
