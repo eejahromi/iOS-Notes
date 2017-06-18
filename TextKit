@@ -29,3 +29,8 @@ self.label.attributedText = attributedString
 // Exclusion paths
 CGRect convertedFrame = [self.textView convertRect:self.imageView fromView:self.view];
 self.textView.textContainer.exclusionPaths = @[UIBezierPath bezierPathWithRect:convertedRect]; // set to nil to reset
+
+// Underline a button title using attributedStrings
+NSAttributedString *attr = [[NSAttributedString alloc] initWithString:@"Description"
+                                                               attributes:@{NSUnderlineStyleAttributeName:@(NSUnderlineStyleSingle)}];
+[self.linkButton setAttributedTitle:attr forState:UIControlStateNormal];
