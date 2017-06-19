@@ -129,6 +129,23 @@ dispatch_async(serial_queue,^{
 	}];
 });
 
+// GCD semaphores - For making asynchronous calls, synchronous but on a background thread
+dispatch_queue_t queue = dispatch_queue_create("background.queue.semaphore",DISPATCH_QUEUE_SERIAL);
+dispatch_async(queue,^{
+	[session dataTaskWithRequest:request completionHandler:(NSURLResponse *response, NSError *error) {
+		// handle data
+		dispatch_semaphore_signal(semaphore);
+	}];
+	dispatch_semaphore_wait(semaphore);
+	
+	[session dataTaskWithRequest:request2 completionHandler:(NSURLResponse *response, NSError *error) {
+		// handle data
+		dispatch_semaphore_signal(semaphore);
+	}];
+	dispatch_semaphore_wait(semaphore);
+});
+
+
 
 -->Dispatch queues vs Opreration queues
 dispatch queues execute tasks in a FIFO order but operations queues don't
