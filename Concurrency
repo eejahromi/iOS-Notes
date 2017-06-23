@@ -52,6 +52,13 @@ run during scrolling, we need to add it to the run loop in the NSRunLoopCommonMo
 GCD in depth...
 C-Library for managing different threads using queues and blocks
 
+Blocks
+blocks are only objects in Objc that are stored on the stack. (by default)
+if we want to allocate them on the heap then we have to use "copy" attribute:
+@property (nonatomic, copy) (^EJCompletionBlock)(); // as a property
+[myBlock copy]; // locally using the word copy
+
+
 ->declaring a new queue
 dispatch_queue_t queue;
 
