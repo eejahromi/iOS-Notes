@@ -24,4 +24,14 @@ UIApplicationShortcutItem *shortcut = [[UIapplicationShortcutItem alloc]initWith
 use [UIApplication sharedApplication].shortcutItems to manipulate the shortcutItems array
 
 
-Peek and Pop
+-Peek and Pop
+UIViewControllerPreviewingDelegate
+- (nullable UIViewController *)previewingContext:(id <UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {
+  // retreive cell or detailView
+  previewingContext.sourceRect = cell.frame
+  return detailView;
+}
+
+- (void)previewingContext:(id <UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit {
+  [self show:viewControllerToCommit sender:self];
+}
