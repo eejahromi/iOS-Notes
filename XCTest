@@ -74,4 +74,5 @@ UIViewController *rootVC = UIApplication.sharedApplication.keyWindow.rootViewCon
 UIView *rootView = rootVC.view;
 XCAssertTrue([rootView.subviews containsObject:testingView],@"testingView should be present");
 
-
+// testing animation keys
+XCAssertTrue([rootView.layer.animationKeys containsObject:@"opacity"],@"The opacity should be animated");
