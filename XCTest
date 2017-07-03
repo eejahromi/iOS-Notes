@@ -66,3 +66,10 @@ Mocks care about behaviors in testing.
 Senario, if we have the same moveUp method as the Stubs and that method has 5 children methods and we comment one of those out, the the test will fail where as in stubs the method would pass.
 
 
+- Snippets to help with workflow and UI
+// getting root ViewController
+UIViewController *rootVC = UIApplication.sharedApplication.keyWindow.rootViewController;
+
+
+
+
