@@ -70,6 +70,8 @@ Senario, if we have the same moveUp method as the Stubs and that method has 5 ch
 // getting root ViewController
 UIViewController *rootVC = UIApplication.sharedApplication.keyWindow.rootViewController;
 
-
+// testing if a view is present on screen
+UIView *rootView = rootVC.view;
+XCAssertTrue([rootView.subviews containsObject:testingView],@"testingView should be present");
 
 
