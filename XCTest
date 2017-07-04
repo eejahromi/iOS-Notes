@@ -82,6 +82,26 @@ XCAssertTrue([rootView.layer.animationKeys containsObject:@"opacity"],@"The opac
 
 - (void)testNetworkCall {
   self.expectation = [self expectationWithDescription:@"GET network call with JSON response"];
+  NSURLSession *session = [NSURLSession sharedSession];
+  NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"http://api.kivaws.org/v1/loans/newest.json"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        XCTAssertNotNil(data,@"data should not be nil");
+        XCTAssertNil(error,@"Error should be nil");
+               
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+        XCTAssertEqual(httpResponse.statusCode, 200, @"HTTP Reponse Code should be 200");
+        
+        [self.expectation fulfill];
+    }];
+    [task resume];
+    
+    // timeout
+    [self waitForExpectationsWithTimeout:task.originalRequest.timeoutInterval handler:^(NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error: %@",error.localizedDescription);
+        }
+        [task cancel];
+    }];
 }
 
 
