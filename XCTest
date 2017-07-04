@@ -76,3 +76,13 @@ XCAssertTrue([rootView.subviews containsObject:testingView],@"testingView should
 
 // testing animation keys
 XCAssertTrue([rootView.layer.animationKeys containsObject:@"opacity"],@"The opacity should be animated");
+
+// XCTestExpectation - for testing async code
+@property (strong, nonatomic) XCTestExpectation *expectation;
+
+- (void)testNetworkCall {
+  self.expectation = [self expectationWithDescription:@"GET network call with JSON response"];
+}
+
+
+
