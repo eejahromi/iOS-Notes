@@ -112,6 +112,8 @@ UIBezierPath *path = [[UIBezierPath alloc] init];
 [[UIColor redColor] setStroke]; // color that goes around the border
 [path stroke]; // stroke the edges
 
+[[UIColor blackColor] setColor]; // sets color for all use (including above procedures)
+
 UIBezierPath *ovalPath = [UIBezierPath bezierPathWithOvalInRect:self.view.bounds];
 UIBezierPath *roundedPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:15.0];
 UIBezierPath *roundedDiffCorners = [UIBezierPath bezierPathWithRoundedRect:self.bounds
