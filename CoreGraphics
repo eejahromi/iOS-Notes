@@ -138,3 +138,6 @@ CGRect smallerBound = CGRectInset(bounds, 10.0, 10.0);
 // color
 creating colors with color spaces - color spaces are good if you want cross platform code
 CGColorSpaceRef CGColorGetColorSpace(CGColorRef color); // any color
+CGColorSpaceRef colorSpaceRGB = CGColorSpaceCreateDeviceRGB(); // other choices include CGColorSpaceCreateDeviceGray and CGColorSpaceCreateDeviceCMYK
+
+
