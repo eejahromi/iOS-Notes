@@ -134,3 +134,7 @@ UIBezierPath *curve = [self.path addCurveToPoint:CGPointMake(self.frame.size.wid
 // insetBy (creating a smaller/larger rect than the source with the same center point)
 CGRect bounds = self.view.bounds;
 CGRect smallerBound = CGRectInset(bounds, 10.0, 10.0);
+
+// color
+creating colors with color spaces - color spaces are good if you want cross platform code
+CGColorSpaceRef CGColorGetColorSpace(CGColorRef color); // any color
