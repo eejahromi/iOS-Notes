@@ -172,6 +172,14 @@ two concrete subclasses:
 NSOperationQueue concurrent vs non-concurrent
 In the context of an NSOperation object, which runs in an NSOperationQueue, the terms concurrent and non-concurrent do not necessarily refer to the side-by-side execution of threads. Instead, a non-concurrent operation is one that executes using the environment that is provided for it while a concurrent operation is responsible for setting up its own execution environment.
 
+NSOperationQueue example
+NSOperationQueue *operationQueue = [NSOperationQueue new];
+operationQueue.maxConcurrentOperationCount = 1; // 1 means serial queue, greater than 1 means concurrent
+[operationQueue addOperationWithBlock:^{
+	NSLog(@"Block is executing");
+}];
+
+
 run loop in iOS
 event processing loop that you use to schedule work and coordinate the receipt of incoming events. the purpose of a run loop is to keep your thread busy when there is work to do and put your thread to sleep when there is none.
 each thread including app's main thread has an associated run loop object. only secondary threads need to run their run loop explicitly.
