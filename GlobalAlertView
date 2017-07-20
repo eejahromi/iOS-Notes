@@ -27,6 +27,7 @@ static UILabel *label = nil;
     });
     
     label.textColor = [UIColor whiteColor];
+    label.adjustsFontBasedOnWidth = YES;
     label.textAlignment = NSTextAlignmentCenter;
     label.text = alertText;
     [_sharedNavigationBarAlertView addSubview:label];
