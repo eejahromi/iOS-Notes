@@ -179,6 +179,15 @@ operationQueue.maxConcurrentOperationCount = 1; // 1 means serial queue, greater
 	NSLog(@"Block is executing");
 }];
 
+// NSBlockOperation
+NSBlockOperation *blockOperation = [NSBlockOperation blockOperationWithBlock:^{
+	NSLog(@"Block operation is executing");
+}];
+
+[operationQueue addOperation:blockOperation]; // the above block operation will not execute until this call is made
+
+// if for any reason we want to wait before we make the above call we can suspend the operation using this code
+operationQueue.suspended = YES; // set it back to false in order to un-suspend it
 
 run loop in iOS
 event processing loop that you use to schedule work and coordinate the receipt of incoming events. the purpose of a run loop is to keep your thread busy when there is work to do and put your thread to sleep when there is none.
