@@ -152,7 +152,19 @@ dispatch_async(queue,^{
 	dispatch_semaphore_wait(semaphore);
 });
 
+// Canceling block operations - good for block that are to be run using dispatch after
+dispatch_block_t work = dispatch_block_create(0,^{
+	NSLog(@"Work Block!");
+});
 
+dispatch_after(DISPATCH_TIME_NOW,(int 64_t)(10 * NSEC_PER_SECOND),dispatch_get_main_queue(),work);
+while() {
+	sleep(1);
+	// checking if block has been canceled
+	if(dispatch_block_testCancel(work)) {
+		return;
+	}
+}
 
 -->Dispatch queues vs Opreration queues
 dispatch queues execute tasks in a FIFO order but operations queues don't
