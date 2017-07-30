@@ -18,11 +18,3 @@ bounceAnimation.timingFunctions = @[
 [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]
   ];
 [self.view.layer addAnimation:bounceAnimation forKey:@"bounceAnimation"];
-
-CABasicAnimation
-
-CABasicAnimation *fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-fadeAnimation.fromValue = @0.0f;
-fadeAnimation.toValue = @1.0f;
-fadeAnimation.duration = 0.2;
-[_gradientView.layer addAnimation:fadeAnimation forKey:@"fadeAnimation"];
