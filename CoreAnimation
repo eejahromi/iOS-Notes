@@ -58,3 +58,10 @@ shapeLayer.actions = @{@"contents": [NSNull null]};
 UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:self.view.frame];
 CAShapeLayer *shapeLayer = [CAShapeLayer layer];
 shapeLayer.path = path.cgPath;
+
+-Animations
+CABasicAnimation *fadeAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+fadeAnimation.fromValue = @0.0f;
+fadeAnimation.toValue = @1.0f;
+fadeAnimation.duration = 0.2;
+[_gradientView.layer addAnimation:fadeAnimation forKey:@"fadeAnimation"];
