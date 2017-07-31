@@ -141,3 +141,23 @@ CGColorSpaceRef CGColorGetColorSpace(CGColorRef color); // any color
 CGColorSpaceRef colorSpaceRGB = CGColorSpaceCreateDeviceRGB(); // other choices include CGColorSpaceCreateDeviceGray and CGColorSpaceCreateDeviceCMYK
 
 
+// Gradient
+CGContextRef context =  UIGraphicsGetCurrentContext();
+CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB(); // system color space
+    
+CGFloat locations[] = {0.0,1.0};
+NSArray *colors = @[(__bridge id)[UIColor redColor].CGColor,(__bridge id)[UIColor purpleColor].CGColor];
+    
+CGGradientRef gradient = CGGradientCreateWithColors(colorSpace,(__bridge CFArrayRef)colors, locations);
+    
+CGPoint startPoint = CGPointMake(CGRectGetMidX(self.bounds), 0);
+CGPoint endPoint = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetHeight(self.bounds));
+    
+CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, 0);
+    
+// need to release the retained pointers
+CFRelease(gradient);
+CFRelease(colorSpace);
+
+
+
