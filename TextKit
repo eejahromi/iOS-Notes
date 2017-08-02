@@ -64,4 +64,18 @@ NSMutableAttributedString * fourthString = [[NSMutableAttributedString alloc] in
     
 self.resultsTextView.attributedText = attrNameString;
 
+// Adding images to text using NSTextAttachment and NSMutableAttributedString
+NSMutableAttributedString *mutableString = [[NSMutableAttributedString alloc] initWithString:@"John Smith"
+                                                                                      attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]}];
+// NSTextAttachment with an image property
+NSTextAttachment *textAttachment = [NSTextAttachment new];
+textAttachment.image = [UIImage imageNamed:@"officer"];
+textAttachment.bounds = CGRectMake(1.0, 1.0, 12.0, 12.0);
+    
+[mutableString appendAttributedString:[NSAttributedString attributedStringWithAttachment:textAttachment]];
+[self.infoLabel setAttributedText:mutableString]; // adding the mutableAttributedString to label
+
+
+
+
 
