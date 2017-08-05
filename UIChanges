@@ -121,3 +121,8 @@ NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationLandscapeLeft];
 --value:array of font names (i.e Quicksand_Dash.otf)
 - Use font name (not filename) in the code (best way is to copy font name from get info window in finder)
 
+// applying tint color to an imageView using rendering mode
+UIImage *imgMenu = [[UIImage imageNamed:@"brand-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+UIImageView *imageView = [UIImageView new];
+imageView.image = imgMenu;
+imageView.tintColor = [UIColor whiteColor];
