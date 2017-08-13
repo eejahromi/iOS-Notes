@@ -99,6 +99,11 @@ if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
     controller.popoverPresentationController.sourceView = self.view; 
  }
 
+// locking orientation for a UIViewController
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 // Forcing orientation change for a viewController
 NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationLandscapeLeft];
 [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
