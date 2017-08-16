@@ -6,6 +6,10 @@ Accessibility Attributes
 -Frame: The frame of the element within the screen
 -Value: value of the element i.e "54 out of 100" for UISlider
 
+
+-Accessibility identifier vs Accessibility label
+Accessibility identifier is for testing where as Accessibility label is what is read out loud to the user by voice over
+
 // marking something as accessibility element
 descriptionLabel.isAccessibilityElement = YES;
 NOTE: In UIKit most of the elements are already set to YES except for labels
