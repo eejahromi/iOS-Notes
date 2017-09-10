@@ -407,6 +407,25 @@ typdef NS_Enum(NSUInteger,TableViewSections) {
 // let reuseIdentifier for a cell be the xib name if using one so we can get a 2 for one and use a constant
 static NSString * const developerCell = @"DeveloperCell";
 
+// creating string representation for enum types
+typedef NS_ENUM(NSInteger, UITableViewCellStyle) { 
+  UITableViewCellStyleDefault,
+  UITableViewCellStyleValue1,
+  UITableViewCellStyleValue2,
+  UITableViewCellStyleSubtitle
+};
+
+NSString * const UITableViewCellStyleDescription[] = {
+  [UITableViewCellStyleDefault] = @"Default", 
+  [UITableViewCellStyleSubtitle] = @"Subtitle",
+  [UITableViewCellStyleValue1] = @"Value 1", 
+  [UITableViewCellStyleValue2] = @"Value 2"
+};
+
+UITableViewCellStyle style = ...;
+NSString *description = UITableViewCellStyleDescription[style];
+
+
 // finding the topmost viewController
 + (UIViewController*)topMostViewController
 {
