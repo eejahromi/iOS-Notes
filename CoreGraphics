@@ -120,7 +120,7 @@ UIBezierPath *roundedDiffCorners = [UIBezierPath bezierPathWithRoundedRect:self.
                                       byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight
                                             cornerRadii:CGSizeMake(15.0, 0.0)];
 
-UIBezierPath *arcs = [UIBezierPath [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width/2,
+UIBezierPath *arcs = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width/2,
                                                                   self.frame.size.height/2)
                                                radius:self.frame.size.height/2
                                            startAngle:[self toRadians:270.0]
