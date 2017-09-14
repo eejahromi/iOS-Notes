@@ -76,6 +76,11 @@ textAttachment.bounds = CGRectMake(1.0, 1.0, 12.0, 12.0);
 [self.infoLabel setAttributedText:mutableString]; // adding the mutableAttributedString to label
 
 
-
-
+// UIMenuController
+- (void)handleLongPressGesture:(UIGestureRecognizer *)sender  {
+    if (recognizer.state == UIGestureRecognizerStateRecognized && [recognizer.view becomeFirstResponder]) {
+      UIMenuController *menuController = [UIMenuController sharedMenuController];
+      [menuController setTargetRect:sender.view.frame inView:sender.view.superview];
+      [menuController setMenuVisible:YES animated:YES];
+}
 
