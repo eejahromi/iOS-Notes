@@ -47,6 +47,7 @@ git log --oneline // short version of log with only hash and commit message
 git log --since="2016-07-01" // show only commits after july 1st, 2016
 git branch --vv // shows all local branches and latest commit
 git shortlog <branchName> // shortlog of commits of a branch categorized by authors
+git checkout --track origin/branch_name // checking a remote branch
 
 Useful CocoaPods commands:
 for checking if using outdated pods: pod outdated
