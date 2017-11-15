@@ -109,3 +109,16 @@ NSArray *monospacedSetting = @[@{UIFontFeatureTypeIdentifierKey: @(kNumberSpacin
     
     UIFontDescriptor *newDescriptor = [[self.durationLabel.font fontDescriptor] fontDescriptorByAddingAttributes:@{UIFontDescriptorFeatureSettingsAttribute: monospacedSetting}];
     self.countLabel.font = [UIFont fontWithDescriptor:newDescriptor size:0];
+
+// iPhone X layout guides
+// pinning to the bottom safe are layout guide to avoid having views underneath the home indicator
+
+UIView *footerView = ....;
+footerView.translatesAutoResizingMaskIntoConstraint = NO;
+UILayoutGuide *guide = self.view.safeAreaLayoutGuide;
+NSLayoutConstraint.activate = @[ [footerView.bottomAnchor constraintEqualsTo:guide.bottomAnchor] ];
+
+
+
+
+
