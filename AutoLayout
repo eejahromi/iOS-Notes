@@ -115,9 +115,10 @@ NSArray *monospacedSetting = @[@{UIFontFeatureTypeIdentifierKey: @(kNumberSpacin
 
 UIView *footerView = ....;
 footerView.translatesAutoResizingMaskIntoConstraint = NO;
-UILayoutGuide *guide = self.view.safeAreaLayoutGuide;
-NSLayoutConstraint.activate = @[ [footerView.bottomAnchor constraintEqualsTo:guide.bottomAnchor] ];
-
+if(@available(iOS11,*)) {
+  UILayoutGuide *guide = self.view.safeAreaLayoutGuide;
+  NSLayoutConstraint.activate = @[ [footerView.bottomAnchor constraintEqualsTo:guide.bottomAnchor] ];
+}
 
 
 
