@@ -104,5 +104,6 @@ XCAssertTrue([rootView.layer.animationKeys containsObject:@"opacity"],@"The opac
     }];
 }
 
-
+// Screenshot
+[[XCUIScreen mainScreen] screenshot]; // take screenshot
 
