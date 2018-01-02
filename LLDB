@@ -5,6 +5,10 @@ LLDB
 (lldb) thread list // tells you which thread is this code run on, great for when dealing with threads
 (lldb) rb . -s AppName // sets a breakpoint in every function of the app
 
+(lldb) po [LoginView _shortMethodDescription] // shows all method headers in LoginView file
+(lldb) image lookup -n lblLogin // looks up anything named lblLogin in the project
+(lldb) image lookup -rn LoginView.\w+\: // any class that contains LoginView in it’s name and has a method with 1+ param
+
 (lldb)target modules list // a set of commands to inspect modules in the specified target
 
 // prints the view hierarchy (text format of viewHierarchy button in toolbar)
