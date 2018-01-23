@@ -52,6 +52,12 @@ for ignoring cases like skipping iterations of loops and adding more action
 also for stopping in a specific place in multiple files.
 Example,
 
+-registers
+$rdi
+$rsi
+$rdx
+$rcx
+
 (we want to print the name of the class associated with a viewController as we navigate through app)
 Symbol: -[UIViewController viewDidAppear:]
 Condition: sizeof(void *) == 8 // only print for 64 bit
