@@ -49,6 +49,7 @@ git branch --vv // shows all local branches and latest commit
 git shortlog <branchName> // shortlog of commits of a branch categorized by authors
 git checkout --track origin/branch_name // checking a remote branch
 git stash save "issue #123" // saving a stash under a specific name
+git stash show -p stash@{1} > stash.txt // save stash details in a file to inpect without applying stash
 
 Useful CocoaPods commands:
 for checking if using outdated pods: pod outdated
