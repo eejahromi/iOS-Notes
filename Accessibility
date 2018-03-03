@@ -1,6 +1,6 @@
 Accessibility Attributes
 
--Label: Way to identify the accessible element i.e "Back Button"
+-Label: Way to tell the user what the accessible element is i.e "Back Button"
 -Traits: Elements state, behavior or usage i.e "is selected" for UIButton
 -Hint: describes what element completes i.e "Shows product details"
 -Frame: The frame of the element within the screen
