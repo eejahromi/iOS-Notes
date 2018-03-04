@@ -425,6 +425,17 @@ NSString * const UITableViewCellStyleDescription[] = {
 UITableViewCellStyle style = ...;
 NSString *description = UITableViewCellStyleDescription[style];
 
+// instantiating a view using a xib in the bundle
++ (ExampleView *)instanceFromNib {
+	return [[[UINib nibWithNibName:@"" bundle:nil] instantiateWithOwner:nil options:nil] firstObject];
+}
+
+class func instanceFromNib() -> ExampleView {
+	return UINib(nibName: String(describing: self), bundle: nil)
+			.instantiate(withOwner: nil, options: nil)[0] as! ExampleView
+}
+
+
 
 // finding the topmost viewController
 + (UIViewController*)topMostViewController
