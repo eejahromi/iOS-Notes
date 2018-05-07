@@ -51,6 +51,7 @@ git checkout --track origin/branch_name // checking a remote branch
 git stash save "issue #123" // saving a stash under a specific name
 git stash show -p stash@{1} > stash.txt // save stash details in a file to inpect without applying stash
 git symbolic-ref refs/heads/short refs/heads/some-long-branch-name
+git checkout --track origin/branch-name // track a remote branch locally
 
 Useful CocoaPods commands:
 for checking if using outdated pods: pod outdated
