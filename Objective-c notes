@@ -473,3 +473,7 @@ for (id secItemClass in secItemClasses) {
 -Getting text content of a UIWebView using the DOM
 [webView stringByEvaluatingJavascriptFrom:@"document.documentElement.innerText;"];
 
+// Swift localizedString format
+let count = 3
+let format = NSLocalizedString("NUMBER_CITIES", comment:"Number of cities")
+cell.textLabel?.text = String.localizedStringWithFormat(format, count)
