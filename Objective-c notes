@@ -436,6 +436,13 @@ class func instanceFromNib() -> ExampleView {
 }
 
 
+// calculating how long a call takes
+CFTimeInterval start = CACurrentMediaTime();
+.
+.
+.
+NSLog(%lf,CACurrentMediaTime() - start);
+
 
 // finding the topmost viewController
 + (UIViewController*)topMostViewController
